@@ -44,6 +44,12 @@
     "finishedTitle": "That's the whole deck.",
     "finishedNote": "{count} words. Shuffle for a new order."
   },
+  "install": {
+    "message": "Install {name} for one-tap, offline access.",
+    "ios": "Add {name} to your home screen: tap {share}, then \"Add to Home Screen.\"",
+    "action": "Install",
+    "dismissLabel": "Dismiss"
+  },
   "about": {
     "title": "About",
     "back": "Back to the decks",

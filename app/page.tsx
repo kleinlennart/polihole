@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { GithubIcon } from "@/components/github-icon";
+import { InstallPrompt } from "@/components/install-prompt";
 import { QuoteHeader } from "@/components/quote-header";
 import { content, fill } from "@/lib/content";
 import { claims } from "@/lib/decks";
@@ -55,6 +56,8 @@ export default function Home() {
           </a>
         </span>
       </header>
+
+      <InstallPrompt />
 
       <div className="flex flex-1 flex-col sm:flex-row">
         {decks.map((deck) => (
