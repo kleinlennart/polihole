@@ -34,6 +34,7 @@ export function CardShell({
   title,
   cardNumber,
   done,
+  flashing = false,
   canGoBack,
   onNext,
   onPrevious,
@@ -46,6 +47,8 @@ export function CardShell({
   /** The card's own number, or null when there's no card to label. */
   cardNumber: number | null;
   done: boolean;
+  /** Inverts the screen in bursts — the timer signalling that it's up. */
+  flashing?: boolean;
   canGoBack: boolean;
   onNext: () => void;
   onPrevious: () => void;
@@ -85,7 +88,9 @@ export function CardShell({
 
   return (
     <main
-      className={`flex min-h-[100svh] flex-1 flex-col ${s.field} ${s.focus}`}
+      className={`flex min-h-[100svh] flex-1 flex-col ${s.field} ${s.focus} ${
+        flashing ? "flash-invert" : ""
+      }`}
     >
       <header className="flex items-center justify-between px-5 pt-5 sm:px-8 sm:pt-7">
         <Link
