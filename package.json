@@ -7,8 +7,11 @@
     "build": "next build && node scripts/generate-sw.mjs",
     "start": "next start",
     "lint": "eslint",
+    "dedupe:words": "node scripts/dedupe-words.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\"",
     "typecheck": "tsc --noEmit",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
@@ -28,6 +31,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.3.5",
+    "husky": "^9.1.7",
     "prettier": "^3.9.8",
     "prettier-plugin-tailwindcss": "^0.8.1",
     "tailwindcss": "^4",

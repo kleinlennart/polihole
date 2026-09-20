@@ -12,9 +12,10 @@ npm run build   # next build (static export to out/) + node scripts/generate-sw.
                 # note: build does NOT override BASE_PATH, so it bakes in /polihole; dev does
 npm run lint       # bare `eslint` (flat config, eslint-config-next core-web-vitals + typescript)
 npm run typecheck  # tsc --noEmit
+npm test           # node --test over tests/ — data invariants only, no deps, no UI tests
 ```
 
-There is no test framework configured — no test runner, no test files, nothing to run a single test with.
+The only tests are data invariants in `tests/`, run by Node's built-in runner — no test framework is installed and nothing tests components or pages. A single file: `node --test tests/data.test.mjs`. Husky runs `npm test` on pre-commit (`.husky/pre-commit`); the hook checks the working tree, not just what is staged. `npm run dedupe:words` reports padded and repeated entries in `data/words.json` and `npm run dedupe:words -- --write` fixes them — it keeps the first spelling of a word, which renumbers every card after the one it drops.
 
 To preview the production build the way it is actually deployed (under a `/polihole/` path, with the service worker):
 
@@ -86,3 +87,4 @@ shadcn is configured with the `base-nova` style on `@base-ui/react` (not Radix) 
 ## Rules
 
 - don't use Browser Tools to look at the page unless asked to
+- No need to ever run `format` yourself
