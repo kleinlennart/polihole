@@ -9,7 +9,7 @@ const { home, polihole, politicize } = content;
 // and nothing above them — the wordmark would read as a second Polihole.
 const decks = [
   {
-    href: "/polihole",
+    href: "/deck",
     name: polihole.title,
     blurb: polihole.blurb,
     count: fill(polihole.count, { count: claims.length }),

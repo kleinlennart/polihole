@@ -42,7 +42,7 @@ const urls = files
   .filter((rel) => PRECACHE_EXTENSIONS.has(rel.slice(rel.lastIndexOf("."))))
   .filter((rel) => !rel.endsWith(".txt") || rel.endsWith("index.txt"))
   .sort()
-  // Directory index pages are requested as `/polihole/polihole/`, not as
+  // Directory index pages are requested as `/some/dir/`, not as
   // `.../index.html`, so cache them under the URL the browser will ask for.
   .map((rel) =>
     rel.endsWith("/index.html")
