@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GithubIcon } from "@/components/github-icon";
 import { QuoteHeader } from "@/components/quote-header";
 import { content, fill } from "@/lib/content";
 import { claims } from "@/lib/decks";
@@ -29,8 +30,6 @@ const decks = [
 export default function Home() {
   return (
     <main className="flex min-h-[100svh] flex-1 flex-col">
-      {/* One variable sizes the quote and the box the About link is centred in,
-          so the link sits on the quote's first line at every width. */}
       <header className="flex items-start justify-between gap-6 px-5 pt-6 pb-5 [--quote-leading:1.1] [--quote-size:clamp(1.4rem,3vw,2.1rem)] sm:px-8 sm:pt-8 sm:pb-6">
         <div>
           <QuoteHeader />
@@ -38,13 +37,22 @@ export default function Home() {
             {home.tagline}
           </p>
         </div>
-        <span className="flex h-[calc(var(--quote-size)*var(--quote-leading))] shrink-0 items-center">
+        <span className="flex shrink-0 items-center gap-4">
           <Link
             href="/about"
             className="text-sm font-semibold underline decoration-2 underline-offset-4 opacity-65 transition-opacity hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:text-base"
           >
             {home.aboutLink}
           </Link>
+          <a
+            href={home.githubLink.url}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={home.githubLink.label}
+            className="opacity-65 transition-opacity hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+          >
+            <GithubIcon aria-hidden className="size-5" />
+          </a>
         </span>
       </header>
 

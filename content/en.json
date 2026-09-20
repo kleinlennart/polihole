@@ -7,7 +7,11 @@
   },
   "home": {
     "tagline": "Two card games for starting arguments. Neither one settles anything.",
-    "aboutLink": "About"
+    "aboutLink": "About",
+    "githubLink": {
+      "label": "View source on GitHub",
+      "url": "https://github.com/kleinlennart/polihole"
+    }
   },
   "deck": {
     "cardIndex": "#{index}",
@@ -18,7 +22,7 @@
   },
   "polihole": {
     "title": "Polihole",
-    "blurb": "A claim on every card. Agree, disagree, or stall convincingly.",
+    "blurb": "A claim or question on every card. Agree, disagree, or stall convincingly.",
     "count": "{count} cards",
     "pushFurther": "Push further",
     "sourceToggle": "Where's this from?",
@@ -27,7 +31,7 @@
   },
   "politicize": {
     "title": "Politicize This",
-    "blurb": "One word. Make the case for why it's political.",
+    "blurb": "The Politics of X. Make the case for why it's political.",
     "prefix": "The Politics of",
     "note": "Explain! You have 30 seconds / 1 min.",
     "timerOptions": [

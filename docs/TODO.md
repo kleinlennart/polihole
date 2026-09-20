@@ -1,7 +1,5 @@
 # TODO
 
-- add Github link
-
 - add timer
 
 - add #number of card
@@ -15,3 +13,6 @@
 - center cards on mobile
 
 - drop push further for now
+
+- Back button name Exit
+
