@@ -146,12 +146,15 @@
   :root {
     --paper: var(--color-paper);
     --ink: var(--color-ink);
+    --link: var(--color-ballot);
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
       --paper: #000000;
       --ink: #f5f4f2;
+      /* Ballot blue goes muddy on black; lift it until it reads. */
+      --link: #9aa4ff;
     }
   }
 
@@ -161,6 +164,21 @@
     color: var(--ink);
     -webkit-tap-highlight-color: transparent;
     overscroll-behavior: none;
+  }
+}
+
+/* For the quote: it holds its position at the top of the page and only fades,
+   so its first line never moves. */
+@utility deck-fade {
+  animation: deck-fade 260ms ease-out both;
+}
+
+@keyframes deck-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

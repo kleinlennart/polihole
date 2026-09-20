@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
+import { content } from "@/lib/content";
 
 export type Variant = "polihole" | "politicize";
 
@@ -99,7 +100,7 @@ export function CardShell({
               onClick={onRestart}
               className={`order-1 px-6 py-3 text-base font-semibold ${s.primary} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:order-2`}
             >
-              Shuffle and deal again
+              {content.deck.restart}
             </button>
           ) : (
             <button
@@ -107,7 +108,7 @@ export function CardShell({
               onClick={onNext}
               className={`order-1 px-6 py-3 text-base font-semibold ${s.primary} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:order-2`}
             >
-              Next card
+              {content.deck.next}
             </button>
           )}
         </div>
@@ -116,11 +117,17 @@ export function CardShell({
   );
 }
 
-export function DeckFinished({ note }: { note: string }) {
+export function DeckFinished({
+  title,
+  note,
+}: {
+  title: string;
+  note: string;
+}) {
   return (
     <div className="deck-enter mx-auto w-full max-w-[22ch]">
       <h2 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
-        That&apos;s the whole deck.
+        {title}
       </h2>
       <p className="mt-5 max-w-[34ch] text-lg leading-snug opacity-70">
         {note}

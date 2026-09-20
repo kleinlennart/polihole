@@ -1,20 +1,26 @@
 import Link from "next/link";
-import { claims, words } from "@/lib/decks";
+import { QuoteHeader } from "@/components/quote-header";
+import { content, fill } from "@/lib/content";
+import { claims } from "@/lib/decks";
 
+const { home, polihole, politicize } = content;
+
+// The app and its first deck share a name, so the home screen shows the decks
+// and nothing above them — the wordmark would read as a second Polihole.
 const decks = [
   {
     href: "/polihole",
-    name: "Polihole",
-    blurb: "A claim on every card. Agree, disagree, or stall convincingly.",
-    count: `${claims.length} claims`,
+    name: polihole.title,
+    blurb: polihole.blurb,
+    count: fill(polihole.count, { count: claims.length }),
     field: "bg-ballot text-white hover:bg-ballot-deep focus-visible:outline-ballot",
     quiet: "text-white/65",
   },
   {
     href: "/politicize",
-    name: "Politicize This",
-    blurb: "One word, no prompt. Make the case that it's political.",
-    count: `${words.length} words`,
+    name: politicize.title,
+    blurb: politicize.blurb,
+    count: null,
     field: "bg-riso text-black hover:bg-riso-deep focus-visible:outline-riso",
     quiet: "text-black/65",
   },
@@ -23,12 +29,24 @@ const decks = [
 export default function Home() {
   return (
     <main className="flex min-h-[100svh] flex-1 flex-col">
-      <div className="px-5 py-7 sm:px-8 sm:py-9">
-        <h1 className="text-2xl font-extrabold tracking-[-0.02em]">Polihole</h1>
-        <p className="mt-1 max-w-[42ch] text-base opacity-65">
-          Two decks for starting arguments. Neither one settles anything.
-        </p>
-      </div>
+      {/* One variable sizes the quote and the box the About link is centred in,
+          so the link sits on the quote's first line at every width. */}
+      <header className="flex items-start justify-between gap-6 px-5 pt-6 pb-5 [--quote-leading:1.1] [--quote-size:clamp(1.4rem,3vw,2.1rem)] sm:px-8 sm:pt-8 sm:pb-6">
+        <div>
+          <QuoteHeader />
+          <p className="mt-3 text-balance text-base leading-snug opacity-75 sm:text-lg">
+            {home.tagline}
+          </p>
+        </div>
+        <span className="flex h-[calc(var(--quote-size)*var(--quote-leading))] shrink-0 items-center">
+          <Link
+            href="/about"
+            className="text-sm font-semibold underline decoration-2 underline-offset-4 opacity-65 transition-opacity hover:opacity-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:text-base"
+          >
+            {home.aboutLink}
+          </Link>
+        </span>
+      </header>
 
       <div className="flex flex-1 flex-col sm:flex-row">
         {decks.map((deck) => (
@@ -38,9 +56,11 @@ export default function Home() {
             className={`group flex flex-1 flex-col justify-end p-6 transition-colors sm:p-9 ${deck.field} focus-visible:outline focus-visible:-outline-offset-4 focus-visible:outline-2`}
           >
             <div>
-              <p className={`mb-2 text-sm font-semibold tabular-nums ${deck.quiet}`}>
-                {deck.count}
-              </p>
+              {deck.count ? (
+                <p className={`mb-2 text-sm font-semibold tabular-nums ${deck.quiet}`}>
+                  {deck.count}
+                </p>
+              ) : null}
               <h2 className="text-balance text-[clamp(2.25rem,7vw,4rem)] font-extrabold leading-[0.98] tracking-[-0.03em]">
                 {deck.name}
               </h2>

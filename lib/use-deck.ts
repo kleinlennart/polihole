@@ -1,7 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { shuffleAvoiding } from "@/lib/decks";
+import { useHydrated } from "@/lib/use-hydrated";
 
 const storagePrefix = "polihole:last-seen:";
 
@@ -19,22 +20,6 @@ function writeLastSeen(key: string, id: string) {
   } catch {
     // ignore
   }
-}
-
-const noopSubscribe = () => () => {};
-
-/**
- * False while rendering on the server and through hydration, true afterwards.
- * The deal has to wait for this: shuffling during the export would bake one
- * fixed order into the HTML, and shuffling during hydration would disagree
- * with it.
- */
-function useHydrated() {
-  return useSyncExternalStore(
-    noopSubscribe,
-    () => true,
-    () => false,
-  );
 }
 
 export type Deck<T> = {

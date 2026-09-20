@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
+import { content } from "@/lib/content";
 import { ServiceWorker } from "@/components/service-worker";
 
 // Franklin Gothic is the voice of a century of ballot papers and campaign
@@ -12,10 +13,13 @@ const libreFranklin = Libre_Franklin({
 });
 
 export const metadata: Metadata = {
-  title: "Polihole",
-  description:
-    "Two discussion-starter card decks for political science students: Polihole and Politicize This.",
-  appleWebApp: { capable: true, title: "Polihole", statusBarStyle: "default" },
+  title: content.app.name,
+  description: content.app.description,
+  appleWebApp: {
+    capable: true,
+    title: content.app.name,
+    statusBarStyle: "default",
+  },
 };
 
 export const viewport: Viewport = {
@@ -26,7 +30,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="en"
+      lang={content.locale}
       className={`${libreFranklin.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">

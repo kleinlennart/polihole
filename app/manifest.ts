@@ -1,15 +1,15 @@
 import type { MetadataRoute } from "next";
 import { basePath } from "@/lib/base-path";
+import { content } from "@/lib/content";
 
 // Metadata routes are Route Handlers; a static export needs them pinned.
 export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Polihole — political discussion decks",
-    short_name: "Polihole",
-    description:
-      "Two discussion-starter card decks for political science students: Polihole and Politicize This.",
+    name: content.app.fullName,
+    short_name: content.app.name,
+    description: content.app.description,
     // Manifest URLs are resolved against the origin, not the manifest's own
     // location, so every one of these carries the basePath.
     start_url: `${basePath}/`,

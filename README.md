@@ -48,8 +48,21 @@ GitHub Actions**. Live at `https://kleinlennart.github.io/polihole/`.
 
 ## Content
 
-Both decks are plain JSON in [`data/`](data/), imported at build time so they
-ship inside the app bundle and work offline with no fetch.
+**Interface copy** — every string the app displays lives in
+[`content/en.json`](content/en.json): headings, buttons, blurbs, end-of-deck
+messages, the app name and description used by the manifest. Edit that file and
+the whole interface follows; no component holds its own text.
+
+`{count}` placeholders are filled at render time from the real deck length, so
+the end-of-deck copy stays honest as decks grow.
+
+To add a language, copy `content/en.json`, translate the values, and switch
+between them in [`lib/content.ts`](lib/content.ts) — the `Content` type checks a
+new file against the English one, so a missing key is a build error. The decks
+themselves would need translating separately.
+
+**Deck data** — both decks are plain JSON in [`data/`](data/), imported at build
+time so they ship inside the app bundle and work offline with no fetch.
 
 `data/claims.json`:
 

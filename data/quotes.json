@@ -1,0 +1,72 @@
+[
+  {
+    "include": true,
+    "short": "In our age there is no such thing as keeping out of politics.",
+    "long": "In our age there is no such thing as keeping out of politics. All issues are political issues, and politics itself is a mass of lies, evasions, folly, hatred and schizophrenia.",
+    "author": "George Orwell",
+    "context": "Politics and the English Language, 1946"
+  },
+  {
+    "include": true,
+    "short": "Political debate is futile.",
+    "long": "Political debate is futile because it is based on the naive premise that we can be convinced by the logical arguments of our enemies to change our inner selves.",
+    "author": "Guillermo Jiménez",
+    "context": null
+  },
+  {
+    "include": false,
+    "short": "Man is by nature a political animal.",
+    "long": "Man is by nature a political animal, and he who is without a city, by nature and not by accident, is either a poor sort of being or a being higher than man.",
+    "author": "Aristotle",
+    "context": "Politics, c. 350 BC"
+  },
+  {
+    "include": false,
+    "short": "Politics is a slow boring of hard boards.",
+    "long": "Politics is a strong and slow boring of hard boards. It takes both passion and perspective.",
+    "author": "Max Weber",
+    "context": "Politics as a Vocation, 1919"
+  },
+  {
+    "include": false,
+    "short": "Who gets what, when, and how.",
+    "long": "Politics is the study of who gets what, when, and how.",
+    "author": "Harold Lasswell",
+    "context": "Politics: Who Gets What, When, How, 1936"
+  },
+  {
+    "include": false,
+    "short": "War is the continuation of politics by other means.",
+    "long": "War is not merely a political act but a real political instrument, a continuation of political intercourse, a carrying out of the same by other means.",
+    "author": "Carl von Clausewitz",
+    "context": "On War, 1832"
+  },
+  {
+    "include": false,
+    "short": "There are no personal solutions at this time.",
+    "long": "There are no personal solutions at this time. There is only collective action for a collective solution.",
+    "author": "Carol Hanisch",
+    "context": "The Personal Is Political, 1969"
+  },
+  {
+    "include": false,
+    "short": "I hate the indifferent.",
+    "long": "I hate the indifferent. I believe that living means taking sides. Those who really live cannot help being a citizen and a partisan.",
+    "author": "Antonio Gramsci",
+    "context": "La Città Futura, 1917"
+  },
+  {
+    "include": false,
+    "short": "A way of ruling divided societies without undue violence.",
+    "long": "Politics is a way of ruling in divided societies without undue violence.",
+    "author": "Bernard Crick",
+    "context": "In Defence of Politics, 1962"
+  },
+  {
+    "include": false,
+    "short": "The distinction between fact and fiction no longer exists.",
+    "long": "The ideal subject of totalitarian rule is not the convinced Nazi or the convinced communist, but people for whom the distinction between fact and fiction and the distinction between true and false no longer exist.",
+    "author": "Hannah Arendt",
+    "context": "The Origins of Totalitarianism, 1951"
+  }
+]

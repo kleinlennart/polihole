@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import { CardShell, DeckFinished } from "@/components/card-shell";
+import { content, fill } from "@/lib/content";
 import { claims, type Claim } from "@/lib/decks";
 import { useDeck } from "@/lib/use-deck";
+
+const copy = content.polihole;
 
 export default function PoliholePage() {
   const deck = useDeck<Claim>(claims, (c) => c.id, "polihole");
@@ -12,7 +15,7 @@ export default function PoliholePage() {
   return (
     <CardShell
       variant="polihole"
-      title="Polihole"
+      title={copy.title}
       index={deck.index}
       total={deck.total}
       done={deck.done}
@@ -22,11 +25,14 @@ export default function PoliholePage() {
       footer={card ? <SourceNote key={card.id} source={card.source} /> : null}
     >
       {deck.done ? (
-        <DeckFinished note="Sixty-seven claims, no winner declared. Shuffle them and the arguments come out differently." />
+        <DeckFinished
+          title={copy.finishedTitle}
+          note={fill(copy.finishedNote, { count: deck.total })}
+        />
       ) : card ? (
         <ClaimCard key={card.id} card={card} />
       ) : (
-        <p className="sr-only">Dealing the deck</p>
+        <p className="sr-only">{content.deck.dealing}</p>
       )}
     </CardShell>
   );
@@ -55,7 +61,7 @@ function ClaimCard({ card }: { card: Claim }) {
             }}
             className="mt-7 border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           >
-            Push further
+            {copy.pushFurther}
           </button>
         )
       ) : null}
@@ -74,7 +80,7 @@ function SourceNote({ source }: { source: string }) {
         onClick={() => setShown((v) => !v)}
         className="self-start text-sm font-medium text-white/55 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
-        Where&apos;s this from?
+        {copy.sourceToggle}
       </button>
       {shown ? <p className="text-sm text-white/70">{source}</p> : null}
     </div>

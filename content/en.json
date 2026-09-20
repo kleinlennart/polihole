@@ -1,0 +1,71 @@
+{
+  "locale": "en",
+  "app": {
+    "name": "Polihole",
+    "fullName": "Polihole — political discussion decks",
+    "description": "Two discussion-starter card decks for political science students: Polihole and Politicize This."
+  },
+  "home": {
+    "tagline": "Two card games for starting arguments. Neither one settles anything.",
+    "aboutLink": "About"
+  },
+  "deck": {
+    "next": "Next card",
+    "restart": "Shuffle and deal again",
+    "dealing": "Dealing the deck"
+  },
+  "polihole": {
+    "title": "Polihole",
+    "blurb": "A claim on every card. Agree, disagree, or stall convincingly.",
+    "count": "{count} cards",
+    "pushFurther": "Push further",
+    "sourceToggle": "Where's this from?",
+    "finishedTitle": "That's the whole deck.",
+    "finishedNote": "{count} claims, no winner declared. Shuffle them and the arguments come out differently."
+  },
+  "politicize": {
+    "title": "Politicize This",
+    "blurb": "One word, no prompt. Make the case for why it's political.",
+    "prefix": "The politics of",
+    "note": "No prompt. That's the game.",
+    "finishedTitle": "That's the whole deck.",
+    "finishedNote": "{count} words, all of them political by the end. Shuffle for a new order."
+  },
+  "about": {
+    "title": "About",
+    "back": "Back to the decks",
+    "intro": "Two decks of prompts for people who enjoy arguing about politics.",
+    "lead": "Nothing is scored, nothing is saved, and nobody wins.",
+    "sections": [
+      {
+        "heading": "Polihole",
+        "body": "Deals a political claim. Argue with it, argue against it, or stall convincingly."
+      },
+      {
+        "heading": "Politicize This",
+        "body": "Deals a single word and nothing else. Make the case for why it's political. Thank you for coming to my Ted Talk."
+      },
+      {
+        "heading": "Offline",
+        "body": "Both decks are bundled with the app, so it runs with no connection once it's open. Add it to your home screen and it behaves like any other app."
+      }
+    ],
+    "credits": "This project has been inspired by {askhole}, the {leftValues} and the {politicalCompass}.",
+    "links": {
+      "askhole": {
+        "label": "Askhole",
+        "url": "https://askhole.io/"
+      },
+      "leftValues": {
+        "label": "Left Values Survey",
+        "url": "https://leftvalues.github.io/"
+      },
+      "politicalCompass": {
+        "label": "Political Compass",
+        "url": "https://www.politicalcompass.org/"
+      }
+    },
+    "affiliation": "No affiliation with any of them.",
+    "disclaimer": "And no endorsement of anything on any card."
+  }
+}
