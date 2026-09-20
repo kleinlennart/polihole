@@ -57,12 +57,12 @@ export default function PoliticizePage() {
         <div className="mx-auto w-full max-w-4xl">
           {/* The prefix is outside the keyed element on purpose: it's the same
               on every card, so it shouldn't re-animate when the word changes. */}
-          <p className="text-[clamp(1.375rem,3.4vw,2rem)] font-medium leading-none text-black/60">
+          <p className="text-[clamp(1.375rem,3.4vw,2rem)] leading-none font-medium text-black/60">
             {copy.prefix}
           </p>
           <p
             key={word}
-            className="deck-enter mt-3 text-balance text-[clamp(3.25rem,12vw,7.5rem)] font-extrabold leading-[0.95] tracking-[-0.035em]"
+            className="deck-enter mt-3 text-[clamp(3.25rem,12vw,7.5rem)] leading-[0.95] font-extrabold tracking-[-0.035em] text-balance"
           >
             {word}
           </p>
@@ -87,7 +87,7 @@ export default function PoliticizePage() {
             ) : (
               <>
                 <p
-                  className={`text-[clamp(2.25rem,6vw,3.5rem)] font-extrabold leading-none tabular-nums tracking-[-0.02em] ${
+                  className={`text-[clamp(2.25rem,6vw,3.5rem)] leading-none font-extrabold tracking-[-0.02em] tabular-nums ${
                     timer.phase === "finished" ? "text-black" : "text-black/50"
                   }`}
                 >

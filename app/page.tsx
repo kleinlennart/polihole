@@ -15,7 +15,8 @@ const decks = [
     name: polihole.title,
     blurb: polihole.blurb,
     count: fill(polihole.count, { count: claims.length }),
-    field: "bg-ballot text-white hover:bg-ballot-deep focus-visible:outline-ballot",
+    field:
+      "bg-ballot text-white hover:bg-ballot-deep focus-visible:outline-ballot",
     quiet: "text-white/65",
   },
   {
@@ -34,7 +35,7 @@ export default function Home() {
       <header className="flex items-start justify-between gap-6 px-5 pt-6 pb-5 [--quote-leading:1.1] [--quote-size:clamp(1.4rem,3vw,2.1rem)] sm:px-8 sm:pt-8 sm:pb-6">
         <div>
           <QuoteHeader />
-          <p className="mt-3 text-balance text-base leading-snug opacity-75 sm:text-lg">
+          <p className="mt-3 text-base leading-snug text-balance opacity-75 sm:text-lg">
             {home.tagline}
           </p>
         </div>
@@ -64,18 +65,22 @@ export default function Home() {
           <Link
             key={deck.href}
             href={deck.href}
-            className={`group flex flex-1 flex-col justify-end p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] transition-colors sm:p-9 sm:pb-[max(2.25rem,env(safe-area-inset-bottom))] ${deck.field} focus-visible:outline focus-visible:-outline-offset-4 focus-visible:outline-2`}
+            className={`group flex flex-1 flex-col justify-end p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] transition-colors sm:p-9 sm:pb-[max(2.25rem,env(safe-area-inset-bottom))] ${deck.field} focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-4`}
           >
             <div>
               {deck.count ? (
-                <p className={`mb-2 text-sm font-semibold tabular-nums ${deck.quiet}`}>
+                <p
+                  className={`mb-2 text-sm font-semibold tabular-nums ${deck.quiet}`}
+                >
                   {deck.count}
                 </p>
               ) : null}
-              <h2 className="text-balance text-[clamp(2.25rem,7vw,4rem)] font-extrabold leading-[0.98] tracking-[-0.03em]">
+              <h2 className="text-[clamp(2.25rem,7vw,4rem)] leading-[0.98] font-extrabold tracking-[-0.03em] text-balance">
                 {deck.name}
               </h2>
-              <p className={`mt-3 max-w-[30ch] text-lg leading-snug ${deck.quiet}`}>
+              <p
+                className={`mt-3 max-w-[30ch] text-lg leading-snug ${deck.quiet}`}
+              >
                 {deck.blurb}
               </p>
             </div>

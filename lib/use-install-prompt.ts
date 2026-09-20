@@ -112,5 +112,9 @@ export function useInstallPrompt(): InstallOffer | null {
   // unlike iOS there's no manual gesture worth describing instead.
   if (platform === "android" && !deferred) return null;
 
-  return { platform, install: platform === "android" ? install : null, dismiss };
+  return {
+    platform,
+    install: platform === "android" ? install : null,
+    dismiss,
+  };
 }

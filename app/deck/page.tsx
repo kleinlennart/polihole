@@ -45,7 +45,7 @@ function ClaimCard({ card }: { card: Claim }) {
 
   return (
     <div className="deck-enter mx-auto w-full max-w-4xl">
-      <p className="text-balance text-[clamp(2.5rem,7vw,4.25rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
+      <p className="text-[clamp(2.5rem,7vw,4.25rem)] leading-[1.04] font-extrabold tracking-[-0.02em] text-balance">
         {card.text}
       </p>
 

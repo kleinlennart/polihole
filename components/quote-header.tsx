@@ -18,11 +18,11 @@ export function QuoteHeader() {
   }
 
   return (
-    <p className="min-h-[4rem] max-w-[24ch] text-balance text-[length:var(--quote-size)] font-extrabold leading-[var(--quote-leading)] tracking-[-0.02em] sm:min-h-[3.25rem] sm:max-w-[34ch]">
+    <p className="min-h-[4rem] max-w-[24ch] text-[length:var(--quote-size)] leading-[var(--quote-leading)] font-extrabold tracking-[-0.02em] text-balance sm:min-h-[3.25rem] sm:max-w-[34ch]">
       {quote ? (
         <span className="deck-fade">
           &ldquo;{quote.short ?? quote.long}&rdquo;{" "}
-          <span className="whitespace-nowrap text-base font-normal opacity-50">
+          <span className="text-base font-normal whitespace-nowrap opacity-50">
             – {quote.author}
           </span>
         </span>

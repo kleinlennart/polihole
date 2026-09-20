@@ -101,12 +101,12 @@ starts a new deal. One pass never repeats a card.
 
 ## Structure
 
-| Path                               | What's in it                                       |
-| ---------------------------------- | -------------------------------------------------- |
-| `app/page.tsx`                     | Home: the two decks as a two-option ballot         |
-| `app/deck/`, `app/politicize/`     | One full-screen card view each                     |
-| `components/card-shell.tsx`        | Shared chrome: counter, next, end-of-deck          |
-| `lib/decks.ts`                     | Deck data, types, shuffle                          |
-| `lib/use-deck.ts`                  | One shuffled pass, end screen, no-immediate-repeat |
-| `app/manifest.ts`                  | Web app manifest (basePath-aware)                  |
-| `scripts/generate-sw.mjs`          | Post-build service worker generation               |
+| Path                           | What's in it                                       |
+| ------------------------------ | -------------------------------------------------- |
+| `app/page.tsx`                 | Home: the two decks as a two-option ballot         |
+| `app/deck/`, `app/politicize/` | One full-screen card view each                     |
+| `components/card-shell.tsx`    | Shared chrome: counter, next, end-of-deck          |
+| `lib/decks.ts`                 | Deck data, types, shuffle                          |
+| `lib/use-deck.ts`              | One shuffled pass, end screen, no-immediate-repeat |
+| `app/manifest.ts`              | Web app manifest (basePath-aware)                  |
+| `scripts/generate-sw.mjs`      | Post-build service worker generation               |

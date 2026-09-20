@@ -35,10 +35,7 @@
     "blurb": "The Politics of X. Make the case for why it matters.",
     "prefix": "The Politics of",
     "note": "Explain! You have 30 seconds / 1 min.",
-    "timerOptions": [
-      30,
-      60
-    ],
+    "timerOptions": [30, 60],
     "timerStart": "Start {seconds}s",
     "timerStop": "Stop",
     "finishedTitle": "That's the whole deck.",

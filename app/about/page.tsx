@@ -21,7 +21,7 @@ export default function AboutPage() {
         {copy.back}
       </Link>
 
-      <h1 className="mt-10 text-balance text-[clamp(1.9rem,5vw,2.9rem)] font-extrabold leading-[1.1] tracking-[-0.025em]">
+      <h1 className="mt-10 text-[clamp(1.9rem,5vw,2.9rem)] leading-[1.1] font-extrabold tracking-[-0.025em] text-balance">
         {copy.intro}
       </h1>
       <p className="mt-4 text-xl leading-snug opacity-65">{copy.lead}</p>

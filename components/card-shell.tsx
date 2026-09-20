@@ -153,16 +153,10 @@ export function CardShell({
   );
 }
 
-export function DeckFinished({
-  title,
-  note,
-}: {
-  title: string;
-  note: string;
-}) {
+export function DeckFinished({ title, note }: { title: string; note: string }) {
   return (
     <div className="deck-enter mx-auto w-full max-w-[22ch]">
-      <h2 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-6xl">
+      <h2 className="text-4xl leading-[1.05] font-extrabold tracking-tight text-balance sm:text-6xl">
         {title}
       </h2>
       <p className="mt-5 max-w-[34ch] text-lg leading-snug opacity-70">
