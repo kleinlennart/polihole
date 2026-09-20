@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Libre_Franklin } from "next/font/google";
 import "./globals.css";
 import { content } from "@/lib/content";
-import { ServiceWorker } from "@/components/service-worker";
+import { UpdatePrompt } from "@/components/update-prompt";
 
 // Franklin Gothic is the voice of a century of ballot papers and campaign
 // signage — the right gothic for a deck of political claims.
@@ -35,8 +35,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${libreFranklin.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
+        <UpdatePrompt />
         {children}
-        <ServiceWorker />
       </body>
     </html>
   );

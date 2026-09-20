@@ -159,6 +159,23 @@
   }
 }
 
+/* The update band arriving at the top edge — down from off-screen, where the
+   cards come up from below. */
+@utility banner-enter {
+  animation: banner-enter 260ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes banner-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @utility deck-enter {
   animation: deck-enter 220ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }

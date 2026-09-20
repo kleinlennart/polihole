@@ -47,6 +47,11 @@
     "action": "Install",
     "dismissLabel": "Dismiss"
   },
+  "update": {
+    "message": "A new version is ready. You won't lose your place.",
+    "action": "Reload",
+    "dismissLabel": "Dismiss"
+  },
   "about": {
     "title": "About",
     "back": "Go back",
@@ -109,7 +114,7 @@
         }
       ]
     },
-    "credits": "This project was inspired by {askhole}, the {leftValues} and {politicalCompass}.",
+    "credits": "This project was inspired by {askhole}, {politicalCompass}, and the {leftValues}.",
     "links": {
       "source": {
         "label": "GitHub",

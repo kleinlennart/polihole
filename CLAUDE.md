@@ -21,8 +21,12 @@ To preview the production build the way it is actually deployed (under a `/polih
 
 ```bash
 mkdir -p /tmp/preview && ln -sfn "$PWD/out" /tmp/preview/polihole
-python3 -m http.server 4521 --directory /tmp/preview   # http://localhost:4521/polihole/
+python3 -c "from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; import functools; \
+ThreadingHTTPServer(('', 4521), functools.partial(SimpleHTTPRequestHandler, directory='/tmp/preview')).serve_forever()"
+# http://localhost:4521/polihole/
 ```
+
+It has to be the **threading** server, not plain `python3 -m http.server`: the worker's install fires one fetch per precached URL at once, and a single-threaded server drops enough of them that the install fails and the update never lands.
 
 ## What this is
 
@@ -36,7 +40,7 @@ Routes: `/` (home, two decks) · `/deck` (Polihole, claims) · `/politicize` (Po
 
 The app is served from a sub-path on GitHub Pages. `next.config.ts` sets `basePath`/`assetPrefix` from `process.env.BASE_PATH ?? "/polihole"` **and** re-exports it as `NEXT_PUBLIC_BASE_PATH`, which `lib/base-path.ts` inlines at build time.
 
-Next auto-prefixes what it controls — `next/link`, `next/image`, metadata routes. It does **not** prefix hand-written URL strings. Anything hand-written (service worker registration and scope, manifest `start_url`/`scope`/`icons`, files served from `public/`) must prepend `basePath` from `lib/base-path.ts` itself. See `app/manifest.ts` and `components/service-worker.tsx` for the pattern.
+Next auto-prefixes what it controls — `next/link`, `next/image`, metadata routes. It does **not** prefix hand-written URL strings. Anything hand-written (service worker registration and scope, manifest `start_url`/`scope`/`icons`, files served from `public/`) must prepend `basePath` from `lib/base-path.ts` itself. See `app/manifest.ts` and `lib/use-app-update.ts` for the pattern.
 
 `BASE_PATH=""` (an empty string, not unset) builds/serves at the root — that is what the `dev` script does.
 
@@ -47,6 +51,20 @@ Next auto-prefixes what it controls — `next/link`, `next/image`, metadata rout
 ### Build is two halves
 
 `next build` then `node scripts/generate-sw.mjs`. The script walks `out/`, writes `out/sw.js` with a precache list of the whole site plus a content-hash cache name, and drops `out/.nojekyll`. `out/sw.js` is generated — never edit it. The script reads `BASE_PATH` itself with the same `/polihole` default, so both halves of the build must see the same value; the CI workflow passes `BASE_PATH` explicitly from the Pages `base_path` output.
+
+### Updating an installed app
+
+The worker serves cache-first, so a deploy is invisible to an installed copy until the page is built again from the new cache. Three pieces make that happen, and they only work together:
+
+- `scripts/generate-sw.mjs` **must not call `skipWaiting()` in `install`.** A worker that takes over mid-session leaves the open page rendering old HTML against a new cache. It installs, then waits for the message `"polihole:skip-waiting"`.
+- `lib/use-app-update.ts` registers the worker, re-checks on `visibilitychange` (an installed app resumed from memory never navigates, so nothing else would ever look), and surfaces the waiting worker.
+- `components/update-prompt.tsx` offers the swap. Accepting posts the message; the worker activates and claims the page, and `controllerchange` reloads it. `sessionStorage` puts the deck back on the same card.
+
+Ignoring the offer is safe — the worker takes over on its own once every tab is closed, which for an installed app means fully swiped away.
+
+Precaching uses `fetch(url, { cache: "reload" })` rather than `cache.addAll`: Pages serves with `max-age=600`, and a plain `addAll` can file a stale page under the new cache name for ten minutes after a deploy.
+
+Note that Next stamps a random build ID into three `_next/static/<buildId>/` paths, so **every** build produces a new cache name and shows everyone the band — including a docs-only push, since `deploy.yml` has no path filter.
 
 ### All display copy lives in `content/en.json`
 
