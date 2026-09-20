@@ -1,21 +1,32 @@
 "use client";
 
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 import { CardShell, DeckFinished } from "@/components/card-shell";
 import { content, fill } from "@/lib/content";
 import { wordId, wordNumber, words, type Word } from "@/lib/decks";
 import { useDeck } from "@/lib/use-deck";
 import { formatTime, useTimer } from "@/lib/use-timer";
+import { useWordSize } from "@/lib/use-word-size";
 
 const copy = content.politicize;
 
 const timerButton =
   "border border-black/35 px-5 py-2.5 text-base font-semibold transition-colors hover:bg-black/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black";
 
+/** Sized off the viewport, for the frames before the word has been measured. */
+const wordSizeFallback = "clamp(3.25rem,12vw,7.5rem)";
+
 export default function PoliticizePage() {
   const deck = useDeck<Word>(words, wordId, "politicize");
   const timer = useTimer();
   const word = deck.current;
+
+  // Each card is set as large as it will go, so a short word fills the screen
+  // instead of floating in the middle of it. One fixed size for the whole deck
+  // can only ever be as big as the longest word allows, which leaves most
+  // cards far smaller than they could be.
+  const wordRef = useRef<HTMLParagraphElement>(null);
+  const wordSize = useWordSize(wordRef, word ?? "", wordSizeFallback);
 
   // A new word is a new explanation, so any running countdown is cleared here
   // rather than in an effect — every route to another card comes through these.
@@ -54,7 +65,7 @@ export default function PoliticizePage() {
           note={fill(copy.finishedNote, { count: deck.total })}
         />
       ) : word ? (
-        <div className="mx-auto w-full max-w-4xl">
+        <div className="@container mx-auto w-full max-w-4xl">
           {/* The prefix is outside the keyed element on purpose: it's the same
               on every card, so it shouldn't re-animate when the word changes. */}
           <p className="text-[clamp(1.375rem,3.4vw,2rem)] leading-none font-medium text-black/60">
@@ -62,7 +73,9 @@ export default function PoliticizePage() {
           </p>
           <p
             key={word}
-            className="deck-enter mt-3 text-[clamp(3.25rem,12vw,7.5rem)] leading-[0.95] font-extrabold tracking-[-0.035em] text-balance"
+            ref={wordRef}
+            style={{ fontSize: wordSize }}
+            className="deck-enter mt-3 leading-[0.95] font-extrabold tracking-[-0.035em] text-balance"
           >
             {word}
           </p>

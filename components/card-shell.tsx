@@ -92,7 +92,7 @@ export function CardShell({
         flashing ? "flash-invert" : ""
       }`}
     >
-      <header className="flex items-center justify-between px-5 pt-5 sm:px-8 sm:pt-7">
+      <header className="flex items-center justify-between px-7 pt-5 sm:px-8 sm:pt-7">
         <Link
           href="/"
           aria-label={`${content.deck.exit} ${title}`}
@@ -110,12 +110,14 @@ export function CardShell({
 
       <section
         onClick={done ? undefined : onNext}
-        className="flex flex-1 flex-col justify-center px-5 py-10 sm:px-8"
+        // A phone on its side has no height to spare: the generous vertical
+        // padding is the first thing to give, before the card's type is.
+        className="flex flex-1 flex-col justify-center px-7 py-10 sm:px-8 [@media(max-height:520px)]:py-4"
       >
         {children}
       </section>
 
-      <footer className="px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:px-8 sm:pb-[max(2rem,env(safe-area-inset-bottom))]">
+      <footer className="px-7 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:px-8 sm:pb-[max(2rem,env(safe-area-inset-bottom))]">
         <div
           className={`flex flex-col gap-4 border-t pt-4 sm:flex-row sm:items-start sm:justify-between sm:gap-3 ${s.hairline}`}
         >

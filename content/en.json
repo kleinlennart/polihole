@@ -28,7 +28,7 @@
     "pushFurther": "Push further",
     "sourceToggle": "Where's this from?",
     "finishedTitle": "That's the whole deck.",
-    "finishedNote": "{count} claims, no winner declared. Shuffle them and the arguments come out differently."
+    "finishedNote": "{count} discussions, nothing changed. Or did it?"
   },
   "politicize": {
     "title": "Politicize This",
@@ -55,7 +55,7 @@
     "sections": [
       {
         "heading": "Polihole",
-        "body": "Deals a political claim. Argue with it, argue against it, or stall convincingly."
+        "body": "Deals a political claim or question. Argue for it, argue against it, argue about arguing."
       },
       {
         "heading": "Politicize This",
