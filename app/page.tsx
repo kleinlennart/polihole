@@ -61,7 +61,7 @@ export default function Home() {
           <Link
             key={deck.href}
             href={deck.href}
-            className={`group flex flex-1 flex-col justify-end p-6 transition-colors sm:p-9 ${deck.field} focus-visible:outline focus-visible:-outline-offset-4 focus-visible:outline-2`}
+            className={`group flex flex-1 flex-col justify-end p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] transition-colors sm:p-9 sm:pb-[max(2.25rem,env(safe-area-inset-bottom))] ${deck.field} focus-visible:outline focus-visible:-outline-offset-4 focus-visible:outline-2`}
           >
             <div>
               {deck.count ? (

@@ -115,10 +115,11 @@ export function CardShell({
         {children}
       </section>
 
-      <footer className="px-5 pb-5 sm:px-8 sm:pb-8">
+      <footer className="px-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:px-8 sm:pb-[max(2rem,env(safe-area-inset-bottom))]">
         <div
-          className={`flex flex-col gap-3 border-t pt-4 sm:flex-row-reverse sm:items-start sm:justify-between ${s.hairline}`}
+          className={`flex flex-col gap-4 border-t pt-4 sm:flex-row sm:items-start sm:justify-between sm:gap-3 ${s.hairline}`}
         >
+          <div className="min-h-6">{footer}</div>
           <div className="flex gap-3">
             <button
               type="button"
@@ -146,7 +147,6 @@ export function CardShell({
               </button>
             )}
           </div>
-          <div className="min-h-6">{footer}</div>
         </div>
       </footer>
     </main>

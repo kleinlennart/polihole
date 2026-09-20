@@ -1,3 +1,3 @@
 # TODO
 
-- center cards on mobile
+- offer up the PWA install on mobile

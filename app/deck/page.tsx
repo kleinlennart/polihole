@@ -45,7 +45,7 @@ function ClaimCard({ card }: { card: Claim }) {
 
   return (
     <div className="deck-enter mx-auto w-full max-w-4xl">
-      <p className="text-balance text-[clamp(2rem,6.2vw,4.25rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
+      <p className="text-balance text-[clamp(2.5rem,7vw,4.25rem)] font-extrabold leading-[1.04] tracking-[-0.02em]">
         {card.text}
       </p>
 
@@ -75,16 +75,16 @@ function SourceNote({ source }: { source: string }) {
   const [shown, setShown] = useState(false);
 
   return (
-    <div className="flex flex-col gap-1">
+    <p className="text-sm">
       <button
         type="button"
         aria-expanded={shown}
         onClick={() => setShown((v) => !v)}
-        className="self-start text-sm font-medium text-white/55 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        className="font-medium text-white/55 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
       >
         {copy.sourceToggle}
       </button>
-      {shown ? <p className="text-sm text-white/70">{source}</p> : null}
-    </div>
+      {shown ? <span className="text-white/70"> {source}</span> : null}
+    </p>
   );
 }
