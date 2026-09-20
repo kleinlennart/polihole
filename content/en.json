@@ -109,7 +109,7 @@
         }
       ]
     },
-    "credits": "This project was inspired by {askhole}, the {leftValues} and the {politicalCompass}.",
+    "credits": "This project was inspired by {askhole}, the {leftValues} and {politicalCompass}.",
     "links": {
       "source": {
         "label": "GitHub",
@@ -124,7 +124,7 @@
         "url": "https://leftvalues.github.io/"
       },
       "politicalCompass": {
-        "label": "Political Compass",
+        "label": "The Political Compass",
         "url": "https://www.politicalcompass.org/"
       }
     },

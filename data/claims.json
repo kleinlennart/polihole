@@ -534,5 +534,501 @@
     "source": "Inspired by Left Values Survey",
     "axis": "social",
     "tags": ["culture", "economy"]
+  },
+  {
+    "id": "c068",
+    "text": "If economic globalisation is inevitable, it should primarily serve humanity rather than the interests of trans-national corporations.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c069",
+    "text": "I'd always support my country, whether it was right or wrong.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c070",
+    "text": "No one chooses their country of birth, so it's foolish to be proud of it.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c071",
+    "text": "Our race has many superior qualities, compared with other races.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c072",
+    "text": "The enemy of my enemy is my friend.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c073",
+    "text": "Military action that defies international law is sometimes justified.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c074",
+    "text": "There is now a worrying fusion of information and entertainment.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c075",
+    "text": "People are ultimately divided more by class than by nationality.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c076",
+    "text": "Controlling inflation is more important than controlling unemployment.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c077",
+    "text": "Because corporations cannot be trusted to voluntarily protect the environment, they require regulation.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c078",
+    "text": "“from each according to his ability, to each according to his need” is a fundamentally good idea.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c079",
+    "text": "The freer the market, the freer the people.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c080",
+    "text": "It's a sad reflection on our society that something as basic as drinking water is now a bottled, branded consumer product.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c081",
+    "text": "Land shouldn't be a commodity to be bought and sold.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c082",
+    "text": "It is regrettable that many personal fortunes are made by people who simply manipulate money and contribute nothing to their society.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c083",
+    "text": "Protectionism is sometimes necessary in trade.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c084",
+    "text": "The only social responsibility of a company should be to deliver a profit to its shareholders.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c085",
+    "text": "The rich are too highly taxed.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c086",
+    "text": "Those with the ability to pay should have access to higher standards of medical care.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c087",
+    "text": "Governments should penalise businesses that mislead the public.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c088",
+    "text": "A genuine free market requires restrictions on the ability of predator multinationals to create monopolies.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c089",
+    "text": "Abortion, when the woman's life is not threatened, should always be illegal.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c090",
+    "text": "All authority should be questioned.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c091",
+    "text": "An eye for an eye and a tooth for a tooth.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c092",
+    "text": "Taxpayers should not be expected to prop up any theatres or museums that cannot survive on a commercial basis.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c093",
+    "text": "Schools should not make classroom attendance compulsory.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c094",
+    "text": "All people have their rights, but it is better for all of us that different sorts of people should keep to their own kind.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c095",
+    "text": "Good parents sometimes have to spank their children.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c096",
+    "text": "It's natural for children to keep some secrets from their parents.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c097",
+    "text": "Possessing marijuana for personal use should not be a criminal offence.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c098",
+    "text": "The prime function of schooling should be to equip the future generation to find jobs.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c099",
+    "text": "People with serious inheritable disabilities should not be allowed to reproduce.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c100",
+    "text": "The most important thing for children to learn is to accept discipline.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c101",
+    "text": "There are no savage and civilised peoples; there are only different cultures.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c102",
+    "text": "Those who are able to work, and refuse the opportunity, should not expect society's support.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c103",
+    "text": "When you are troubled, it's better not to think about it, but to keep busy with more cheerful things.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c104",
+    "text": "First-generation immigrants can never be fully integrated within their new country.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c105",
+    "text": "What's good for the most successful corporations is always, ultimately, good for all of us.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c106",
+    "text": "No broadcasting institution, however independent its content, should receive public funding.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c107",
+    "text": "Our civil liberties are being excessively curbed in the name of counter-terrorism.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c108",
+    "text": "A significant advantage of a one-party state is that it avoids all the arguments that delay progress in a democratic political system.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c109",
+    "text": "Although the electronic age makes official surveillance easier, only wrongdoers need to be worried.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c110",
+    "text": "The death penalty should be an option for the most serious crimes.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c111",
+    "text": "In a civilised society, one must always have people above to be obeyed and people below to be commanded.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c112",
+    "text": "Abstract art that doesn't represent anything shouldn't be considered art at all.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c113",
+    "text": "In criminal justice, punishment should be more important than rehabilitation.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c114",
+    "text": "It is a waste of time to try to rehabilitate some criminals.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c115",
+    "text": "The businessperson and the manufacturer are more important than the writer and the artist.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c116",
+    "text": "Mothers may have careers, but their first duty is to be homemakers.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c117",
+    "text": "Multinational companies are unethically exploiting the plant genetic resources of developing countries.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c118",
+    "text": "Making peace with the establishment is an important aspect of maturity.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c119",
+    "text": "Astrology accurately explains many things.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c120",
+    "text": "You cannot be moral without being religious.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c121",
+    "text": "Charity is better than social security as a means of helping the genuinely disadvantaged.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c122",
+    "text": "Some people are naturally unlucky.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c123",
+    "text": "It is important that my child's school instills religious values.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c124",
+    "text": "Sex outside marriage is usually immoral.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c125",
+    "text": "A same sex couple in a stable, loving relationship should not be excluded from the possibility of child adoption.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c126",
+    "text": "Pornography, depicting consenting adults, should be legal for the adult population.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c127",
+    "text": "What goes on in a private bedroom between consenting adults is no business of the state.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c128",
+    "text": "No one can feel naturally homosexual.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
+  },
+  {
+    "id": "c129",
+    "text": "These days openness about sex has gone too far.",
+    "followUp": null,
+    "source": "The Political Compass",
+    "axis": "compass",
+    "tags": []
   }
 ]
