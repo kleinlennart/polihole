@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Polihole
 
-## Getting Started
+Two discussion-starter card games for politics nerds.
 
-First, run the development server:
+- **Polihole** — a political claim on every card
+- **Politicize This** — one word, no prompt: _The politics of Tupperware._
+
+No accounts, no backend, no scoring. Tap through, argue, move on.
+
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000/polihole
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app is served from a sub-path (`basePath: '/polihole'`) because it deploys
+to a GitHub Pages project page, so plain `localhost:3000` will 404. To run it at
+the root instead:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+BASE_PATH= npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build
 
-## Learn More
+```bash
+npm run build   # next build (static export to out/) + scripts/generate-sw.mjs
+```
 
-To learn more about Next.js, take a look at the following resources:
+`scripts/generate-sw.mjs` writes `out/sw.js` with a precache list of the whole
+exported site, and drops `out/.nojekyll`. The list has to be generated because
+Next hashes asset filenames on every build.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To preview the production build with its service worker, serve `out/` under a
+`/polihole/` path:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+mkdir -p /tmp/preview && ln -sfn "$PWD/out" /tmp/preview/polihole
+python3 -m http.server 4521 --directory /tmp/preview   # http://localhost:4521/polihole/
+```
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`.github/workflows/deploy.yml` builds on every push to `main` and publishes
+`out/` to GitHub Pages. Enable it once under **Settings → Pages → Source →
+GitHub Actions**. Live at `https://kleinlennart.github.io/polihole/`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Content
+
+Both decks are plain JSON in [`data/`](data/), imported at build time so they
+ship inside the app bundle and work offline with no fetch.
+
+`data/claims.json`:
+
+```json
+{
+  "id": "c001",
+  "text": "Front-line prompt",
+  "followUp": "Optional deeper line, or null",
+  "source": "Inspired by Left Values Survey",
+  "axis": "revolution",
+  "tags": ["revolution", "reform"]
+}
+```
+
+`data/words.json` is a flat list of words:
+
+```json
+["Inheritance", "Tupperware", "Borders"]
+```
+
+v1 deals one shuffled deck with no filter UI, but claims carry `axis` and `tags`
+so a filter can be added later without migrating the data.
+
+## Structure
+
+| Path                               | What's in it                                       |
+| ---------------------------------- | -------------------------------------------------- |
+| `app/page.tsx`                     | Home: the two decks as a two-option ballot         |
+| `app/polihole/`, `app/politicize/` | One full-screen card view each                     |
+| `components/card-shell.tsx`        | Shared chrome: counter, next, end-of-deck          |
+| `lib/decks.ts`                     | Deck data, types, shuffle                          |
+| `lib/use-deck.ts`                  | One shuffled pass, end screen, no-immediate-repeat |
+| `app/manifest.ts`                  | Web app manifest (basePath-aware)                  |
+| `scripts/generate-sw.mjs`          | Post-build service worker generation               |

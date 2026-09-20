@@ -1,0 +1,744 @@
+[
+  {
+    "id": "c001",
+    "text": "You can't fix this system. You have to break it.",
+    "followUp": "Name the last time a system fixed itself from the inside.",
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "revolution",
+      "reform"
+    ]
+  },
+  {
+    "id": "c002",
+    "text": "A revolution usually costs more than it wins.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "revolution",
+      "violence"
+    ]
+  },
+  {
+    "id": "c003",
+    "text": "You could vote your way to a completely different economy.",
+    "followUp": "If it were possible, why hasn't anyone done it?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "democracy",
+      "reform"
+    ]
+  },
+  {
+    "id": "c004",
+    "text": "Capitalism will eventually collapse on its own.",
+    "followUp": "And if it doesn't? What's the backup plan?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "capitalism",
+      "crisis"
+    ]
+  },
+  {
+    "id": "c005",
+    "text": "Violence is acceptable if what it builds is good.",
+    "followUp": "Who gets to decide it was good — the people who did it, or the people it happened to?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "violence",
+      "ethics"
+    ]
+  },
+  {
+    "id": "c006",
+    "text": "Tax the rich hard enough and inequality goes away.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "economy",
+      "inequality",
+      "tax"
+    ]
+  },
+  {
+    "id": "c007",
+    "text": "When every peaceful option is gone, an uprising is justified.",
+    "followUp": "Who certifies that the options are actually gone?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "violence",
+      "resistance"
+    ]
+  },
+  {
+    "id": "c008",
+    "text": "Factories and farms should belong to everyone, not to someone.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "economy",
+      "ownership"
+    ]
+  },
+  {
+    "id": "c009",
+    "text": "Giving workers a vote at work is enough. You don't need to change who owns it.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "work",
+      "ownership",
+      "democracy"
+    ]
+  },
+  {
+    "id": "c010",
+    "text": "Today's social democrats sold out everything the left stood for.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "revolution",
+    "tags": [
+      "left",
+      "reform"
+    ]
+  },
+  {
+    "id": "c011",
+    "text": "People's politics come from their bank balance, not their beliefs.",
+    "followUp": "Then explain everyone who votes against their own wallet.",
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "materialism",
+      "ideology"
+    ]
+  },
+  {
+    "id": "c012",
+    "text": "History is mostly one class fighting another.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "history",
+      "class"
+    ]
+  },
+  {
+    "id": "c013",
+    "text": "History gets moved by individuals and ideas, not forces.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "history",
+      "ideology"
+    ]
+  },
+  {
+    "id": "c014",
+    "text": "Everyone gives what they can. Everyone gets what they need.",
+    "followUp": "Who assesses what you can give?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "distribution",
+      "equality"
+    ]
+  },
+  {
+    "id": "c015",
+    "text": "Complete equality is actually achievable, not just a nice idea.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "equality",
+      "utopia"
+    ]
+  },
+  {
+    "id": "c016",
+    "text": "A poor country has to get rich before it can get fair.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "development",
+      "economy"
+    ]
+  },
+  {
+    "id": "c017",
+    "text": "The powerful can be talked into giving up power peacefully.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "power",
+      "reform"
+    ]
+  },
+  {
+    "id": "c018",
+    "text": "Big change happens slowly or it doesn't last.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "theory",
+    "tags": [
+      "reform",
+      "change"
+    ]
+  },
+  {
+    "id": "c019",
+    "text": "Economies run better built from the bottom up.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "economy",
+      "decentralization"
+    ]
+  },
+  {
+    "id": "c020",
+    "text": "People who live in a place plan it better than people who don't.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "local",
+      "planning"
+    ]
+  },
+  {
+    "id": "c021",
+    "text": "A computer could run an economy better than a market can.",
+    "followUp": "Would you accept its answer if you disagreed with it?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "planning",
+      "technology"
+    ]
+  },
+  {
+    "id": "c022",
+    "text": "A country in a hurry needs a plan, not a market.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "planning",
+      "development"
+    ]
+  },
+  {
+    "id": "c023",
+    "text": "Workplaces should be run by the people working in them.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "work",
+      "democracy"
+    ]
+  },
+  {
+    "id": "c024",
+    "text": "The state is just whoever holds the monopoly on violence.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "state",
+      "power"
+    ]
+  },
+  {
+    "id": "c025",
+    "text": "An economy run entirely from the top isn't socialism. It's the state playing boss.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "state",
+      "planning"
+    ]
+  },
+  {
+    "id": "c026",
+    "text": "Central planning always ends in paperwork.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "bureaucracy",
+      "planning"
+    ]
+  },
+  {
+    "id": "c027",
+    "text": "The government should be able to assign you your job.",
+    "followUp": "For a year? For life? Who signs off?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "work",
+      "state",
+      "freedom"
+    ]
+  },
+  {
+    "id": "c028",
+    "text": "Getting somewhere better requires a period of rule by one side.",
+    "followUp": "How do you tell a transition from a regime?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "centralization",
+    "tags": [
+      "state",
+      "power",
+      "transition"
+    ]
+  },
+  {
+    "id": "c029",
+    "text": "One world government. Good idea, badly executed — or bad idea?",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "global",
+      "state"
+    ]
+  },
+  {
+    "id": "c030",
+    "text": "Patriotism has no place on the left.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "nationalism",
+      "identity"
+    ]
+  },
+  {
+    "id": "c031",
+    "text": "No foreign government should get a say in another country's laws.",
+    "followUp": "Not even to stop something you'd call a crime?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "sovereignty",
+      "intervention"
+    ]
+  },
+  {
+    "id": "c032",
+    "text": "Borders between friendly countries should just be open.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "borders",
+      "migration"
+    ]
+  },
+  {
+    "id": "c033",
+    "text": "A country that believes in something should spread it abroad.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "intervention",
+      "ideology"
+    ]
+  },
+  {
+    "id": "c034",
+    "text": "You have more in common with a worker abroad than with your own boss.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "class",
+      "solidarity"
+    ]
+  },
+  {
+    "id": "c035",
+    "text": "Every people should get to decide its own future.",
+    "followUp": "Including the ones whose decision you'd hate?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "self-determination",
+      "nationalism"
+    ]
+  },
+  {
+    "id": "c036",
+    "text": "I'd accept being poorer so another country could be less poor.",
+    "followUp": "How much poorer, exactly?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "redistribution",
+      "global"
+    ]
+  },
+  {
+    "id": "c037",
+    "text": "Cultures that resemble each other should govern together.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "internationalism",
+    "tags": [
+      "federation",
+      "culture"
+    ]
+  },
+  {
+    "id": "c038",
+    "text": "Radicals should still run for office.",
+    "followUp": "Has anyone ever come back out of parliament unchanged?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "elections",
+      "strategy"
+    ]
+  },
+  {
+    "id": "c039",
+    "text": "Society should be built out of workplaces, not constituencies.",
+    "followUp": "So who speaks for everyone without a job?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "unions",
+      "work"
+    ]
+  },
+  {
+    "id": "c040",
+    "text": "Any party that leads a movement ends up ruling it.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "parties",
+      "power"
+    ]
+  },
+  {
+    "id": "c041",
+    "text": "Nothing big gets won without a mass party behind it.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "parties",
+      "strategy"
+    ]
+  },
+  {
+    "id": "c042",
+    "text": "A crowd that shows up on its own beats a plan drawn up in a meeting.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "protest",
+      "strategy"
+    ]
+  },
+  {
+    "id": "c043",
+    "text": "Movements work better loose and leaderless.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "organization",
+      "leadership"
+    ]
+  },
+  {
+    "id": "c044",
+    "text": "Unions got bought a long time ago.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "unions",
+      "cooptation"
+    ]
+  },
+  {
+    "id": "c045",
+    "text": "People keep voting for parties that harm them. That tells you parties are over.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "organization",
+    "tags": [
+      "elections",
+      "parties"
+    ]
+  },
+  {
+    "id": "c046",
+    "text": "Climate is the one fight that outranks every other fight.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "climate",
+      "priorities"
+    ]
+  },
+  {
+    "id": "c047",
+    "text": "No climate policy is worth a real drop in how people live.",
+    "followUp": "Whose living standard did you picture — yours?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "climate",
+      "growth"
+    ]
+  },
+  {
+    "id": "c048",
+    "text": "Renewables will never fully replace fossil fuels.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "energy",
+      "climate"
+    ]
+  },
+  {
+    "id": "c049",
+    "text": "End industrial farming, even if it means growing less food.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "farming",
+      "food"
+    ]
+  },
+  {
+    "id": "c050",
+    "text": "Lab-grown meat is worth serious public money.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "food",
+      "technology"
+    ]
+  },
+  {
+    "id": "c051",
+    "text": "Scrap private cars. Make transport free instead.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "transport",
+      "cities"
+    ]
+  },
+  {
+    "id": "c052",
+    "text": "People should accept real hardship to keep nature intact.",
+    "followUp": "Which people, and who asks them?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "nature",
+      "sacrifice"
+    ]
+  },
+  {
+    "id": "c053",
+    "text": "What we eat has to change completely, not slightly.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "food",
+      "consumption"
+    ]
+  },
+  {
+    "id": "c054",
+    "text": "There are too many of us for the planet to carry.",
+    "followUp": "Which of us did you have in mind?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "population",
+      "climate"
+    ]
+  },
+  {
+    "id": "c055",
+    "text": "Wrecking a bit of nature is fine if enough people gain from it.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "nature",
+      "development"
+    ]
+  },
+  {
+    "id": "c056",
+    "text": "The only way out is to live much more simply than we do.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "degrowth",
+      "climate"
+    ]
+  },
+  {
+    "id": "c057",
+    "text": "Every big state that promised a better world trashed the environment doing it.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "ecology",
+    "tags": [
+      "history",
+      "climate"
+    ]
+  },
+  {
+    "id": "c058",
+    "text": "How a country treats queer people is a front-line political issue, not a side one.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "lgbtq",
+      "rights"
+    ]
+  },
+  {
+    "id": "c059",
+    "text": "The idea that some jobs are women's work has to die.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "gender",
+      "family"
+    ]
+  },
+  {
+    "id": "c060",
+    "text": "Marriage is a leftover from a system of ownership. Phase it out.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "marriage",
+      "family"
+    ]
+  },
+  {
+    "id": "c061",
+    "text": "Abortion should be restricted.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "abortion",
+      "rights"
+    ]
+  },
+  {
+    "id": "c062",
+    "text": "Religion does more good than harm and should keep its influence.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "religion",
+      "society"
+    ]
+  },
+  {
+    "id": "c063",
+    "text": "Some groups should have legal protections that others don't get.",
+    "followUp": "For how long, and who decides when it stops?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "minorities",
+      "law"
+    ]
+  },
+  {
+    "id": "c064",
+    "text": "A government should never touch a religious or cultural tradition.",
+    "followUp": "Not even one it considers harmful?",
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "religion",
+      "culture",
+      "state"
+    ]
+  },
+  {
+    "id": "c065",
+    "text": "Prisons should be abolished.",
+    "followUp": "Start with the person you'd least like released.",
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "prisons",
+      "justice"
+    ]
+  },
+  {
+    "id": "c066",
+    "text": "Letting large numbers of people immigrate is naive.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "migration",
+      "borders"
+    ]
+  },
+  {
+    "id": "c067",
+    "text": "You can't fix the economy without also fixing the culture.",
+    "followUp": null,
+    "source": "Inspired by Left Values Survey",
+    "axis": "social",
+    "tags": [
+      "culture",
+      "economy"
+    ]
+  }
+]
