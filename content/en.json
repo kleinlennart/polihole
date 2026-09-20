@@ -25,7 +25,7 @@
   },
   "politicize": {
     "title": "Politicize This",
-    "blurb": "One word, no prompt. Make the case for why it's political.",
+    "blurb": "One word. Make the case for why it's political.",
     "prefix": "The politics of",
     "note": "No prompt. That's the game.",
     "finishedTitle": "That's the whole deck.",
