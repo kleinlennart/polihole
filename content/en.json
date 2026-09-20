@@ -15,6 +15,7 @@
   },
   "deck": {
     "cardIndex": "#{index}",
+    "exit": "Exit",
     "back": "Back",
     "next": "Next card",
     "restart": "Shuffle and deal again",

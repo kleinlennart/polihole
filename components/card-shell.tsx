@@ -95,10 +95,11 @@ export function CardShell({
       <header className="flex items-center justify-between px-5 pt-5 sm:px-8 sm:pt-7">
         <Link
           href="/"
+          aria-label={`${content.deck.exit} ${title}`}
           className={`-ml-2 flex items-center gap-2 px-2 py-1 text-sm font-medium ${s.quiet} transition-colors hover:text-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
         >
           <ArrowLeft aria-hidden className="size-4" />
-          {title}
+          {content.deck.exit}
         </Link>
         {cardNumber === null ? null : (
           <p className={`text-sm font-medium tabular-nums ${s.quiet}`}>
@@ -116,7 +117,7 @@ export function CardShell({
 
       <footer className="px-5 pb-5 sm:px-8 sm:pb-8">
         <div
-          className={`flex flex-col gap-3 border-t pt-4 sm:flex-row-reverse sm:items-center sm:justify-between ${s.hairline}`}
+          className={`flex flex-col gap-3 border-t pt-4 sm:flex-row-reverse sm:items-start sm:justify-between ${s.hairline}`}
         >
           <div className="flex gap-3">
             <button
