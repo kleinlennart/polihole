@@ -31,7 +31,7 @@
   },
   "politicize": {
     "title": "Politicize This",
-    "blurb": "The Politics of X. Make the case for why it's political.",
+    "blurb": "The Politics of X. Make the case for why it matters.",
     "prefix": "The Politics of",
     "note": "Explain! You have 30 seconds / 1 min.",
     "timerOptions": [

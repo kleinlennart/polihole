@@ -11,16 +11,20 @@ No accounts, no backend, no scoring. Tap through, argue, move on.
 
 ```bash
 npm install
-npm run dev     # http://localhost:3000/polihole
+npm run dev     # http://localhost:3000
 ```
 
-The app is served from a sub-path (`basePath: '/polihole'`) because it deploys
-to a GitHub Pages project page, so plain `localhost:3000` will 404. To run it at
-the root instead:
+The `dev` script sets `BASE_PATH=` so the app runs at the root. Production is
+different: it deploys to a GitHub Pages project page, so `next.config.ts`
+defaults `basePath` to `/polihole`, and that default is what `npm run build`
+bakes in. To run the dev server under that sub-path instead:
 
 ```bash
-BASE_PATH= npm run dev
+npx next dev   # http://localhost:3000/polihole
 ```
+
+(`BASE_PATH=/polihole npm run dev` won't do it — the script's own `BASE_PATH=`
+overrides whatever the shell passes in.)
 
 ## Build
 
@@ -100,7 +104,7 @@ starts a new deal. One pass never repeats a card.
 | Path                               | What's in it                                       |
 | ---------------------------------- | -------------------------------------------------- |
 | `app/page.tsx`                     | Home: the two decks as a two-option ballot         |
-| `app/polihole/`, `app/politicize/` | One full-screen card view each                     |
+| `app/deck/`, `app/politicize/`     | One full-screen card view each                     |
 | `components/card-shell.tsx`        | Shared chrome: counter, next, end-of-deck          |
 | `lib/decks.ts`                     | Deck data, types, shuffle                          |
 | `lib/use-deck.ts`                  | One shuffled pass, end screen, no-immediate-repeat |
