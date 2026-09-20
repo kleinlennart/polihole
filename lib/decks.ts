@@ -34,6 +34,22 @@ export const words = wordsData as Word[];
 /** Stable per-card key. A word is its own id. */
 export const wordId = (w: Word) => w;
 
+/**
+ * The number printed on a card. It belongs to the card, not to where the
+ * shuffle happens to put it, so #42 is the same claim every time. Claims carry
+ * it in their id; words have no id, so theirs is their place in the word bank
+ * and renumbering them means reordering the file.
+ */
+const wordNumbers = new Map(words.map((w, i) => [w, i + 1]));
+
+export function claimNumber(claim: Claim): number {
+  return Number(claim.id.replace(/\D/g, ""));
+}
+
+export function wordNumber(word: Word): number {
+  return wordNumbers.get(word) ?? 0;
+}
+
 /** One item at random. Lives here with the other draws, not in a component. */
 export function pickOne<T>(items: readonly T[]): T {
   return items[Math.floor(Math.random() * items.length)];

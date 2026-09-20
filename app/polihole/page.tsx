@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { CardShell, DeckFinished } from "@/components/card-shell";
 import { content, fill } from "@/lib/content";
-import { claims, type Claim } from "@/lib/decks";
+import { claimNumber, claims, type Claim } from "@/lib/decks";
+import { flags } from "@/lib/flags";
 import { useDeck } from "@/lib/use-deck";
 
 const copy = content.polihole;
@@ -16,10 +17,11 @@ export default function PoliholePage() {
     <CardShell
       variant="polihole"
       title={copy.title}
-      index={deck.index}
-      total={deck.total}
+      cardNumber={card ? claimNumber(card) : null}
       done={deck.done}
+      canGoBack={deck.canGoBack}
       onNext={deck.next}
+      onPrevious={deck.previous}
       onRestart={deck.restart}
       // Keyed by card, so both disclosures close themselves on the next card.
       footer={card ? <SourceNote key={card.id} source={card.source} /> : null}
@@ -47,7 +49,7 @@ function ClaimCard({ card }: { card: Claim }) {
         {card.text}
       </p>
 
-      {card.followUp ? (
+      {flags.pushFurther && card.followUp ? (
         deeper ? (
           <p className="deck-enter mt-7 max-w-[46ch] border-l-2 border-white/30 pl-4 text-[clamp(1.05rem,2.2vw,1.5rem)] leading-snug text-white/80">
             {card.followUp}

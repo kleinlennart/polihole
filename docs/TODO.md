@@ -18,4 +18,4 @@
 
 - http://localhost:3000 goes to /polihole
 
-- 
+- fix URL http://localhost:3000/polihole/polihole/

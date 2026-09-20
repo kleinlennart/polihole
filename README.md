@@ -86,6 +86,15 @@ time so they ship inside the app bundle and work offline with no fetch.
 v1 deals one shuffled deck with no filter UI, but claims carry `axis` and `tags`
 so a filter can be added later without migrating the data.
 
+The `#` on a card is the card's own number — taken from a claim's `id`, or from
+a word's place in `words.json` — not its position in the shuffle, so the same
+card always carries the same number. The dealt order and your place in it are
+kept in `sessionStorage`, so reloading puts the same card back; closing the tab
+starts a new deal. One pass never repeats a card.
+
+`followUp` lines are written but not shown: `pushFurther` in
+[`lib/flags.ts`](lib/flags.ts) is off.
+
 ## Structure
 
 | Path                               | What's in it                                       |

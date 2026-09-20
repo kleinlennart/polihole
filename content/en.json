@@ -10,6 +10,8 @@
     "aboutLink": "About"
   },
   "deck": {
+    "cardIndex": "#{index}",
+    "back": "Back",
     "next": "Next card",
     "restart": "Shuffle and deal again",
     "dealing": "Dealing the deck"

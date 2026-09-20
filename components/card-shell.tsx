@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
-import { content } from "@/lib/content";
+import { content, fill } from "@/lib/content";
 
 export type Variant = "polihole" | "politicize";
 
@@ -12,7 +12,7 @@ const skin = {
     field: "bg-ballot text-white",
     quiet: "text-white/55",
     hairline: "border-white/25",
-    control: "border-white/30 text-white hover:bg-white/10",
+    secondary: "border border-white/35 text-white hover:bg-white/10",
     primary: "bg-white text-ballot hover:bg-white/90",
     focus: "focus-visible:outline-white",
   },
@@ -20,29 +20,35 @@ const skin = {
     field: "bg-riso text-black",
     quiet: "text-black/55",
     hairline: "border-black/25",
-    control: "border-black/30 text-black hover:bg-black/10",
+    secondary: "border border-black/35 text-black hover:bg-black/10",
     primary: "bg-black text-riso hover:bg-black/85",
     focus: "focus-visible:outline-black",
   },
 } as const;
 
+const button =
+  "px-6 py-3 text-base font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:pointer-events-none disabled:opacity-35";
+
 export function CardShell({
   variant,
   title,
-  index,
-  total,
+  cardNumber,
   done,
+  canGoBack,
   onNext,
+  onPrevious,
   onRestart,
   footer,
   children,
 }: {
   variant: Variant;
   title: string;
-  index: number;
-  total: number;
+  /** The card's own number, or null when there's no card to label. */
+  cardNumber: number | null;
   done: boolean;
+  canGoBack: boolean;
   onNext: () => void;
+  onPrevious: () => void;
   onRestart: () => void;
   footer?: React.ReactNode;
   children: React.ReactNode;
@@ -51,17 +57,31 @@ export function CardShell({
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      // Arrows steer the deck wherever focus happens to be — after a click it
+      // sits on the button that was pressed.
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        onPrevious();
+        return;
+      }
       if (done) return;
-      // Let buttons handle their own Space/Enter.
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        onNext();
+        return;
+      }
+      // Space and Enter belong to whatever control is focused.
       if ((e.target as HTMLElement)?.closest("button, a")) return;
-      if (e.key === " " || e.key === "ArrowRight" || e.key === "Enter") {
+      if (e.key === " " || e.key === "Enter") {
         e.preventDefault();
         onNext();
       }
     }
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [done, onNext]);
+  }, [done, onNext, onPrevious]);
 
   return (
     <main
@@ -70,16 +90,16 @@ export function CardShell({
       <header className="flex items-center justify-between px-5 pt-5 sm:px-8 sm:pt-7">
         <Link
           href="/"
-          className={`-ml-2 flex items-center gap-2 rounded-none px-2 py-1 text-sm font-medium ${s.quiet} transition-colors hover:text-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
+          className={`-ml-2 flex items-center gap-2 px-2 py-1 text-sm font-medium ${s.quiet} transition-colors hover:text-current focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2`}
         >
           <ArrowLeft aria-hidden className="size-4" />
           {title}
         </Link>
-        <p className={`text-sm font-medium tabular-nums ${s.quiet}`}>
-          {done ? total : Math.min(index + 1, total)}
-          <span className="px-1">/</span>
-          {total}
-        </p>
+        {cardNumber === null ? null : (
+          <p className={`text-sm font-medium tabular-nums ${s.quiet}`}>
+            {fill(content.deck.cardIndex, { index: cardNumber })}
+          </p>
+        )}
       </header>
 
       <section
@@ -91,26 +111,36 @@ export function CardShell({
 
       <footer className="px-5 pb-5 sm:px-8 sm:pb-8">
         <div
-          className={`flex flex-col gap-3 border-t pt-4 sm:flex-row sm:items-center sm:justify-between ${s.hairline}`}
+          className={`flex flex-col gap-3 border-t pt-4 sm:flex-row-reverse sm:items-center sm:justify-between ${s.hairline}`}
         >
-          <div className="order-2 min-h-6 sm:order-1">{footer}</div>
-          {done ? (
+          <div className="flex gap-3">
             <button
               type="button"
-              onClick={onRestart}
-              className={`order-1 px-6 py-3 text-base font-semibold ${s.primary} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:order-2`}
+              onClick={onPrevious}
+              disabled={!canGoBack}
+              className={`${button} ${s.secondary}`}
             >
-              {content.deck.restart}
+              {content.deck.back}
             </button>
-          ) : (
-            <button
-              type="button"
-              onClick={onNext}
-              className={`order-1 px-6 py-3 text-base font-semibold ${s.primary} transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 sm:order-2`}
-            >
-              {content.deck.next}
-            </button>
-          )}
+            {done ? (
+              <button
+                type="button"
+                onClick={onRestart}
+                className={`${button} flex-1 ${s.primary}`}
+              >
+                {content.deck.restart}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={onNext}
+                className={`${button} flex-1 ${s.primary}`}
+              >
+                {content.deck.next}
+              </button>
+            )}
+          </div>
+          <div className="min-h-6">{footer}</div>
         </div>
       </footer>
     </main>

@@ -2,7 +2,7 @@
 
 import { CardShell, DeckFinished } from "@/components/card-shell";
 import { content, fill } from "@/lib/content";
-import { words, wordId, type Word } from "@/lib/decks";
+import { wordId, wordNumber, words, type Word } from "@/lib/decks";
 import { useDeck } from "@/lib/use-deck";
 
 const copy = content.politicize;
@@ -15,10 +15,11 @@ export default function PoliticizePage() {
     <CardShell
       variant="politicize"
       title={copy.title}
-      index={deck.index}
-      total={deck.total}
+      cardNumber={word ? wordNumber(word) : null}
       done={deck.done}
+      canGoBack={deck.canGoBack}
       onNext={deck.next}
+      onPrevious={deck.previous}
       onRestart={deck.restart}
       footer={
         word ? <p className="text-sm text-black/55">{copy.note}</p> : null
