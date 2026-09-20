@@ -35,7 +35,7 @@
     "blurb": "The Politics of X. Make the case for why it matters.",
     "prefix": "The Politics of",
     "note": "Explain! You have 30 seconds / 1 min.",
-    "timerOptions": [30, 60],
+    "timerOptions": [ 30, 60 ],
     "timerStart": "Start {seconds}s",
     "timerStop": "Stop",
     "finishedTitle": "That's the whole deck.",
@@ -49,7 +49,7 @@
   },
   "about": {
     "title": "About",
-    "back": "Back to the decks",
+    "back": "Go back",
     "intro": "Two decks of prompts for people who enjoy arguing about politics.",
     "lead": "Nothing is scored, nothing is saved, and nobody wins.",
     "sections": [
@@ -60,14 +60,61 @@
       {
         "heading": "Politicize This",
         "body": "Deals a single word and nothing else. Make the case for why it's political. Thank you for coming to my Ted Talk."
-      },
-      {
-        "heading": "Offline",
-        "body": "Both decks are bundled with the app, so it runs with no connection once it's open. Add it to your home screen and it behaves like any other app."
       }
     ],
-    "credits": "This project has been inspired by {askhole}, the {leftValues} and the {politicalCompass}.",
+    "features": {
+      "heading": "The app",
+      "items": [
+        {
+          "name": "Offline",
+          "body": "Both decks are bundled with the app, so it runs with no connection once it's open. Add it to your home screen and it behaves like any other app."
+        },
+        {
+          "name": "Open source",
+          "body": "Every card, and the app around them, is on {source}. Corrections and additions welcome."
+        },
+        {
+          "name": "No tracking",
+          "body": "No accounts, no analytics, no cookies. Where you are in a deck is remembered by your browser and never leaves your device."
+        }
+      ]
+    },
+    "resources": {
+      "heading": "Resources",
+      "items": [
+        {
+          "label": "The Rules of Civil Conversation",
+          "note": "therulesofcivilconversation.org",
+          "url": "https://therulesofcivilconversation.org"
+        },
+        {
+          "label": "Varieties Of Argumentative Experience",
+          "note": "Scott Alexander, LessWrong",
+          "url": "https://www.lesswrong.com/posts/NLBbCQeNLFvBJJkrt/varieties-of-argumentative-experience"
+        },
+        {
+          "label": "Your Logical Fallacy Is",
+          "note": "yourfallacy.is",
+          "url": "https://yourfallacy.is"
+        },
+        {
+          "label": "Your Bias Is",
+          "note": "yourbias.is",
+          "url": "https://yourbias.is"
+        },
+        {
+          "label": "The Free Learning List",
+          "note": "freelearninglist.org",
+          "url": "https://freelearninglist.org"
+        }
+      ]
+    },
+    "credits": "This project was inspired by {askhole}, the {leftValues} and the {politicalCompass}.",
     "links": {
+      "source": {
+        "label": "GitHub",
+        "url": "https://github.com/kleinlennart/polihole"
+      },
       "askhole": {
         "label": "Askhole",
         "url": "https://askhole.io/"
@@ -82,6 +129,6 @@
       }
     },
     "affiliation": "No affiliation with any of them.",
-    "disclaimer": "And no endorsement of anything on any card."
+    "disclaimer": "And no endorsement of any card content."
   }
 }

@@ -82,3 +82,7 @@ shadcn is configured with the `base-nova` style on `@base-ui/react` (not Radix) 
 `data/quotes.json` — `{ include, short, long, author, context }`; `include: false` switches a quote off without deleting it, and only `short ?? long` plus `author` are shown.
 
 `docs/PLAN.md` (gitignored) and `docs/TODO.md` hold the original design intent and the running task list.
+
+## Rules
+
+- don't use Browser Tools to look at the page unless asked to
