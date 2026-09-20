@@ -10,8 +10,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run dev     # BASE_PATH= next dev — serves at http://localhost:3000 (root, NOT /polihole)
 npm run build   # next build (static export to out/) + node scripts/generate-sw.mjs
                 # note: build does NOT override BASE_PATH, so it bakes in /polihole; dev does
-npm run lint    # bare `eslint` (flat config, eslint-config-next core-web-vitals + typescript)
-npx tsc --noEmit   # type check
+npm run lint       # bare `eslint` (flat config, eslint-config-next core-web-vitals + typescript)
+npm run typecheck  # tsc --noEmit
 ```
 
 There is no test framework configured — no test runner, no test files, nothing to run a single test with.
