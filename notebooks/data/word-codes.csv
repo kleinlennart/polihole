@@ -1,0 +1,70 @@
+word,register,distance,concreteness,domain,frames
+Housework,serious,2,5,home,labor;gender;care;class
+Debt,serious,1,4,money,class;state;time;care
+Language,serious,1,3,language,race;class;state;norms
+Hunger,serious,1,4,food,class;state;body;care
+Sleep,serious,3,5,body,labor;class;body;time;care
+Maps,serious,2,4,space,state;race;space;infra
+Waiting,serious,3,4,time,class;state;time;care
+Beauty,serious,2,3,body,gender;race;class;norms;body
+Statistics,serious,2,3,tech,state;class;infra;race
+Charity,serious,2,4,money,class;care;state;norms
+Museums,serious,2,4,culture,race;class;state;norms;space
+Forgiveness,serious,3,2,culture,state;race;norms;care
+Free Time,serious,2,4,time,labor;class;time;gender
+Water,serious,1,5,nature,env;state;class;infra
+Names,serious,3,4,language,race;gender;state;norms
+Ugliness,serious,3,3,body,class;race;norms;body;space
+Queues,chaos,4,5,space,class;state;norms;time;space
+Weather,serious,3,5,nature,env;class;state;infra
+Grief,serious,3,4,care,care;labor;gender;state;time
+Accents,serious,3,5,language,class;race;norms
+Sidewalks,serious,4,5,space,infra;state;class;body;space
+Salt,serious,4,5,food,state;class;body;env;race
+Handwriting,chaos,4,5,language,class;state;norms;infra
+Noise,serious,3,5,space,class;state;race;norms;space
+Laundry,chaos,3,5,home,labor;gender;class;infra
+Fonts,chaos,4,4,tech,class;infra;norms;state
+Boredom,serious,4,3,time,labor;class;time;norms
+Bread,serious,2,5,food,class;state;labor;race;env
+Punctuality,chaos,4,5,time,labor;class;race;norms;time
+Lawns,chaos,4,5,home,env;class;race;space;norms
+Tupperware,chaos,5,5,home,gender;labor;class;env;norms
+Diarrhea,chaos,5,5,body,state;class;body;care;infra
+Group Chats,chaos,4,5,tech,infra;norms;class;labor
+Loading Screens,chaos,5,5,tech,infra;class;time;labor
+Office Birthdays,chaos,5,5,work,labor;gender;norms;class
+Cargo Shorts,chaos,5,5,taste,gender;class;norms;race
+Pigeons,chaos,4,5,nature,env;class;space;state;race
+Airport Lounges,chaos,4,5,space,class;state;race;space;infra
+Reply All,chaos,5,5,work,labor;class;infra;norms
+Hot Sauce,chaos,4,5,food,race;class;norms;body
+The Aux Cord,chaos,5,5,taste,class;race;norms;gender
+Seat Reclining,chaos,5,5,space,class;norms;space;body
+Vending Machines,chaos,4,5,food,class;labor;infra;care;state
+Ceiling Fans,chaos,5,5,home,env;class;infra;race;body
+Baby Names,chaos,4,5,language,class;race;gender;norms;state
+Hotel Breakfast,chaos,5,5,food,class;labor;race;norms
+Comic Sans,chaos,5,5,taste,class;norms;infra;care
+Dishwasher Loading,chaos,5,5,home,labor;gender;norms;care
+Sock Length,chaos,5,5,taste,class;gender;norms;race
+Autoplay,chaos,4,4,tech,infra;labor;time;class;care
+Cilantro,chaos,5,5,food,race;body;norms;class
+Loud Chewing,chaos,5,4,body,norms;class;body;care
+Pineapple on Pizza,chaos,5,5,food,race;norms;class
+AI,serious,1,3,tech,labor;class;infra;state;env;race
+Becoming,serious,3,1,culture,gender;race;norms;care
+Catan,chaos,4,4,culture,race;class;space;env;norms
+Cheese,chaos,4,5,food,class;race;state;env;norms
+Presence,serious,3,1,culture,labor;care;time;norms
+Design,serious,2,2,tech,class;infra;state;body;norms
+Slop,chaos,4,3,tech,labor;class;infra;norms
+Poop,chaos,5,5,body,state;infra;class;env;body
+Matcha,chaos,4,5,food,race;class;env;norms
+Foodporn,chaos,4,4,taste,class;race;gender;labor;norms
+WhatsApp,chaos,3,5,tech,infra;state;race;class;care
+Dogs,chaos,4,5,home,class;space;race;care;norms
+OnlyFans,chaos,2,5,body,labor;gender;class;infra;state
+Fireworks,chaos,4,5,culture,state;class;env;race;norms
+Self-Checkout,chaos,4,5,money,labor;class;infra;state
+Air Conditioning,chaos,4,5,home,env;class;race;infra;body

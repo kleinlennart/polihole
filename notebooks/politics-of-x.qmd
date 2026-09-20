@@ -1,0 +1,602 @@
+---
+title: "The Politics of X"
+subtitle: "A methodology for finding words that are worth 60 seconds"
+author: "Claude Code"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    embed-resources: true
+    theme: cosmo
+    code-fold: true
+    fig-width: 8
+    fig-height: 5
+execute:
+  warning: false
+  message: false
+  cache: true
+---
+
+```{r setup}
+library(tidyverse)
+library(ggrepel)
+library(patchwork)
+library(gt)
+
+theme_set(theme_minimal(base_size = 12))
+set.seed(1312)
+```
+
+## The problem, stated so it can be measured
+
+"Politicize This" deals a word; a player has 30–60 seconds to argue it is political.
+The deck currently holds a mix of words that do very different work in play, and the
+two failure modes are not symmetrical:
+
+- **The lecture.** *Debt*, *Hunger*, *AI*. Everyone already knows these are political.
+  The player recites the seminar answer, nobody is surprised, the table waits.
+- **The blank.** A word so far from politics that no angle arrives at all. Dead air,
+  then a rescue from someone else.
+
+What we want sits between them: the word that looks apolitical for about one second
+and then opens up. The design brief for this round is explicit — **less serious is
+more fun, and it shouldn't be obvious.** That is not a mood; it is a constraint on
+which cells of the design space we are willing to fill.
+
+So the construct is:
+
+> **Interesting = the distance the player has to travel × the number of roads they
+> can travel on.**
+
+Distance without roads is the blank. Roads without distance is the lecture.
+
+## The instrument
+
+Four codes per word. Three are judgments on a 1–5 scale; the fourth is a checklist,
+which is the part that makes "it has depth" countable instead of a vibe.
+
+```{r instrument}
+tribble(
+  ~code, ~type, ~definition,
+  "distance", "1–5", "How apolitical it looks at first glance. 1 = the word is already a political topic (Debt). 5 = a table would laugh at the idea it is political (Sock Length).",
+  "register", "serious / chaos", "Tone of the word itself, independent of distance. The brief wants chaos.",
+  "concreteness", "1–5", "Does everyone at the table picture the same thing instantly? 1 = abstract (Becoming). 5 = a shared physical image (Hotel Breakfast).",
+  "frames", "checklist", "Which political frames the word plausibly opens. Traction is the count."
+) |>
+  gt() |>
+  tab_header(title = "Codes") |>
+  cols_label(code = "Code", type = "Scale", definition = "What it asks") |>
+  tab_options(table.font.size = 12)
+```
+
+### The frame inventory
+
+The frame list is the load-bearing part. A word earns a frame if a reasonably
+informed player could get to that argument inside a minute without stretching.
+
+```{r frames}
+frame_defs <- tribble(
+  ~frame, ~opens,
+  "labor",  "Who does the work, who is paid for it, who is on call",
+  "class",  "Money, access, status, who can afford the nice version",
+  "gender", "Who is expected to do it, whose comfort is default",
+  "race",   "Race, migration, colonial history, whose version is 'authentic'",
+  "state",  "Law, regulation, policing, taxation, licensing",
+  "infra",  "Infrastructure, platforms, standards, defaults someone chose",
+  "env",    "Resources, waste, climate, what it costs the planet",
+  "care",   "Dependency, health, disability, who is looked after",
+  "norms",  "Etiquette, taste, respectability, shame",
+  "body",   "Bodies, ability, discipline, disgust",
+  "time",   "Whose time is assumed to be free",
+  "space",  "Public space, property, who is allowed to be where"
+)
+
+frame_defs |>
+  gt() |>
+  tab_header(title = "Twelve frames") |>
+  cols_label(frame = "Frame", opens = "The argument it opens") |>
+  tab_options(table.font.size = 12)
+```
+
+::: {.callout-warning}
+## These codings are one coder's first pass
+Every code in `data/word-codes.csv` is my judgment, written in one sitting, to give
+the method something real to chew on. They are a starting argument, not data. Before
+any of this is load-bearing, a second coder should code the same words blind and the
+agreement should be checked (see [Reliability]). Where we disagree is usually where
+the interesting design question is hiding.
+:::
+
+## Loading the deck
+
+```{r load}
+words <- jsonlite::fromJSON("../data/words.json")
+
+codes <- read_csv("../notebooks/data/word-codes.csv", show_col_types = FALSE) |>
+  mutate(
+    frame_set = str_split(frames, ";"),
+    traction = lengths(frame_set)
+  )
+
+coverage <- list(
+  uncoded = setdiff(words, codes$word),
+  stray   = setdiff(codes$word, words)
+)
+
+cat(
+  "deck: ", length(words), " words | coded: ", nrow(codes),
+  "\nuncoded (in deck, missing a code row): ",
+  if (length(coverage$uncoded)) paste(coverage$uncoded, collapse = ", ") else "none",
+  "\nstray (coded, no longer in deck): ",
+  if (length(coverage$stray)) paste(coverage$stray, collapse = ", ") else "none",
+  "\n", sep = ""
+)
+```
+
+The word bank is edited by hand and often, so this check runs first and loudly:
+new words show up as uncoded, deleted ones as stray. Neither is an error — it is a
+to-do list.
+
+## Audit: where the deck actually sits
+
+```{r quadrant}
+#| fig-cap: "Each word placed by how far it has to travel and how many roads it has. Labels are thinned to the extremes."
+
+plot_dat <- codes |>
+  mutate(
+    quadrant = case_when(
+      distance >= 4 & traction >= 4 ~ "the good cell",
+      distance <= 2 & traction >= 4 ~ "lecture",
+      distance >= 4 & traction <= 3 ~ "thin",
+      TRUE ~ "middle"
+    )
+  )
+
+ggplot(plot_dat, aes(distance, traction, colour = register)) +
+  annotate("rect", xmin = 3.5, xmax = 5.4, ymin = 3.5, ymax = 6.4,
+           fill = "grey80", alpha = 0.35) +
+  geom_jitter(width = 0.14, height = 0.14, size = 2.6, alpha = 0.85) +
+  geom_text_repel(
+    data = filter(plot_dat, quadrant != "middle"),
+    aes(label = word), size = 3, max.overlaps = 18, seed = 1
+  ) +
+  scale_colour_manual(values = c(chaos = "#d1495b", serious = "#2e4057")) +
+  scale_x_continuous(breaks = 1:5, limits = c(0.6, 5.4)) +
+  scale_y_continuous(breaks = 1:6) +
+  labs(
+    x = "distance  (1 = already political → 5 = looks absurd)",
+    y = "traction  (frames the word opens)",
+    colour = NULL,
+    title = "The shaded box is what the brief asks for",
+    subtitle = "Non-obvious, and still with somewhere to go"
+  )
+```
+
+```{r quadrant-counts}
+plot_dat |>
+  count(quadrant, register) |>
+  pivot_wider(names_from = register, values_from = n, values_fill = 0) |>
+  mutate(total = chaos + serious) |>
+  arrange(desc(total)) |>
+  gt() |>
+  tab_header(title = "How the current deck splits") |>
+  tab_options(table.font.size = 12)
+```
+
+Two findings worth acting on:
+
+```{r findings}
+n_lecture <- sum(codes$distance <= 2)
+n_abstract <- sum(codes$concreteness <= 2)
+share_class <- mean(map_lgl(codes$frame_set, ~ "class" %in% .x))
+
+cat(
+  "words at distance <= 2 (the lecture zone): ", n_lecture,
+  " of ", nrow(codes), "\n",
+  "words at concreteness <= 2 (nothing to picture): ", n_abstract, "\n",
+  "share of words that open the 'class' frame: ", round(100 * share_class), "%\n",
+  sep = ""
+)
+```
+
+1. **The lecture zone is over-stocked.** Those words are not bad; they are just
+   already on the syllabus. They are the cards a player performs rather than thinks
+   through.
+2. **`class` is nearly constant.** If ~9 in 10 words open a class argument, the frame
+   does not discriminate between words. It stays in the instrument because it is
+   true, but traction is more informative when computed *without* the frames that
+   every word has.
+
+```{r distinctive-traction}
+ubiquitous <- frame_defs$frame[
+  map_dbl(frame_defs$frame, \(f) mean(map_lgl(codes$frame_set, ~ f %in% .x))) > 0.8
+]
+
+codes <- codes |>
+  mutate(
+    traction_distinct = map_int(frame_set, ~ length(setdiff(.x, ubiquitous)))
+  )
+
+cat("treated as ubiquitous and excluded from distinctive traction: ",
+    paste(ubiquitous, collapse = ", "), "\n", sep = "")
+```
+
+### Frame coverage
+
+```{r coverage-plot}
+#| fig-cap: "Which arguments the deck can currently produce, split by register."
+
+codes |>
+  select(word, register, frame_set) |>
+  unnest(frame_set) |>
+  count(frame = frame_set, register) |>
+  mutate(frame = fct_reorder(frame, n, sum)) |>
+  ggplot(aes(n, frame, fill = register)) +
+  geom_col() +
+  scale_fill_manual(values = c(chaos = "#d1495b", serious = "#2e4057")) +
+  labs(x = "words opening this frame", y = NULL, fill = NULL,
+       title = "Frame coverage, and who carries it")
+```
+
+Read this column by register, not in total. A frame that only the *serious* words
+carry is a frame the deck cannot reach while staying funny — and staying funny is
+the brief. Those are the cells candidates should target.
+
+### Redundancy: which cards are the same card
+
+Two words with the same frame signature produce the same conversation. In a deck
+meant to be played end to end, that is worse than a weak word.
+
+```{r redundancy}
+frame_matrix <- codes |>
+  select(word, frame_set) |>
+  unnest(frame_set) |>
+  mutate(present = 1) |>
+  pivot_wider(names_from = frame_set, values_from = present, values_fill = 0) |>
+  column_to_rownames("word") |>
+  as.matrix()
+
+jaccard <- proxy::simil(frame_matrix, method = "Jaccard")
+pairs <- as.data.frame(as.table(as.matrix(jaccard))) |>
+  rename(a = Var1, b = Var2, similarity = Freq) |>
+  filter(as.character(a) < as.character(b), similarity >= 0.75) |>
+  arrange(desc(similarity))
+
+pairs |>
+  head(15) |>
+  mutate(similarity = round(similarity, 2)) |>
+  gt() |>
+  tab_header(
+    title = "Near-identical cards",
+    subtitle = "Jaccard similarity of frame signatures ≥ 0.75"
+  ) |>
+  tab_options(table.font.size = 12)
+```
+
+This is a cut list, not a bug list: keep the funnier member of each pair.
+
+## The screening rule
+
+A candidate word has to clear floors before its score means anything. The floors
+encode the brief; the weights are placeholders until playtests exist.
+
+```{r rubric}
+FLOORS <- list(distance = 4, concreteness = 4, traction = 3)
+
+WEIGHTS <- c(distance = 1.0, traction_distinct = 0.6, concreteness = 0.4, chaos_bonus = 0.5)
+
+score_words <- function(df) {
+  df |>
+    mutate(
+      frame_set = if (is.list(frames)) frames else str_split(frames, ";"),
+      traction = lengths(frame_set),
+      traction_distinct = map_int(frame_set, ~ length(setdiff(.x, ubiquitous))),
+      passes = distance >= FLOORS$distance &
+        concreteness >= FLOORS$concreteness &
+        traction >= FLOORS$traction,
+      score = WEIGHTS[["distance"]] * distance +
+        WEIGHTS[["traction_distinct"]] * traction_distinct +
+        WEIGHTS[["concreteness"]] * concreteness +
+        WEIGHTS[["chaos_bonus"]] * (register == "chaos")
+    )
+}
+```
+
+::: {.callout-note}
+## The weights are guesses and are meant to be replaced
+`WEIGHTS` is a hunch about what makes a card land, written to match the brief
+(distance weighted hardest, chaos rewarded). The [Playtest] section replaces these
+numbers with estimates from actual sessions. Until then the score is a sorting
+convenience, not a measurement.
+:::
+
+```{r existing-scored}
+scored_deck <- score_words(codes)
+
+scored_deck |>
+  arrange(desc(score)) |>
+  transmute(word, register, distance, traction, concreteness,
+            score = round(score, 1), passes) |>
+  slice(c(1:8, (n() - 7):n())) |>
+  gt() |>
+  tab_header(title = "Current deck, best and worst by the rubric") |>
+  tab_row_group(label = "weakest", rows = 9:16) |>
+  tab_row_group(label = "strongest", rows = 1:8) |>
+  tab_options(table.font.size = 12)
+```
+
+## Generating candidates against the gaps
+
+Candidates are written *after* the audit, aimed at the thin cells: frames the chaos
+register cannot currently reach, and domains where every word we have is serious.
+
+```{r gap-targets}
+gap_targets <- codes |>
+  select(word, register, frame_set) |>
+  unnest(frame_set) |>
+  count(frame = frame_set, register) |>
+  pivot_wider(names_from = register, values_from = n, values_fill = 0) |>
+  mutate(chaos_share = chaos / (chaos + serious)) |>
+  arrange(chaos_share)
+
+gap_targets |>
+  gt() |>
+  fmt_percent(chaos_share, decimals = 0) |>
+  tab_header(title = "Frames the funny half of the deck can't reach") |>
+  tab_options(table.font.size = 12)
+```
+
+```{r candidates}
+candidates <- tribble(
+  ~word, ~register, ~distance, ~concreteness, ~domain, ~frames,
+  "Office Microwave Fish", "chaos", 5, 5, "work",  "race;norms;class;labor",
+  "Splitting the Bill",    "chaos", 5, 5, "money", "class;gender;norms;care",
+  "Cookie Banners",        "chaos", 4, 5, "tech",  "state;infra;class;labor",
+  "CAPTCHAs",              "chaos", 5, 5, "tech",  "labor;infra;body;class",
+  "Read Receipts",         "chaos", 5, 5, "tech",  "labor;care;norms;time",
+  "Hold Music",            "chaos", 5, 5, "tech",  "labor;class;time;care",
+  "Benches",               "chaos", 4, 5, "space", "space;class;body;state;care",
+  "Water Fountains",       "chaos", 4, 5, "space", "race;state;class;infra;body",
+  "Pockets",               "chaos", 5, 5, "taste", "gender;class;labor;norms",
+  "The Office Thermostat", "chaos", 5, 5, "work",  "gender;labor;env;class",
+  "Standing on Escalators","chaos", 5, 5, "space", "space;norms;class;time",
+  "Shopping Cart Coins",   "chaos", 5, 5, "money", "class;labor;norms;state",
+  "Best-Before Dates",     "chaos", 4, 5, "food",  "env;class;state;care",
+  "Glitter",               "chaos", 5, 5, "taste", "env;gender;class;norms",
+  "Balloons",              "chaos", 5, 5, "culture","env;class;care;norms",
+  "Snow Shoveling",        "chaos", 5, 5, "space", "labor;state;class;care;space",
+  "Bike Bells",            "chaos", 5, 4, "space", "space;class;norms;state",
+  "Crosswalk Buttons",     "chaos", 5, 5, "space", "infra;state;class;body;space",
+  "Speed Bumps",           "chaos", 4, 5, "space", "state;class;infra;space",
+  "Lost and Found",        "chaos", 5, 4, "space", "class;state;norms;care",
+  "Hand Dryers",           "chaos", 5, 5, "body",  "env;class;infra;body;care",
+  "Sunscreen",             "chaos", 4, 5, "body",  "race;body;class;env;care",
+  "Deodorant",             "chaos", 4, 5, "body",  "race;norms;body;gender;class",
+  "Ironing",               "chaos", 5, 5, "home",  "labor;gender;class;norms",
+  "Leftovers",             "chaos", 5, 5, "food",  "class;env;gender;care",
+  "Potlucks",              "chaos", 5, 5, "food",  "race;class;labor;norms;gender",
+  "Gift Wrapping",         "chaos", 5, 5, "culture","env;gender;class;labor;norms",
+  "Group Photos",          "chaos", 5, 4, "culture","race;gender;norms;class",
+  "Voice Notes",           "chaos", 5, 5, "tech",  "class;race;norms;time;care",
+  "Out of Office Replies", "chaos", 5, 5, "work",  "labor;class;time;norms",
+  "Calendar Invites",      "chaos", 5, 5, "work",  "labor;time;class;norms",
+  "Windows",               "chaos", 4, 5, "home",  "state;class;env;infra;body",
+  "Stairs",                "chaos", 4, 5, "space", "body;care;class;infra;space",
+  "Keys",                  "chaos", 4, 5, "home",  "class;state;space;care",
+  "Nicknames",             "chaos", 4, 4, "language","race;class;gender;norms",
+  "Whistling",             "chaos", 5, 4, "culture","norms;race;gender;class",
+  "Naps",                  "chaos", 4, 5, "body",  "labor;class;race;time;body",
+  "Fitted Sheets",         "chaos", 5, 5, "home",  "labor;gender;class;norms",
+  "Umbrellas",             "chaos", 5, 5, "space", "space;class;norms;body",
+  "Minibars",              "chaos", 5, 5, "money", "class;state;labor;norms",
+  "Duty Free",             "chaos", 4, 5, "money", "state;class;race;env",
+  "Passport Photos",       "chaos", 4, 5, "body",  "state;race;body;class",
+  "Hotel Slippers",        "chaos", 5, 5, "home",  "class;labor;race;norms"
+)
+
+nearest_card <- function(fs, dom) {
+  sims <- map_dbl(codes$frame_set, \(es) length(intersect(fs, es)) / length(union(fs, es)))
+  i <- which.max(sims)
+  tibble(near_word = codes$word[i], near_sim = sims[i], near_domain = codes$domain[i])
+}
+
+scored_candidates <- score_words(candidates) |>
+  mutate(map2_dfr(frame_set, domain, nearest_card)) |>
+  mutate(
+    frames_clash = near_sim >= 0.75,
+    redundant = frames_clash & near_domain == domain,
+    nearest_existing = sprintf("%s (%.2f)", near_word, near_sim)
+  )
+```
+
+```{r redundancy-caveat}
+cat(
+  "flagged by frame signature alone: ", sum(scored_candidates$frames_clash),
+  " of ", nrow(scored_candidates),
+  "\nstill flagged once domain has to match too: ", sum(scored_candidates$redundant),
+  "\n", sep = ""
+)
+```
+The first number is the instrument creaking. Twelve frames, four or five per word,
+means identical signatures happen by arithmetic rather than by meaning — *Read
+Receipts* and *Presence* code identically and play nothing alike. So the signature
+match is a **prompt to look**, and only counts as redundancy when the two words also
+live in the same domain. The honest fix is a longer frame list; the cheap fix is
+this, and it is worth knowing which one we are using.
+
+```{r candidate-table}
+scored_candidates |>
+  filter(passes, !redundant) |>
+  arrange(desc(score)) |>
+  transmute(word, domain, distance, traction, score = round(score, 1), nearest_existing) |>
+  gt() |>
+  tab_header(
+    title = "Candidates that clear the floors and aren't a card we already have",
+    subtitle = "Ordered by the placeholder score — treat the ordering as weak"
+  ) |>
+  tab_options(table.font.size = 11)
+```
+
+One caveat the numbers cannot show: these candidates were written *after* the
+floors were set, aiming at them. A pass rate this high says the pool was
+well-aimed, not that the rule is strict — the only discrimination it actually
+demonstrated is the redundancy check. It has yet to meet words that should fail.
+
+Look at the score column before trusting it: with `distance` and `concreteness` both
+capped at 5, most survivors tie near the ceiling. The rubric is doing its real work as
+a **filter**, not as a ranking — it separates the 39 words worth dealing from the 5 that
+repeat a card we already have, and beyond that it has no resolution. Ranking is what
+the playtest model is for.
+
+```{r rejected}
+scored_candidates |>
+  filter(!passes | redundant) |>
+  transmute(word, distance, concreteness, traction,
+            why = case_when(
+              redundant ~ paste0("same frames and domain as ", nearest_existing),
+              distance < FLOORS$distance ~ "too obvious",
+              concreteness < FLOORS$concreteness ~ "nothing to picture",
+              TRUE ~ "too thin"
+            )) |>
+  gt() |>
+  tab_header(title = "Rejected by the rule") |>
+  tab_options(table.font.size = 11)
+```
+
+```{r export}
+out <- "../notebooks/data/candidates-scored.csv"
+scored_candidates |>
+  select(word, register, distance, concreteness, domain, frames,
+         traction, traction_distinct, score, passes, redundant, nearest_existing) |>
+  arrange(desc(passes), desc(score)) |>
+  write_csv(out)
+
+cat("wrote ", out, " (", nrow(scored_candidates), " candidates)\n", sep = "")
+```
+
+Nothing here goes into `data/words.json` automatically. The export is a review queue.
+
+## Reliability
+
+The instrument is only worth its codes if two people using it land in the same place.
+Distance is the code most at risk: it is a judgment about *an imagined table's*
+reaction, not about the word.
+
+```{r reliability}
+# Stand-in for a real second coder: the same words, coded with noise.
+# Replace this with a colleague's CSV and the calculation is unchanged.
+second_coder <- codes |>
+  mutate(distance_b = pmin(5, pmax(1, distance + sample(c(-1, 0, 0, 1), n(), TRUE))))
+
+icc <- psych::ICC(
+  as.matrix(select(second_coder, distance, distance_b))
+)$results |>
+  filter(type == "ICC2") |>
+  pull(ICC)
+
+cat("ICC(2,1) between coder A and the stand-in: ", round(icc, 2), "\n",
+    "This number is meaningless until the second column is a real person.\n", sep = "")
+```
+
+The threshold to agree on before coding starts: what counts as *good enough*
+agreement on `distance`, and what happens to words the two coders split on.
+My proposal — disagreement on distance is a signal the word is interesting to
+*some* tables and not others, so those words go to playtest rather than to the bin.
+
+## Playtest
+
+The rubric is a prior. This is how it gets a posterior.
+
+**Protocol.** Play normally. One observer, one row per card *per player*:
+
+```{r schema}
+tribble(
+  ~field, ~type, ~note,
+  "session_id", "chr", "One game night",
+  "player_id", "chr", "Anonymous but stable within a session",
+  "word", "chr", "The card as dealt",
+  "seconds_to_first_angle", "num", "Stopwatch from card reveal to first real claim. The blank shows up here.",
+  "n_angles", "int", "Distinct frames actually used, coded from the recording or tallied live",
+  "ran_over", "lgl", "Did the table keep talking past the timer",
+  "rating", "ord", "Player's own 1–5: would you want this card again"
+) |>
+  gt() |>
+  tab_header(title = "One row per card per player") |>
+  tab_options(table.font.size = 12)
+```
+
+`ran_over` is the outcome I would trust most. Ratings are polite; a table that keeps
+arguing after the buzzer is not.
+
+::: {.callout-important}
+## Everything below runs on simulated data
+There are no sessions yet. The block below invents ratings so the model code is
+known to execute. **No coefficient printed here is a finding**, and the simulation
+was written by someone who already believes the hypothesis, which is exactly why it
+reproduces it.
+:::
+
+```{r simulate}
+sim_players <- paste0("p", 1:12)
+sim_words <- slice_sample(scored_deck, n = 24)
+
+sim_ratings <- expand_grid(player_id = sim_players, word = sim_words$word) |>
+  left_join(select(sim_words, word, distance, traction_distinct, concreteness, register),
+            by = "word") |>
+  mutate(
+    player_effect = rnorm(n(), 0, 0.6)[match(player_id, sim_players)],
+    latent = 0.55 * scale(distance)[, 1] +
+      0.40 * scale(traction_distinct)[, 1] +
+      0.25 * scale(concreteness)[, 1] +
+      player_effect + rnorm(n(), 0, 0.9),
+    rating = cut(latent, breaks = c(-Inf, -1.1, -0.35, 0.35, 1.1, Inf),
+                 labels = 1:5, ordered_result = TRUE)
+  )
+
+glimpse(sim_ratings, width = 72)
+```
+
+```{r model}
+fit <- ordinal::clmm(
+  rating ~ scale(distance) + scale(traction_distinct) + scale(concreteness) +
+    (1 | player_id) + (1 | word),
+  data = sim_ratings
+)
+
+broom::tidy(fit) |>
+  filter(coef.type == "location") |>
+  transmute(term, estimate = round(estimate, 2), std.error = round(std.error, 2)) |>
+  gt() |>
+  tab_header(
+    title = "Model specification, fit to fake data",
+    subtitle = "The shape of the answer, not the answer"
+  ) |>
+  tab_options(table.font.size = 12)
+```
+
+Once ~3 sessions exist, the same call on real rows does three things:
+
+1. **Replaces `WEIGHTS`** with estimated coefficients, so the screening score stops
+   being a hunch.
+2. **Ranks unplayed candidates** — predict on `scored_candidates`, deal the top of
+   the queue next session.
+3. **Tests the core claim.** If the distance coefficient is flat, the premise of this
+   whole notebook is wrong and the deck should just be funny without the detour.
+
+The `(1 | word)` term is the one to watch: a large word-level variance after the
+codes are accounted for means the instrument is missing whatever actually makes a
+card work.
+
+## What I'd decide next
+
+- **Cut or keep the lecture zone?** There is a case for a handful of obvious words as
+  warm-ups — they let a nervous table start. My instinct is to keep about five and
+  cut the rest.
+- **Is `register` doing work that `distance` isn't?** They correlate strongly here
+  (`r round(cor(codes$distance, as.numeric(codes$register == "chaos")), 2)` in this
+  coding). If they are the same thing measured twice, drop one.
+- **Does a word need to be *shared*?** Every code above assumes the table knows the
+  referent. A German student group and a US one do not have the same *Hotel
+  Breakfast*. That may deserve its own code rather than living inside concreteness.
+- **Who is the second coder.** Nothing else here matters much until that exists.
