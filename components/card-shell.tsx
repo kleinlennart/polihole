@@ -109,7 +109,14 @@ export function CardShell({
       </header>
 
       <section
-        onClick={done ? undefined : onNext}
+        // Kindle-style: the left half of the card steps back, the right half
+        // deals on. The end screen only goes back — reshuffling stays behind
+        // its own button, so a stray tap can't throw away the pass.
+        onClick={(e) => {
+          const { left, width } = e.currentTarget.getBoundingClientRect();
+          if (e.clientX - left < width / 2) onPrevious();
+          else if (!done) onNext();
+        }}
         // A phone on its side has no height to spare: the generous vertical
         // padding is the first thing to give, before the card's type is.
         className="flex flex-1 flex-col justify-center px-7 py-10 sm:px-8 [@media(max-height:520px)]:py-4"

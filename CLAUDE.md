@@ -58,7 +58,7 @@ No component holds a literal user-facing string. `lib/content.ts` types the file
 
 1. `lib/decks.ts` — JSON imported at build time (so decks ship in the bundle and work offline with no fetch), types, `shuffle` (Fisher–Yates), `shuffleAvoiding`, `pickOne`.
 2. `lib/use-deck.ts` — one shuffled pass then an explicit end screen, never a silent loop. The dealt order and index live in `sessionStorage` (reload restores the same card; closing the tab deals fresh); the last card seen lives in `localStorage` so the next shuffle doesn't open on it. A saved order whose ids no longer match the deck is discarded and re-dealt, so editing `data/*.json` is safe.
-3. `components/card-shell.tsx` — shared chrome for both decks: header, counter, footer buttons, keyboard handling (arrows/space/enter), and the per-variant `skin` map that picks the colour scheme.
+3. `components/card-shell.tsx` — shared chrome for both decks: header, counter, footer buttons, keyboard handling (arrows/space/enter), Kindle-style tap halves (left back, right next), and the per-variant `skin` map that picks the colour scheme.
 
 Card numbers are intrinsic to the card, not to its place in the shuffle: `claimNumber` strips the digits out of a claim's `id`, `wordNumber` is the word's 1-based index in `words.json`. **Reordering `data/words.json` renumbers every word card.**
 

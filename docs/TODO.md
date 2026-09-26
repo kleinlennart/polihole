@@ -8,5 +8,4 @@
 
 - stop docs-only pushes asking everyone to reload: next stamps a random build id into three asset paths, so every build is a new cache name, and deploy.yml has no path filter. either a constant `generateBuildId` in next.config.ts or `paths-ignore` on the workflow.
 
-- add Kindle style left right backward forward navigation
-
+- add quiz
