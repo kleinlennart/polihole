@@ -26,6 +26,7 @@
     "blurb": "A claim or question on every card. Agree, disagree, or stall convincingly.",
     "count": "{count} cards",
     "pushFurther": "Push further",
+    "contextToggle": "What's this about?",
     "sourceToggle": "Where's this from?",
     "finishedTitle": "That's the whole deck.",
     "finishedNote": "{count} discussions, nothing changed. Or did it?"
@@ -114,7 +115,7 @@
         }
       ]
     },
-    "credits": "This project was inspired by {askhole}, {politicalCompass}, and the {leftValues}.",
+    "credits": "This project was inspired by {askhole}, {politicalCompass}, and the {leftValues}. Some claims are adapted from {monvote}.",
     "links": {
       "source": {
         "label": "GitHub",
@@ -131,6 +132,10 @@
       "politicalCompass": {
         "label": "The Political Compass",
         "url": "https://www.politicalcompass.org/"
+      },
+      "monvote": {
+        "label": "MonVote2027",
+        "url": "https://monvote2027.fr/donnees"
       }
     },
     "affiliation": "No affiliation with any of them.",

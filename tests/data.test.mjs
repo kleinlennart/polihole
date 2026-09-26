@@ -50,3 +50,46 @@ test("no words padded with whitespace", () => {
       .join(", ")}`,
   );
 });
+
+const claims = JSON.parse(
+  readFileSync(new URL("../data/claims.json", import.meta.url), "utf8"),
+);
+
+test("claim ids are unique and numbered", () => {
+  // The card number is the digits in the id (claimNumber in lib/decks.ts), so
+  // two ids with the same digits would print the same number.
+  const seen = new Map();
+  const clashes = [];
+
+  for (const { id } of claims) {
+    assert.match(id, /^c\d{3,}$/, `malformed claim id "${id}"`);
+    const number = Number(id.slice(1));
+    if (seen.has(number)) clashes.push(`${seen.get(number)} and ${id}`);
+    else seen.set(number, id);
+  }
+
+  assert.deepEqual(clashes, [], `claim ids share a number: ${clashes.join("; ")}`);
+});
+
+test("claim context, where present, is non-empty text", () => {
+  const bad = claims
+    .filter((c) => "context" in c)
+    .filter((c) => typeof c.context !== "string" || c.context.trim() === "")
+    .map((c) => c.id);
+
+  assert.deepEqual(bad, [], `claims with an empty context: ${bad.join(", ")}`);
+});
+
+test("claim tags are lists of words", () => {
+  // A tag list written as a bare string would still be iterable, and quietly
+  // become one tag per letter.
+  const bad = claims
+    .filter(
+      (c) =>
+        !Array.isArray(c.tags) ||
+        !c.tags.every((t) => typeof t === "string" && /^[a-z][a-z-]+$/.test(t)),
+    )
+    .map((c) => c.id);
+
+  assert.deepEqual(bad, [], `claims with malformed tags: ${bad.join(", ")}`);
+});

@@ -69,6 +69,38 @@ function ClaimCard({ card }: { card: Claim }) {
           </button>
         )
       ) : null}
+
+      {card.context ? <ContextNote context={card.context} /> : null}
+    </div>
+  );
+}
+
+function ContextNote({ context }: { context: string }) {
+  const [shown, setShown] = useState(false);
+
+  return (
+    // Reading the note shouldn't turn the card: taps on it stay here instead
+    // of reaching the tap halves. `w-fit` keeps the collapsed toggle from
+    // swallowing taps across the whole row. The toggle waits three seconds
+    // before it fades in, so the claim gets argued about before it gets
+    // explained; the card's key restarts the wait on every card.
+    <div
+      onClick={(e) => e.stopPropagation()}
+      className="delayed-reveal mt-7 w-fit max-w-[52ch]"
+    >
+      <button
+        type="button"
+        aria-expanded={shown}
+        onClick={() => setShown((v) => !v)}
+        className="text-sm font-medium text-white/55 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        {copy.contextToggle}
+      </button>
+      {shown ? (
+        <p className="deck-enter mt-3 border-l-2 border-white/30 pl-4 text-[clamp(1rem,1.8vw,1.2rem)] leading-snug text-white/80">
+          {context}
+        </p>
+      ) : null}
     </div>
   );
 }

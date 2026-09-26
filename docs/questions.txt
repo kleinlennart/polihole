@@ -1,0 +1,400 @@
+q1 [immigration]
+T: Il faut réduire significativement l'immigration légale en France.
+C: L'immigration légale désigne l'entrée régulière d'étrangers sur le territoire (travail, études, regroupement familial). Elle est distincte de l'immigration irrégulière. Réduire l'immigration légale implique de durcir les conditions d'obtention de visas ou de titres de séjour.
+
+q2 [securite,justice]
+T: Les peines pour les crimes et délits violents doivent être alourdies.
+C: Cette question porte sur l'alourdissement des peines maximales encourues pour les crimes et délits violents. Les peines planchers, minimums automatiques en cas de récidive, ont existé de 2007 à 2014.
+
+q3 [economie,fiscal]
+T: Il faut augmenter les impôts sur les très grandes fortunes.
+C: L'ISF (Impôt de solidarité sur la fortune) a été transformé en IFI (Impôt sur la fortune immobilière, limité aux biens immobiliers) en 2018. La question porte sur une taxation plus large des grandes fortunes mobilières et financières.
+
+q4 [social,travail]
+T: L'âge légal de départ à la retraite doit être abaissé.
+C: L'âge légal de départ à la retraite a été relevé à 64 ans par la réforme de 2023, avec une durée de cotisation de 43 annuités requise. La question porte sur un abaissement de cet âge légal.
+
+q5 [international,diplomatie,justice]
+T: La France doit appliquer les mandats d'arrêt de la CPI, y compris contre des dirigeants de pays alliés.
+C: La Cour pénale internationale (CPI), basée à La Haye, peut émettre des mandats d'arrêt pour crimes contre l'humanité, génocide ou crimes de guerrem y compris contre des dirigeants de pays alliés de la France. La France est signataire du Statut de Rome, qui fonde cette juridiction.
+
+q6 [europe]
+T: La France doit quitter l'Union Européenne.
+C: L'article 50 du traité de Lisbonne, utilisé par le Royaume-Uni lors du Brexit en 2020, prévoit la procédure de retrait de l'Union européenne. Quitter l'UE signifierait sortir du marché unique, de la politique commerciale commune et du cadre juridique européen, tout en conservant la possibilité de négocier des accords bilatéraux. Environ 45 % des exportations françaises sont destinées aux États membres de l'UE.
+
+q7 [democratie,institutions]
+T: Une part de représentation proportionnelle doit être introduite aux législatives.
+C: En France, les législatives se déroulent au scrutin majoritaire uninominal à deux tours, ce qui favorise les grands partis. La proportionnelle attribuerait les sièges en fonction de la part de voix obtenue. Une proportionnelle partielle combinerait les deux systèmes.
+
+q8 [sante,education,social]
+T: L'État doit embaucher massivement dans les hôpitaux et l'Éducation nationale.
+C: La France connaît des déficits récurrents de personnels dans les hôpitaux publics et l'Éducation nationale. La question porte sur des recrutements massifs dans ces secteurs, ce qui implique une augmentation des dépenses publiques.
+
+q9 [social,travail,economie]
+T: Le SMIC doit être augmenté significativement.
+C: Le SMIC (salaire minimum interprofessionnel de croissance) est fixé à environ 1 443 € nets par mois en 2026. La question porte sur une hausse significative de ce plancher légal, dont les effets sur l'emploi et la compétitivité font débat.
+
+q10 [energie]
+T: Le nucléaire doit rester un pilier de la politique énergétique française.
+C: La France produit environ 70 % de son électricité grâce au nucléaire, l'un des taux les plus élevés au monde. Le débat porte sur la place du nucléaire dans la transition énergétique : source d'électricité bas-carbone et de souveraineté énergétique pour les uns, risque technologique, financier et lié aux déchets pour les autres.
+
+q11 [economie,social]
+T: Une partie des services publics devrait être ouverte à la gestion privée.
+C: La gestion privée de services publics peut prendre la forme de délégations de service public, de concessions ou de privatisations. Le débat porte sur l'efficacité économique d'un côté, et le maintien de l'égalité d'accès et de la continuité du service de l'autre.
+
+q12 [international,defense]
+T: La France doit quitter l'OTAN.
+C: L'OTAN (Organisation du traité de l'Atlantique Nord) est une alliance militaire fondée en 1949. La France en avait quitté le commandement militaire intégré en 1966 et l'a réintégré en 2009. Quitter l'OTAN signifierait sortir du commandement commun et des garanties de défense mutuelle.
+
+q13 [democratie,institutions]
+T: Il faut instaurer le référendum d'initiative citoyenne (RIC).
+C: Le Référendum d'initiative citoyenne (RIC) permettrait à un nombre défini de citoyens (souvent évoqué autour de 700 000 signatures) de soumettre directement une question au vote populaire, sans passer par le Parlement ni le Président de la République.
+
+q14 [education]
+T: L'uniforme scolaire doit être rendu obligatoire dans les écoles.
+C: L'uniforme scolaire est obligatoire dans de nombreux pays (Royaume-Uni, Japon, etc.). En France, il est absent de l'enseignement public depuis la IIIe République. La question porte sur son rétablissement obligatoire dans les établissements scolaires.
+
+q15 [environnement,fiscal]
+T: La France doit mettre fin à ses subventions aux énergies fossiles.
+C: La France verse chaque année plusieurs dizaines de milliards d'euros en soutiens aux énergies fossiles, sous forme de niches fiscales (avantage sur le gazole non routier, exonérations de taxe intérieure de consommation) et d'aides à certains secteurs industriels. La question porte sur la suppression totale de ces soutiens publics, au nom de la cohérence avec les objectifs climatiques de la France.
+
+q16 [societe,sante]
+T: Il faut légaliser le cannabis récréatif.
+C: Le cannabis récréatif est un stupéfiant interdit en France. Sa légalisation encadrée (production, vente et consommation régulées par l'État) existe dans plusieurs pays (Canada, Uruguay, certains États américains). Elle soulève des enjeux de santé publique, fiscaux et de lutte contre les trafics.
+
+q17 [international,societe]
+T: La France doit présenter des excuses officielles pour son passé colonial.
+C: La France a administré un empire colonial s'étendant sur l'Afrique, l'Asie du Sud-Est et les Amériques du XVIIe siècle au milieu du XXe siècle. Des crimes ont été commis durant cette période : guerres de conquête, système esclavagiste, répressions de mouvements d'indépendance. Plusieurs pays (Belgique, Allemagne, Pays-Bas) ont présenté des excuses officielles pour leurs crimes coloniaux. La France ne l'a pas fait à ce jour.
+
+q18 [economie,fiscal]
+T: L'État doit lancer un grand plan d'investissements publics, même au prix d'un déficit aggravé.
+C: Face au vieillissement des infrastructures, aux besoins de la transition écologique et au recul industriel, plusieurs économistes et partis politiques défendent un choc d'investissement public. Cette approche keynésienne accepte un déficit plus élevé à court terme pour stimuler l'économie et préparer l'avenir. D'autres estiment que la dette publique, qui dépasse 110 % du PIB, interdit tout endettement supplémentaire.
+
+q19 [immigration,sante]
+T: L'aide médicale d'État (AME) pour les sans-papiers doit être supprimée.
+C: L'aide médicale d'État (AME) permet aux étrangers en situation irrégulière de bénéficier de soins, sous conditions de ressources et de durée de présence sur le territoire. Son coût annuel est d'environ 1 milliard d'euros. La question porte sur sa suppression.
+
+q20 [international]
+T: La France doit accroître son aide au développement des pays du Sud.
+C: L'aide publique au développement (APD) française représente environ 0,5 % du revenu national brut. L'objectif fixé par les Nations Unies est de 0,7 %. Cette aide finance des projets de santé, d'éducation et d'infrastructure dans les pays en développement.
+
+q21 [immigration]
+T: Il faut mettre fin au droit du sol en France.
+C: Le droit du sol permet d'obtenir la nationalité française si l'on naît en France de parents étrangers, sous certaines conditions de résidence. La question porte sur sa suppression ou sa restriction, par exemple en le conditionnant à la nationalité ou au statut légal des parents.
+
+q22 [immigration,securite]
+T: Les étrangers en situation irrégulière doivent être expulsés systématiquement.
+C: Les OQTF (Obligations de quitter le territoire français) sont des décisions administratives d'éloignement. Leur taux d'exécution effective est faible (environ 10-15 %). La question porte sur un renforcement du dispositif d'expulsion des personnes en situation irrégulière.
+
+q23 [democratie,immigration]
+T: Le droit de vote aux élections locales doit être accordé aux étrangers résidents en situation régulière.
+C: En France, le droit de vote aux élections locales est réservé aux citoyens français et aux ressortissants de l'Union européenne. Plusieurs pays européens (Suède, Danemark, Pays-Bas, Portugal) accordent ce droit aux résidents étrangers non-communautaires après quelques années de résidence légale. Une révision constitutionnelle serait nécessaire pour l'instaurer en France.
+
+q24 [immigration,social]
+T: Les étrangers devraient attendre 5 ans avant d'accéder aux aides sociales.
+C: Un délai de carence conditionnerait l'accès aux aides sociales (RSA, allocations familiales, etc.) à une durée minimale de présence légale en France. Les délais varient actuellement selon les aides, de quelques mois à cinq ans.
+
+q25 [immigration]
+T: La double nationalité franco-étrangère devrait être restreinte.
+C: La double nationalité permet de posséder deux passeports et d'exercer des droits civiques dans deux pays. La question porte sur des restrictions à cette situation, par exemple en imposant un choix de nationalité unique à la majorité.
+
+q26 [immigration,economie]
+T: Les immigrés venant travailler doivent être prioritaires sur les autres pour l'accueil en France.
+C: L'immigration en France se divise en plusieurs motifs : travail, regroupement familial, asile et protection internationale. La question porte sur l'idée de traiter en priorité les demandes des étrangers qui viennent pour exercer une activité professionnelle, en leur accordant des procédures plus rapides ou des conditions d'accès au séjour plus souples que pour les autres motifs.
+
+q27 [immigration]
+T: Il faut faciliter le regroupement familial.
+C: Le regroupement familial permet à un étranger résidant légalement en France de faire venir son conjoint et ses enfants mineurs, sous conditions de ressources et de logement. La question porte sur l'assouplissement ou le renforcement de ces conditions.
+
+q28 [immigration]
+T: La France doit accueillir davantage de demandeurs d'asile.
+C: La France est liée par le règlement de Dublin, qui définit l'État responsable de l'examen d'une demande d'asile. La question porte sur l'accueil d'un plus grand nombre de réfugiés reconnus, notamment via des mécanismes de relocalisation au sein de l'UE.
+
+q29 [securite,justice]
+T: Il faut rétablir des peines planchers pour les récidivistes.
+C: Les peines planchers imposaient une peine minimale automatique pour les récidivistes, sans marge d'appréciation pour le juge. Instaurées en 2007 et supprimées en 2014 au nom de l'individualisation des peines, la question porte sur leur rétablissement.
+
+q30 [securite,justice]
+T: Les mineurs délinquants doivent être jugés comme des majeurs à partir de 16 ans.
+C: L'ordonnance de 1945 sur l'enfance délinquante posait le principe de primauté éducative sur le répressif pour les mineurs. Le code de justice pénale des mineurs, entré en vigueur en 2021, a durci certaines dispositions. La question porte sur l'alignement de la responsabilité pénale des 16-17 ans sur celle des majeurs.
+
+q31 [social,economie]
+T: Il faut développer la retraite par capitalisation en complément de la répartition.
+C: Le système de retraite français repose principalement sur la répartition : les cotisations des actifs financent immédiatement les pensions des retraités. La capitalisation consiste à l'inverse à épargner, individuellement ou collectivement (fonds de pension, plan d'épargne retraite), pour financer sa propre pension future. La question porte sur l'introduction d'une dose de capitalisation en complément de la répartition, présentée par ses partisans comme un moyen de compléter les pensions, et critiquée par ses opposants au nom de la solidarité entre générations et des risques liés aux marchés financiers.
+
+q32 [justice]
+T: Les peines alternatives à l'emprisonnement (bracelet, TIG, sursis) doivent être privilégiées pour les délits non-violents.
+C: La France connaît une surpopulation carcérale chronique : environ 75 000 détenus pour 62 000 places en 2025. Les peines alternatives à l'emprisonnement comprennent le bracelet électronique, les travaux d'intérêt général (TIG) et le sursis. La question porte sur leur recours prioritaire pour les délits non-violents, dans une logique de réinsertion et de désengorgement des prisons.
+
+q33 [securite,institutions]
+T: Il faut créer une autorité indépendante pour enquêter sur les violences policières.
+C: Les violences impliquant des agents des forces de l'ordre font actuellement l'objet d'enquêtes menées par l'Inspection générale de la Police nationale (IGPN) et l'Inspection générale de la Gendarmerie nationale (IGGN), des organes internes aux ministères concernés. La question porte sur la création d'une autorité indépendante du pouvoir exécutif pour instruire ces affaires, à l'image de l'IOPC britannique ou du Comité P belge.
+
+q34 [institutions,democratie]
+T: Un mandat de parlementaire doit être incompatible avec l'exercice de toute autre activité professionnelle rémunérée.
+C: Les parlementaires français perçoivent une indemnité mensuelle d'environ 7 400 € bruts. Ils peuvent actuellement exercer certaines activités professionnelles en parallèle de leur mandat (professions libérales, fonctions dans des sociétés, etc.), sous réserve des règles déontologiques. La question porte sur une incompatibilité totale, faisant du mandat parlementaire une activité exclusive à temps plein.
+
+q35 [securite,justice]
+T: Il faut créer davantage de places de prison.
+C: Les prisons françaises sont chroniquement surpeuplées : environ 75 000 détenus pour 62 000 places en 2025. La question porte sur la construction de nouveaux établissements pénitentiaires, face à des alternatives comme les peines aménagées (bracelet électronique, travaux d'intérêt général).
+
+q36 [numerique,societe]
+T: Les réseaux sociaux doivent être tenus responsables des contenus préjudiciables publiés par leurs utilisateurs.
+C: Aujourd'hui, les plateformes (Meta, X, TikTok, YouTube) bénéficient d'un régime de responsabilité limitée : elles ne sont pas considérées comme éditrices des contenus publiés par leurs utilisateurs, ce qui réduit leur obligation d'agir. Le règlement européen sur les services numériques (DSA, 2022) a introduit de nouvelles obligations de modération pour les très grandes plateformes. La question porte sur un renforcement de cette responsabilité légale, en cas de maintien de contenus haineux, de désinformation ou d'incitation à la violence.
+
+q37 [agriculture,social,economie]
+T: L'État doit garantir des prix planchers rémunérateurs pour les agriculteurs.
+C: Les prix planchers sont des prix minimums garantis en deçà desquels les agriculteurs ne peuvent vendre leurs produits, visant à couvrir leurs coûts de production et leur rémunération. Le débat porte sur le rôle de l'État dans la fixation de ces prix face aux industriels et aux distributeurs.
+
+q38 [fiscal,economie,social]
+T: Il faut instaurer une contribution exceptionnelle sur les successions de plus de 2 millions d'euros.
+C: Les droits de succession en France sont progressifs selon le lien de parenté et le montant hérité. En ligne directe, ils atteignent 45 % au-delà de 1,8 million d'euros. La question porte sur l'instauration d'une contribution supplémentaire ciblant les très grands patrimoines transmis, dans une logique de redistribution intergénérationnelle des richesses.
+
+q39 [economie,travail]
+T: Il faut baisser les cotisations patronales.
+C: Les cotisations patronales financent la Sécurité sociale (santé, retraites, accidents du travail, chômage). La question porte sur leur réduction pour baisser le coût du travail, avec des débats sur les effets sur l'emploi et le financement de la protection sociale.
+
+q40 [economie,travail]
+T: Les entreprises ayant bénéficié d'aides publiques ne doivent pas pouvoir délocaliser pendant 10 ans.
+C: L'État et les collectivités territoriales accordent chaque année plusieurs milliards d'euros d'aides aux entreprises : subventions, exonérations fiscales, prêts bonifiés, participations au capital. La question porte sur l'instauration d'une clause de maintien territorial conditionnant l'octroi de ces soutiens publics à l'interdiction de délocaliser les activités pendant 10 ans.
+
+q41 [economie]
+T: Il faut nationaliser les secteurs stratégiques (énergie, transports).
+C: Les nationalisations consistent à transférer la propriété d'entreprises privées à l'État dans des secteurs jugés stratégiques. EDF a été renationalisée à 100 % en 2023. La question porte sur l'extension de ce processus à d'autres secteurs (eau, transports, télécoms, banques).
+
+q42 [immigration,international]
+T: La France doit pouvoir déroger à la CEDH pour mener sa politique migratoire.
+C: La Convention européenne des droits de l'homme (CEDH), signée en 1950, garantit notamment le droit au respect de la vie privée et familiale et interdit les traitements inhumains ou dégradants. La Cour européenne des droits de l'homme a plusieurs fois suspendu des expulsions décidées par les autorités françaises. La question porte sur la possibilité pour la France de s'affranchir de ces décisions dans le cadre de sa politique d'éloignement du territoire.
+
+q43 [defense,international]
+T: La France doit s'engager dans un processus de désarmement nucléaire.
+C: La France dispose d'une force de dissuasion nucléaire composée de sous-marins lanceurs d'engins et de missiles aéroportés, représentant environ 290 ogives. Elle est l'une des cinq puissances nucléaires officiellement reconnues par le Traité sur la non-prolifération (TNP). Le Traité sur l'interdiction des armes nucléaires (TIAN), entré en vigueur en 2021, n'a pas été signé par la France.
+
+q44 [transport,environnement]
+T: La vente de véhicules thermiques neufs doit être interdite d'ici 2035.
+C: L'Union européenne a adopté en 2023 l'interdiction de la vente de véhicules à moteur thermique neuf à partir de 2035, avec une dérogation pour les carburants de synthèse neutres en carbone. La question porte sur le maintien ou l'assouplissement de cette échéance.
+
+q45 [social,economie]
+T: Il faut instaurer un revenu universel de base.
+C: Le revenu universel de base (RUB) serait versé à tous les adultes de façon inconditionnelle, sans critère de ressources ni d'activité. Son montant (souvent proposé autour de 800-1 000 €/mois) et son mode de financement (refonte des aides existantes, hausse d'impôts) font l'objet de nombreux débats.
+
+q46 [economie,fiscal,social]
+T: La TVA sur les produits de première nécessité doit être supprimée.
+C: La TVA sur les produits alimentaires de base est déjà à taux réduit de 5,5 % en France. La question porte sur la suppression totale de cette taxe pour une liste de produits de première nécessité (alimentation essentielle, produits d'hygiène), afin de réduire son caractère régressif.
+
+q47 [travail,economie]
+T: La durée légale du travail doit être portée au-dessus de 35 heures par semaine.
+C: La durée légale du travail est fixée à 35 heures par semaine en France depuis 2000. Ce seuil déclenche la majoration des heures supplémentaires (25 % à 50 % de plus). La question porte sur un relèvement de ce seuil légal au-delà de 35 heures, et non sur la simple défiscalisation des heures sup.
+
+q48 [travail,social]
+T: Le droit de grève dans les services publics doit être limité.
+C: Le droit de grève est garanti par la Constitution. Un service minimum légal obligatoire existe dans les transports aériens depuis 2012. La question porte sur l'extension de cette obligation à d'autres services publics (transports terrestres, hôpitaux, enseignement) pour assurer une continuité minimale.
+
+q49 [societe]
+T: La PMA doit être intégralement remboursée et ses conditions d'accès élargies (âge, critères médicaux).
+C: La PMA (procréation médicalement assistée) a été ouverte aux couples de femmes et aux femmes seules par la loi bioéthique de 2021. Elle reste soumise à des conditions d'âge et partiellement remboursée par la Sécurité sociale. La question porte sur un remboursement intégral et un élargissement des critères d'accès.
+
+q50 [societe]
+T: La gestation pour autrui (GPA) doit être légalisée en France.
+C: La GPA (gestation pour autrui) est interdite en France. Elle consiste à ce qu'une femme porte un enfant pour un autre couple, auquel elle sera remise à la naissance. Le débat porte sur la marchandisation du corps, l'égalité des droits entre couples et la protection des enfants nés par GPA à l'étranger.
+
+q51 [societe,sante]
+T: Le droit à l'aide à mourir (assistance médicale pour mettre fin à sa vie) doit être légalisé en France.
+C: L'aide active à mourir (euthanasie ou suicide assisté) est légale dans plusieurs pays (Pays-Bas, Belgique, Suisse, Canada). En France, la loi Claeys-Leonetti (2016) permet la sédation profonde mais pas l'aide active à mourir. Un projet de loi spécifique a été débattu en 2024-2025.
+
+q52 [societe,sante]
+T: Il faut faciliter et élargir l'accès à l'avortement.
+C: Le droit à l'interruption volontaire de grossesse (IVG) est garanti en France depuis la loi de 1975 et inscrit dans la Constitution en 2024. Le délai légal est de 14 semaines. La question porte sur l'élargissement des délais, l'accès territorial et le remboursement.
+
+q53 [environnement,transport,fiscal]
+T: Il faut instaurer une taxe carbone progressive sur les billets d'avion.
+C: Le transport aérien est responsable de 2 à 3 % des émissions mondiales de CO₂, sans compter les effets d'altitude qui amplifient son impact climatique. En France, les billets d'avion sont soumis à une taxe de solidarité (taxe Chirac) dont le montant est fixe selon la destination et la classe. La question porte sur une taxe progressive selon la distance parcourue et la fréquence des voyages, pour inciter à réduire les déplacements aériens.
+
+q54 [economie,travail]
+T: La gouvernance des grandes entreprises doit être partagée à égalité entre représentants des actionnaires et représentants des salariés.
+C: En France, les salariés sont représentés au conseil d'administration des grandes entreprises, mais en minorité (1 à 2 représentants selon la taille). En Allemagne, le modèle de cogestion (Mitbestimmung) impose une représentation à parité dans les conseils de surveillance des entreprises de plus de 2 000 salariés. La question porte sur l'adoption d'un modèle similaire en France.
+
+q55 [logement]
+T: Il faut instaurer un contrôle strict des loyers dans les grandes villes.
+C: L'encadrement des loyers fixe un loyer de référence par zone et type de logement, avec un plafond légal. Il est expérimenté dans plusieurs grandes villes depuis 2019. La question porte sur son extension nationale ou à l'ensemble des zones tendues.
+
+q56 [travail,economie]
+T: Les procédures de licenciement économique doivent être simplifiées.
+C: En France, le licenciement économique est encadré par des procédures strictes : consultation des représentants du personnel, élaboration d'un plan de sauvegarde de l'emploi (PSE) pour les grandes entreprises et contrôle de l'administration du travail. La question porte sur la simplification de ces procédures pour permettre aux entreprises de s'adapter plus rapidement aux évolutions économiques, au risque de fragiliser la protection des salariés.
+
+q57 [environnement,fiscal]
+T: La taxe carbone doit être augmentée.
+C: La taxe carbone (contribution énergie-climat) renchérit le prix des énergies fossiles (carburants, fioul) pour inciter à réduire les émissions de CO₂. En France, sa trajectoire de hausse a été suspendue en 2018 après une mobilisation sociale importante.
+
+q58 [environnement]
+T: Il faut interdire progressivement l'élevage intensif.
+C: L'élevage intensif concentre un grand nombre d'animaux dans de petits espaces pour réduire les coûts de production. La question porte sur son interdiction progressive, au nom du bien-être animal et de l'impact environnemental (pollution des sols et de l'eau, utilisation d'antibiotiques).
+
+q59 [environnement]
+T: Les pesticides doivent être progressivement interdits.
+C: Les pesticides de synthèse (dont le glyphosate) font l'objet de débats sur leurs effets sanitaires et environnementaux. La France a engagé des plans de réduction de leur usage (plan Écophyto). La question porte sur une interdiction progressive et généralisée.
+
+q60 [societe,culture]
+T: La corrida doit être interdite en France.
+C: La corrida est légalement pratiquée en France dans les communes ayant une tradition tauromachique ininterrompue, principalement dans le Sud-Ouest et certaines villes méditerranéennes. Elle bénéficie d'une dérogation à la loi de 1963 sur la protection des animaux. La question oppose les partisans de son maintien comme patrimoine culturel à ceux qui la considèrent comme une forme de cruauté animale incompatible avec les valeurs contemporaines.
+
+q61 [energie,environnement]
+T: Les énergies renouvelables doivent représenter 100 % du mix électrique d'ici 2050.
+C: La production d'électricité à partir de 100 % d'énergies renouvelables (solaire, éolien, hydraulique, biomasse) nécessite de résoudre la question de l'intermittence (stockage, équilibrage des réseaux). Atteindre cet objectif d'ici 2050 implique une transformation profonde du parc de production.
+
+q62 [transport,environnement]
+T: La France ne doit plus construire de nouvelles autoroutes.
+C: La France dispose d'un réseau autoroutier d'environ 12 000 kilomètres, l'un des plus denses d'Europe. Plusieurs projets de nouvelles autoroutes sont en cours d'étude ou de concession. La question oppose les partisans de la mobilité et du désenclavement des territoires aux défenseurs de l'environnement, qui soulignent l'artificialisation des sols et les émissions de CO₂ induites par la construction et l'usage autoroutier.
+
+q63 [defense,fiscal]
+T: Le budget de la défense nationale doit atteindre 3 % du PIB.
+C: Le budget de la défense nationale français représente environ 2 % du PIB, conformément à l'objectif de l'OTAN. La question porte sur un relèvement à 3 %, ce qui constituerait une augmentation substantielle des dépenses militaires.
+
+q64 [environnement,economie,fiscal]
+T: Il faut instaurer une taxe sur les superprofits des entreprises pétrolières.
+C: La taxe sur les superprofits cible les bénéfices exceptionnels réalisés en période de crise, notamment par les entreprises du secteur pétrolier et gazier pendant la crise énergétique de 2022-2023. Plusieurs États européens l'ont instaurée temporairement sur cette période.
+
+q65 [international,defense]
+T: La France doit soutenir davantage l'Ukraine militairement.
+C: Depuis l'invasion de l'Ukraine par la Russie en février 2022, la France fournit une aide militaire (artillerie, véhicules blindés, formation). La question porte sur l'intensification de ce soutien, notamment en termes d'armements lourds et de financement.
+
+q66 [europe,immigration]
+T: Il faut renforcer les contrôles aux frontières extérieures de l'UE.
+C: L'agence Frontex assure la surveillance des frontières extérieures de l'espace Schengen. La question porte sur le renforcement des contrôles aux frontières extérieures de l'UE, notamment en Méditerranée et aux frontières terrestres, pour limiter les entrées irrégulières.
+
+q67 [europe,defense]
+T: La France doit développer une armée européenne commune.
+C: Une armée européenne commune impliquerait un commandement militaire unifié entre États membres de l'UE, distinct de l'OTAN. Elle supposerait un transfert partiel de souveraineté en matière de défense et un budget commun. Plusieurs États membres s'y montrent réticents.
+
+q68 [social,travail]
+T: Le RSA doit rester conditionné à des heures d'activité ou de bénévolat obligatoires.
+C: Le Revenu de solidarité active (RSA) est versé aux personnes dont les ressources sont inférieures à environ 635 € par mois pour une personne seule. En 2024, le gouvernement a généralisé une obligation de 15 heures hebdomadaires d'activité (emploi, formation ou bénévolat) pour ses bénéficiaires. La gauche souhaite abroger cette mesure au nom de l'inconditionnalité des aides sociales, tandis que la droite souhaite la maintenir voire la renforcer.
+
+q69 [international,diplomatie]
+T: La France doit maintenir des relations diplomatiques avec la Russie.
+C: La Russie a envahi l'Ukraine en février 2022, entraînant un régime de sanctions économiques de l'UE et un gel des relations diplomatiques avec de nombreux pays occidentaux. La France a maintenu certains canaux de communication avec Moscou. La question porte sur le maintien de relations diplomatiques avec la Russie, entre la nécessité d'un dialogue pour une résolution du conflit et le risque de légitimer l'agression russe.
+
+q70 [numerique,securite]
+T: Il faut interdire la reconnaissance faciale dans l'espace public.
+C: La reconnaissance faciale utilise des algorithmes pour identifier des personnes à partir de leurs traits physiques, en temps réel ou en différé. En France, son usage par les forces de l'ordre est limité, mais les Jeux olympiques de 2024 ont relancé le débat sur son déploiement dans les espaces publics. Le règlement européen sur l'IA (AI Act, 2024) l'encadre strictement. La question porte sur une interdiction totale au nom du respect de la vie privée et des libertés individuelles.
+
+q71 [international,defense]
+T: La France doit réduire sa présence militaire en Afrique.
+C: La France maintient des bases militaires et des forces prépositionnées dans plusieurs pays d'Afrique subsaharienne. Depuis 2022, plusieurs États (Mali, Niger, Burkina Faso, Tchad, Sénégal) ont demandé le retrait des troupes françaises. La question porte sur une réduction ou une fin de cette présence.
+
+q72 [europe,fiscal]
+T: Il faut harmoniser la fiscalité entre les pays de l'UE pour éviter la concurrence fiscale entre États.
+C: Certains États de l'UE pratiquent une fiscalité sur les sociétés très basse pour attirer les sièges d'entreprises (Irlande, Luxembourg, Pays-Bas). Une harmonisation fiscale européenne fixerait un taux minimal commun d'imposition des bénéfices, limitant cette concurrence entre États membres.
+
+q73 [institutions,democratie]
+T: Il faut passer à une VIe République.
+C: La Ve République, fondée en 1958, est caractérisée par un exécutif présidentiel fort. Passer à une VIe République impliquerait l'adoption d'une nouvelle Constitution, avec un rééquilibrage des pouvoirs entre Président, gouvernement et Parlement.
+
+q74 [institutions,democratie]
+T: L'article 49.3 de la Constitution doit être supprimé.
+C: L'article 49.3 de la Constitution permet au gouvernement d'engager sa responsabilité sur un projet de loi de finances ou de financement de la Sécurité sociale, le faisant adopter sans vote sauf si une motion de censure est déposée et adoptée dans les 24 heures. Il a été utilisé à de nombreuses reprises, notamment lors du débat sur le budget 2024. Ses détracteurs le jugent anti-démocratique ; ses défenseurs y voient un outil nécessaire à la stabilité gouvernementale.
+
+q75 [institutions,democratie]
+T: Il faut donner davantage de pouvoirs au Parlement face à l'exécutif.
+C: L'article 49.3 de la Constitution permet au gouvernement d'engager sa responsabilité sur un texte de loi, qui est adopté sans vote sauf si une motion de censure est votée dans les 24 heures. La question porte sur la réduction des pouvoirs de l'exécutif et le renforcement du rôle du Parlement.
+
+q76 [logement,social]
+T: L'État doit pouvoir réquisitionner les logements laissés vides pour lutter contre la crise du logement.
+C: La France compte environ 3 millions de logements vacants, dont une partie est délibérément laissée vide par leurs propriétaires. Le droit de réquisition existe légalement depuis la loi Quilliot (1982) mais est très rarement mis en œuvre. La crise du logement se traduit par de longues files d'attente pour les HLM et une flambée des loyers dans les grandes villes. La question porte sur le recours effectif à la réquisition pour reloger des personnes sans domicile ou en grande précarité.
+
+q77 [agriculture,environnement]
+T: Les aides agricoles doivent être conditionnées au respect de normes environnementales strictes.
+C: La Politique agricole commune (PAC) verse des subventions aux agriculteurs européens, en grande partie calculées sur la superficie des exploitations. La conditionnalité environnementale stricte lierait ces aides au respect de pratiques agro-écologiques (haies, rotation des cultures, réduction des pesticides).
+
+q78 [laicite,societe]
+T: Le port de signes religieux ostensibles doit être interdit pour tous dans les services publics, agents et usagers.
+C: En France, la loi de 2004 interdit le port de signes religieux ostensibles (voile, kippa, grande croix) aux élèves des écoles publiques. Les agents du service public sont soumis à une obligation de neutralité religieuse. La question porte sur l'extension de cette interdiction aux usagers des services publics.
+
+q79 [sante,travail,societe]
+T: Le congé menstruel doit être instauré et remboursé par la Sécurité sociale.
+C: L'endométriose et les douleurs menstruelles sévères affectent environ 10 % des femmes en âge de procréer et constituent une cause fréquente d'absentéisme au travail. L'Espagne a instauré en 2023 un congé menstruel de trois jours par mois, pris en charge par la Sécurité sociale. La question porte sur la création d'un dispositif similaire en France, permettant aux femmes souffrant de douleurs incapacitantes de s'absenter sans perte de salaire.
+
+q80 [medias,culture]
+T: L'État doit renforcer et augmenter le financement de l'audiovisuel public (France Télévisions, Radio France).
+C: France Télévisions, Radio France et France Médias Monde sont financés par une dotation budgétaire de l'État depuis la suppression de la redevance audiovisuelle en 2022. La question porte sur une augmentation de ce financement public pour renforcer l'audiovisuel public.
+
+q81 [education,sante]
+T: L'éducation à la sexualité doit être renforcée et rendue obligatoire de l'école primaire au lycée.
+C: La loi française prévoit depuis 2001 trois séances annuelles d'éducation à la vie affective et sexuelle, de l'école primaire au lycée. Dans les faits, ces séances sont rarement dispensées faute de formation des enseignants et de moyens alloués. La question porte sur le renforcement effectif de cet enseignement, incluant des thématiques de consentement, d'égalité entre les sexes et de santé reproductive.
+
+q82 [economie,fiscal,social]
+T: Un revenu maximum légal doit être instauré.
+C: Le revenu maximum légal fixerait un plafond au-delà duquel tout revenu supplémentaire (salaire, dividendes, revenus du capital) serait intégralement prélevé par l'État. Plusieurs propositions ont été formulées en France, avec des plafonds allant de 36 fois le SMIC à 20 fois le salaire médian (soit environ 400 000 €/an). Ce concept est distinct d'une simple hausse du taux marginal d'imposition : il s'agit d'un plafond légal absolu.
+
+q83 [medias,democratie]
+T: La loi doit limiter la concentration de la propriété des médias d'information.
+C: En France, plusieurs grands groupes industriels ou financiers contrôlent simultanément des télévisions, radios, titres de presse écrite et médias en ligne. La question porte sur l'instauration ou le renforcement de règles anti-concentration limitant le nombre de médias qu'un même actionnaire peut contrôler, au nom du pluralisme de l'information.
+
+q84 [education]
+T: La carte scolaire doit être supprimée pour permettre le libre choix de l'école.
+C: La carte scolaire affecte les élèves à un établissement public en fonction de leur lieu de résidence. Elle vise à garantir une certaine mixité sociale, mais est fréquemment contournée par les familles les plus aisées. La question porte sur sa suppression totale, qui permettrait à toutes les familles de choisir librement l'établissement public de leur secteur ou d'un autre secteur, au risque d'accentuer les inégalités entre établissements.
+
+q85 [outremer,institutions]
+T: Les territoires d'outre-mer doivent obtenir davantage d'autonomie institutionnelle.
+C: Les territoires d'outre-mer (DOM, ROM, collectivités d'outre-mer) ont des statuts institutionnels variés. Certains souhaitent davantage d'autonomie législative pour adapter les règles à leurs réalités locales, notamment économiques et sociales. Cela nécessiterait une révision constitutionnelle.
+
+q86 [democratie,jeunesse]
+T: Le droit de vote doit être abaissé à 16 ans.
+C: En France, le droit de vote est accordé à partir de 18 ans. Plusieurs pays européens (Autriche, Malte, Écosse, Allemagne pour certains scrutins) l'ont abaissé à 16 ans. Une proposition de loi en ce sens a été débattue à l'Assemblée nationale. Ses partisans invoquent l'engagement civique des jeunes ; ses opposants estiment que la majorité civile et politique doit rester alignée sur la majorité légale.
+
+q87 [social]
+T: Les minima sociaux (RSA, AAH) doivent être significativement augmentés.
+C: Le Revenu de solidarité active (RSA) s'élève à environ 635 € par mois pour une personne seule en 2026. L'Allocation aux adultes handicapés (AAH) est d'environ 1 016 € par mois. Ces montants restent inférieurs au seuil de pauvreté, fixé à environ 1 100 € en France. La question porte sur une hausse significative de ces prestations pour permettre à leurs bénéficiaires de subvenir à leurs besoins essentiels.
+
+q88 [jeunesse,defense]
+T: Le Service National Universel (SNU) doit être rendu obligatoire.
+C: Le Service National Universel (SNU) est expérimenté depuis 2019 sur la base du volontariat pour les 15-17 ans. Il comprend un séjour de cohésion de deux semaines et une mission d'intérêt général. La question porte sur son passage à l'obligatoire pour tous les jeunes de cette tranche d'âge.
+
+q89 [sante,social]
+T: La Sécurité sociale doit prendre en charge 100 % des frais de santé.
+C: La Sécurité sociale rembourse en moyenne 77 % des dépenses de santé. Le reste est pris en charge par les mutuelles complémentaires, dont la souscription est inégalement accessible selon les revenus. La question porte sur un remboursement à 100 % par la Sécurité sociale.
+
+q90 [sante,social]
+T: Les déserts médicaux doivent être traités par la création de centres de santé publics avec des médecins salariés.
+C: Les déserts médicaux désignent les zones où la densité de médecins est insuffisante pour répondre aux besoins de la population. Environ 6 millions de Français vivent sans médecin traitant. Les centres de santé proposent des médecins salariés, à l'inverse des cabinets libéraux. La question porte sur le développement de ces structures publiques comme réponse prioritaire aux inégalités d'accès aux soins dans les territoires sous-dotés.
+
+q91 [jeunesse,education]
+T: Parcoursup doit être supprimé.
+C: Parcoursup est la plateforme nationale de préinscription dans l'enseignement supérieur, lancée en 2018. Elle classe les candidatures selon des critères définis par chaque établissement. La question porte sur sa suppression au profit d'un autre mode d'affectation (tirage au sort, priorité au baccalauréat, etc.).
+
+q92 [societe,institutions]
+T: La France doit reconnaître une troisième mention de genre neutre sur les documents d'état civil.
+C: En France, l'état civil reconnaît deux mentions de sexe : masculin ou féminin. Certaines personnes transgenres ou non-binaires revendiquent une troisième mention, souvent désignée par la lettre X ou la mention « neutre ». L'Allemagne, les Pays-Bas et plusieurs autres pays ont instauré cette option. Une telle réforme nécessiterait une modification du code civil français.
+
+q93 [transport,economie]
+T: Les autoroutes doivent être renationalisées.
+C: Les autoroutes françaises ont été concédées à des sociétés privées (Vinci Autoroutes, Eiffage, Abertis) entre 1990 et 2006. Ces concessions arrivent à échéance entre 2031 et 2036. La renationalisation consisterait à reprendre la propriété et la gestion de ces infrastructures dans le giron public.
+
+q94 [consommation,sante]
+T: La publicité pour les produits nocifs pour la santé (alcool, tabac, malbouffe) doit être davantage restreinte.
+C: La publicité pour l'alcool est encadrée par la loi de 1991, qui autorise sous conditions des messages sur certains supports. Celle pour le tabac est quasi totalement interdite depuis 1991. La question porte sur un renforcement de ces restrictions, étendu à la malbouffe et aux boissons sucrées.
+
+q95 [logement,social]
+T: Il faut construire davantage de logements sociaux.
+C: La France compte environ 5 millions de logements sociaux (HLM), gérés par des organismes publics ou parapublics. Face à la crise du logement et aux longues listes d'attente, la question porte sur un programme de construction significatif de nouveaux logements sociaux.
+
+q96 [numerique,securite]
+T: L'État doit pouvoir bloquer les réseaux sociaux en cas de troubles à l'ordre public.
+C: En 2023, lors des émeutes suivant la mort de Nahel Merzouk, le gouvernement a évoqué la possibilité de restreindre l'accès aux réseaux sociaux pour limiter la coordination des violences. TikTok, Snapchat et Twitter (X) étaient particulièrement visés. La question porte sur l'instauration d'un cadre légal permettant à l'État de bloquer temporairement ces services, en tension avec la liberté d'expression et le droit à l'information.
+
+q97 [logement]
+T: Les propriétaires doivent avoir davantage de facilités pour expulser les locataires mauvais payeurs.
+C: Les procédures d'expulsion locative prennent en moyenne plus d'un an en France, avec une trêve hivernale du 1er novembre au 31 mars pendant laquelle toute expulsion est suspendue. La question porte sur la simplification et l'accélération de ces procédures pour les propriétaires.
+
+q98 [consommation,environnement]
+T: Une taxe sur la fast fashion (vêtements produits à bas coût à l'étranger) doit être instaurée.
+C: La fast fashion désigne la mode à bas coût produite en grande quantité, souvent dans des pays à faible coût de main-d'œuvre. Une loi adoptée en France en 2024 prévoit une taxe sur les vêtements produits à l'étranger à très bas prix, pour internaliser leurs coûts environnementaux et sociaux.
+
+q99 [environnement,justice]
+T: La France doit reconnaître le crime d'écocide dans son droit pénal.
+C: L'écocide désigne la destruction massive et délibérée d'un écosystème naturel. La Convention citoyenne pour le climat (2020) avait recommandé son inscription dans la Constitution française, mais cette proposition n'a pas abouti. La Cour pénale internationale a élargi en 2024 sa compétence aux crimes environnementaux graves. La question porte sur la création d'un crime d'écocide en droit pénal français, permettant de poursuivre les responsables de destructions environnementales majeures.
+
+q100 [logement,environnement]
+T: Il faut faciliter la construction dans les zones protégées pour répondre aux besoins de logement.
+C: Les zones protégées (Natura 2000, zones humides, espaces naturels sensibles) font l'objet de règles d'urbanisme strictes limitant la construction. Face à la crise du logement, la question porte sur un assouplissement de ces règles pour autoriser davantage de constructions dans ces zones.
+

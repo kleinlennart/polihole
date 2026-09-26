@@ -1206,5 +1206,869 @@
     "source": "Right-wing Authoritarianism Scale",
     "axis": "authoritarianism",
     "tags": []
+  },
+  {
+    "id": "c152",
+    "text": "Legal immigration should be significantly reduced.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration"],
+    "context": "Legal immigration means people moving to a country through regular channels: work, study, family or refuge. Cutting it means tighter rules for visas and residence permits. The debate weighs labour needs and family ties against pressure on housing, services and social cohesion."
+  },
+  {
+    "id": "c153",
+    "text": "Violent criminals get off too lightly.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "security",
+    "tags": ["security", "justice"],
+    "context": "This is about longer maximum sentences for violent crimes. Supporters say tougher sentences deter offenders and protect the public; critics say the certainty of being caught matters more than the length of the sentence."
+  },
+  {
+    "id": "c154",
+    "text": "The very rich should pay far more tax.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "tax"],
+    "context": "A wealth tax is levied on what people own, not what they earn. Supporters say great fortunes grow faster than wages and should contribute more; critics say the rich can move their money abroad and that assets are hard to value."
+  },
+  {
+    "id": "c155",
+    "text": "The legal retirement age should be lowered.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "welfare",
+    "tags": ["welfare", "work"],
+    "context": "As people live longer, pensions cost more, and governments often respond by raising the retirement age. Lowering it means more years of retirement, paid for by higher contributions, higher taxes or lower pensions."
+  },
+  {
+    "id": "c156",
+    "text": "My country should enforce ICC arrest warrants, even against the leaders of allies.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "international",
+    "tags": ["international", "diplomacy", "justice"],
+    "context": "The International Criminal Court can issue arrest warrants for genocide, war crimes and crimes against humanity. Member states are obliged to arrest suspects on their territory, even when the suspect leads a friendly country."
+  },
+  {
+    "id": "c157",
+    "text": "My country should leave the European Union.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "europe",
+    "tags": ["europe"],
+    "context": "Leaving the EU means leaving the single market, the customs union and EU law, and negotiating new trade deals from outside. Supporters stress sovereignty and control over laws and borders; opponents stress trade, jobs and influence."
+  },
+  {
+    "id": "c158",
+    "text": "Every vote should count the same: parliament should be elected by proportional representation.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "democracy",
+    "tags": ["democracy", "institutions"],
+    "context": "In winner-takes-all systems, each district elects one representative, which favours large parties and usually produces single-party governments. Proportional representation gives parties seats in line with their share of the vote, which tends to mean coalitions."
+  },
+  {
+    "id": "c159",
+    "text": "Hospitals and schools need an army of new public hires, whatever it costs.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "health",
+    "tags": ["health", "education", "welfare"],
+    "context": "Hiring many more nurses, doctors and teachers means much higher public spending, paid for by taxes or borrowing. Supporters say understaffing costs lives and learning; critics ask where the money and the trained staff will come from."
+  },
+  {
+    "id": "c160",
+    "text": "The minimum wage should be raised significantly.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "welfare",
+    "tags": ["welfare", "work", "economy"],
+    "context": "A statutory minimum wage sets the lowest legal pay. Raising it lifts the incomes of the lowest paid; critics warn it can cost jobs or push up prices if it rises faster than productivity."
+  },
+  {
+    "id": "c161",
+    "text": "Nuclear power should be a pillar of energy policy.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "energy",
+    "tags": ["energy"],
+    "context": "Nuclear power is low-carbon and runs whatever the weather, but brings accident risk, long-lived waste and huge up-front costs. The debate is whether it is a necessary backbone for a low-carbon grid or an expensive detour from renewables."
+  },
+  {
+    "id": "c162",
+    "text": "Private companies would run some public services better than the state does.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "welfare"],
+    "context": "Public services can be handed to private operators through contracts, concessions or outright privatisation. Supporters point to efficiency and innovation; critics to profit-taking, unequal access and the risk of services failing."
+  },
+  {
+    "id": "c163",
+    "text": "My country should leave NATO.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "international",
+    "tags": ["international", "defence"],
+    "context": "NATO is a military alliance whose members promise to defend one another if attacked. Leaving means giving up that guarantee and any say in the alliance, in exchange for full independence in defence and foreign policy."
+  },
+  {
+    "id": "c164",
+    "text": "Citizens should be able to force a national referendum by collecting signatures.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "democracy",
+    "tags": ["democracy", "institutions"],
+    "context": "A citizens' initiative lets a set number of voters force a referendum, bypassing parliament. Supporters call it direct democracy; critics say it reduces complex issues to yes or no and favours well-funded campaigns."
+  },
+  {
+    "id": "c165",
+    "text": "School uniforms should be made compulsory in schools.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "education",
+    "tags": ["education"],
+    "context": "Supporters of school uniforms say they hide differences in wealth, reduce peer pressure and build a sense of belonging. Opponents point to the cost for families and the loss of self-expression."
+  },
+  {
+    "id": "c166",
+    "text": "Governments should end all subsidies for fossil fuels.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment", "tax"],
+    "context": "Governments support fossil fuels through tax breaks, cheap fuel for particular industries and direct aid. Ending it would align spending with climate goals, but could raise prices for households and hit industries that depend on cheap energy."
+  },
+  {
+    "id": "c167",
+    "text": "Recreational cannabis should be legalised.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "society",
+    "tags": ["society", "health"],
+    "context": "Legalising recreational cannabis means the state regulating its production and sale, as it does alcohol. Supporters cite tax revenue, safer products and less organised crime; opponents cite the health risks, especially for young people."
+  },
+  {
+    "id": "c168",
+    "text": "Former colonial powers should officially apologise for their colonial past.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "international",
+    "tags": ["international", "society"],
+    "context": "Colonial empires were built through conquest, slavery and the violent repression of independence movements. Supporters of an apology see it as owed recognition; opponents say today's citizens aren't responsible, or worry about claims for reparations."
+  },
+  {
+    "id": "c169",
+    "text": "Borrow big and build. The deficit can wait.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "tax"],
+    "context": "The case for: borrow now to repair infrastructure, fund the green transition and revive industry, and growth will pay it back. The case against: more debt means higher interest costs and less room to respond to the next crisis."
+  },
+  {
+    "id": "c170",
+    "text": "Free healthcare for undocumented migrants should be abolished.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration", "health"],
+    "context": "Some countries give undocumented migrants access to routine healthcare; others offer emergency care only. Supporters cite public health and the higher cost of treating illness late; opponents say it encourages irregular migration."
+  },
+  {
+    "id": "c171",
+    "text": "Rich countries should increase their development aid to the Global South.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "international",
+    "tags": ["international"],
+    "context": "Development aid funds health, education and infrastructure in poorer countries. Supporters see it as a duty and an investment in stability; critics question whether it works and say the money is needed at home."
+  },
+  {
+    "id": "c172",
+    "text": "Birthright citizenship should be abolished.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration"],
+    "context": "Under birthright citizenship, anyone born in a country becomes a citizen. Supporters say it makes children born and raised there full members of society; opponents say citizenship should depend on the parents' status or ties to the country."
+  },
+  {
+    "id": "c173",
+    "text": "Foreigners without legal status should be systematically deported.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration", "security"],
+    "context": "Deportation orders often go unenforced, for lack of travel documents, cooperation from countries of origin, or because of legal appeals. Systematic removal would mean more detention and enforcement, and raises questions about people's rights and ties."
+  },
+  {
+    "id": "c174",
+    "text": "Foreign residents with legal status should get the right to vote in local elections.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "democracy",
+    "tags": ["democracy", "migration"],
+    "context": "Some countries let foreign residents vote in local elections after a period of legal residence; others reserve it for citizens. Supporters say those who live and pay taxes somewhere should have a say; opponents say voting should come with citizenship."
+  },
+  {
+    "id": "c175",
+    "text": "Foreigners should have to wait 5 years before they can receive welfare benefits.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration", "welfare"],
+    "context": "A waiting period would make access to welfare depend on a minimum length of legal residence. Supporters say it stops welfare from drawing migrants in; critics say it pushes newcomers into poverty."
+  },
+  {
+    "id": "c176",
+    "text": "Dual citizenship should be restricted.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration"],
+    "context": "Dual citizenship means holding two passports and civic rights in two countries. Supporters say it reflects lives lived across borders; critics question divided loyalty. One proposal is to make people choose a single nationality when they come of age."
+  },
+  {
+    "id": "c177",
+    "text": "Let workers in first. Everyone else can wait.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration", "economy"],
+    "context": "Immigration channels include work, family reunification and asylum. Prioritising labour migrants means faster procedures or easier permits for people with a job or needed skills, and relatively fewer places for everyone else."
+  },
+  {
+    "id": "c178",
+    "text": "Family reunification should be made easier.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration"],
+    "context": "Family reunification lets a legally resident foreigner bring over a spouse and children, usually subject to income and housing conditions. The debate is between the right to family life and control over immigration numbers."
+  },
+  {
+    "id": "c179",
+    "text": "My country should take in more asylum seekers.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration"],
+    "context": "Asylum is protection for people fleeing persecution or war. Besides those who arrive and claim asylum, countries can resettle refugees directly from abroad. This is about taking in more of both."
+  },
+  {
+    "id": "c180",
+    "text": "Repeat offenders should face mandatory minimum sentences.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "security",
+    "tags": ["security", "justice"],
+    "context": "Mandatory minimums set an automatic floor on sentences for repeat offenders, leaving judges no discretion. Supporters say they guarantee firmness; critics say they fill prisons without cutting crime and stop judges weighing each case."
+  },
+  {
+    "id": "c181",
+    "text": "Juvenile offenders aged 16 and over should be tried as adults.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "security",
+    "tags": ["security", "justice"],
+    "context": "Most justice systems treat young offenders differently, putting education and rehabilitation ahead of punishment. This is about giving 16- and 17-year-olds the same criminal responsibility, and the same sentences, as adults."
+  },
+  {
+    "id": "c182",
+    "text": "Part of everyone's pension should be invested in the stock market.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "welfare",
+    "tags": ["welfare", "economy"],
+    "context": "In pay-as-you-go pensions, today's workers fund today's retirees. In funded pensions, people save and invest for their own retirement. Supporters say a funded share boosts pensions; critics cite market risk and weaker solidarity between generations."
+  },
+  {
+    "id": "c183",
+    "text": "Prison is the wrong punishment for non-violent crime.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "justice",
+    "tags": ["justice"],
+    "context": "Alternatives to prison include electronic tagging, community service and suspended sentences. Supporters cite rehabilitation, cost and overcrowded prisons; critics call them too lenient."
+  },
+  {
+    "id": "c184",
+    "text": "An independent authority should be created to investigate police violence.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "security",
+    "tags": ["security", "institutions"],
+    "context": "Complaints against the police are often investigated by the police themselves. An independent body would be separate from both the police and the government. Supporters say only that earns public trust; critics fear it undermines police morale."
+  },
+  {
+    "id": "c185",
+    "text": "Being an MP should be a full-time job, with no side income.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "institutions",
+    "tags": ["institutions", "democracy"],
+    "context": "Some parliaments let members keep outside jobs alongside their seat. Supporters of a ban say representing people is a full-time job and outside pay creates conflicts of interest; opponents say outside work keeps politicians in touch with the real world."
+  },
+  {
+    "id": "c186",
+    "text": "More prison places should be built.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "security",
+    "tags": ["security", "justice"],
+    "context": "When prisons are overcrowded, the choice is between building more of them and sending fewer people there. Building costs a lot and takes years; sentencing fewer people raises questions of public safety."
+  },
+  {
+    "id": "c187",
+    "text": "Social media platforms should be held liable for harmful content posted by their users.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "technology",
+    "tags": ["technology", "society"],
+    "context": "Platforms are generally not treated as publishers of what their users post, which limits their legal liability. Making them liable would push them to remove more harmful content, but also, critics fear, more legitimate speech."
+  },
+  {
+    "id": "c188",
+    "text": "Farmers should be guaranteed a price they can live on, whatever the market says.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "agriculture",
+    "tags": ["agriculture", "welfare", "economy"],
+    "context": "A floor price is a guaranteed minimum below which farm produce can't be sold, meant to cover farmers' costs and pay. Supporters say farmers are squeezed by processors and supermarkets; critics warn it can raise food prices or create surpluses."
+  },
+  {
+    "id": "c189",
+    "text": "Nobody should inherit a fortune without paying extra for it.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "tax",
+    "tags": ["tax", "economy", "welfare"],
+    "context": "Inheritance taxes are usually progressive, and often lower for close family. Supporters say large inheritances entrench inequality from one generation to the next; opponents see taxing them as punishing families for passing on what they built."
+  },
+  {
+    "id": "c190",
+    "text": "Employers pay too much to hire people.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "work"],
+    "context": "Employers pay contributions on wages that fund social protection: health, pensions, unemployment. Cutting them lowers the cost of hiring; the question is how the lost funding would be replaced."
+  },
+  {
+    "id": "c191",
+    "text": "Take public money, and you don't get to move the jobs abroad.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "work"],
+    "context": "Governments give companies subsidies, tax breaks and cheap loans. This would attach a condition: take the money, and you can't move jobs abroad for 10 years. Supporters call it fair; critics say it would scare off investment."
+  },
+  {
+    "id": "c192",
+    "text": "Energy and transport should belong to the state.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy"],
+    "context": "Nationalisation moves private companies into state ownership. Supporters say strategic sectors like energy and transport should serve the public, not shareholders; critics point to cost, inefficiency and political meddling."
+  },
+  {
+    "id": "c193",
+    "text": "My country should be able to override European human rights rulings to enforce its migration policy.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "migration",
+    "tags": ["migration", "international"],
+    "context": "The European Convention on Human Rights protects family life and bans inhuman or degrading treatment, and its court can halt deportations. This is about letting a government set those rulings aside on migration, at the cost of weakening the convention."
+  },
+  {
+    "id": "c194",
+    "text": "Nuclear-armed states should commit to nuclear disarmament.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "defence",
+    "tags": ["defence", "international"],
+    "context": "Nuclear disarmament means giving up nuclear weapons, gradually or by treaty. Supporters say they threaten catastrophe; opponents say deterrence keeps the peace between major powers and that disarming alone leaves a country exposed."
+  },
+  {
+    "id": "c195",
+    "text": "The sale of new petrol and diesel cars should be banned by 2035.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "transport",
+    "tags": ["transport", "environment"],
+    "context": "Banning new petrol and diesel cars forces a switch to electric and other low-emission vehicles. Supporters say it gives industry a clear target; critics cite cost, charging infrastructure and the impact on carmakers and rural drivers."
+  },
+  {
+    "id": "c196",
+    "text": "A universal basic income should be introduced.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "welfare",
+    "tags": ["welfare", "economy"],
+    "context": "A universal basic income would pay every adult a fixed sum, with no means test and no work requirement. How much, how to fund it, and whether people would still work are the big arguments."
+  },
+  {
+    "id": "c197",
+    "text": "Food and soap shouldn't be taxed at all.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "tax", "welfare"],
+    "context": "Sales taxes like VAT fall hardest on poorer households, who spend more of what they earn. Scrapping them on essentials like food and hygiene products helps those households, but the rich save money too and the state loses revenue."
+  },
+  {
+    "id": "c198",
+    "text": "The standard working week is too short.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "work",
+    "tags": ["work", "economy"],
+    "context": "The legal working week sets the hours above which overtime pay kicks in, or caps hours outright. A longer week could raise output and lower labour costs; opponents cite health, family life and fewer jobs to go round."
+  },
+  {
+    "id": "c199",
+    "text": "The right to strike in public services should be limited.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "work",
+    "tags": ["work", "welfare"],
+    "context": "The right to strike is a basic protection for workers, but strikes in public services hit the people who depend on them. Limiting it could mean a guaranteed minimum service, longer notice, or bans in essential sectors."
+  },
+  {
+    "id": "c200",
+    "text": "Assisted reproduction should be fully reimbursed and access to it widened (age, medical criteria).",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "society",
+    "tags": ["society"],
+    "context": "Assisted reproduction (IVF and related treatments) is often limited by age, medical criteria, waiting lists and partial funding, and access for single women and same-sex couples varies. This is about full public funding and wider access."
+  },
+  {
+    "id": "c201",
+    "text": "Surrogacy should be legal.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "society",
+    "tags": ["society"],
+    "context": "In surrogacy, a woman carries a child for another person or couple and hands it over at birth. The debate covers commodification of the body, the rights of the surrogate, equal rights for couples, and the interests of the child."
+  },
+  {
+    "id": "c202",
+    "text": "Assisted dying should be legal.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "society",
+    "tags": ["society", "health"],
+    "context": "Assisted dying means helping a terminally ill or suffering person end their life, through euthanasia or assisted suicide. Supporters cite autonomy and dignity; opponents fear pressure on vulnerable people and a slippery slope."
+  },
+  {
+    "id": "c203",
+    "text": "Access to abortion should be made easier and wider.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "society",
+    "tags": ["society", "health"],
+    "context": "Abortion laws vary in time limits, cost and ease of access. This is about longer time limits, better local access and full public funding. The debate turns on bodily autonomy and on when the unborn should be protected."
+  },
+  {
+    "id": "c204",
+    "text": "The more you fly, the more tax you should pay per ticket.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment", "transport", "tax"],
+    "context": "Aviation is a significant and fast-growing source of emissions, and a small share of frequent flyers takes most flights. A progressive tax would rise with distance and with how often you fly."
+  },
+  {
+    "id": "c205",
+    "text": "Workers should have as many seats on the board as shareholders.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "work"],
+    "context": "In most companies, shareholders elect the board. Co-determination gives employees seats too; parity means half of them. Supporters say it leads to longer-term decisions; critics say it slows companies down and deters investors."
+  },
+  {
+    "id": "c206",
+    "text": "Strict rent controls should be introduced in big cities.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "housing",
+    "tags": ["housing"],
+    "context": "Rent control caps rents or rent rises. Supporters say it protects tenants from being priced out; critics say it discourages building and maintenance and shrinks the supply of homes to rent."
+  },
+  {
+    "id": "c207",
+    "text": "It should be easier to lay people off.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "work",
+    "tags": ["work", "economy"],
+    "context": "Laying off staff for economic reasons often involves consultation, notice periods, severance pay and sometimes official approval. Simplifying that lets companies adapt faster, at the cost of weaker protection for employees."
+  },
+  {
+    "id": "c208",
+    "text": "The carbon tax should be raised.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment", "tax"],
+    "context": "A carbon tax raises the price of fossil fuels to cut emissions. It hits drivers and rural households hardest and can spark protests; some designs return the revenue to households as a rebate."
+  },
+  {
+    "id": "c209",
+    "text": "Factory farming should be phased out.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment"],
+    "context": "Intensive livestock farming keeps large numbers of animals in small spaces to cut costs. Phasing it out would improve animal welfare and reduce pollution, but raise the price of meat, eggs and milk."
+  },
+  {
+    "id": "c210",
+    "text": "Pesticides should be phased out.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment"],
+    "context": "Synthetic pesticides raise yields but are contested for their effects on health, insects and water. A general ban would mean a shift to organic or low-input farming, with lower yields or higher costs."
+  },
+  {
+    "id": "c211",
+    "text": "Renewable energy should make up 100% of the electricity mix by 2050.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "energy",
+    "tags": ["energy", "environment"],
+    "context": "A fully renewable grid runs on sun, wind, water and biomass. The challenge is intermittency: storing power and balancing the grid when there is no sun or wind. Getting there means rebuilding the whole generating fleet."
+  },
+  {
+    "id": "c212",
+    "text": "No new motorways should be built.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "transport",
+    "tags": ["transport", "environment"],
+    "context": "Supporters say new motorways connect remote areas, ease congestion and help the economy. Opponents say they pave over land and generate more traffic and emissions, and that the money should go to public transport."
+  },
+  {
+    "id": "c213",
+    "text": "National defence spending should reach 3% of GDP.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "defence",
+    "tags": ["defence", "tax"],
+    "context": "Defence spending is usually measured as a share of GDP. Raising it means more equipment, more recruits and more readiness for war; the money has to come from taxes, borrowing or other budgets."
+  },
+  {
+    "id": "c214",
+    "text": "Oil companies' crisis profits should be taxed away.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment", "economy", "tax"],
+    "context": "A windfall tax targets exceptional profits made because of a crisis, like soaring energy prices. Supporters call those profits unearned; critics say such taxes deter investment and change the rules after the fact."
+  },
+  {
+    "id": "c215",
+    "text": "My country should step up its military support for Ukraine.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "international",
+    "tags": ["international", "defence"],
+    "context": "Military support means weapons, ammunition, training and funding. Supporters say it defends a country against invasion and deters further aggression; critics fear escalation and the cost."
+  },
+  {
+    "id": "c216",
+    "text": "Controls at the EU's external borders should be tightened.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "europe",
+    "tags": ["europe", "migration"],
+    "context": "The EU's external borders are the frontiers of the passport-free Schengen area, so what happens there affects every member. Tighter controls mean more patrols, fences and checks, and raise questions about how people seeking asylum are treated."
+  },
+  {
+    "id": "c217",
+    "text": "The EU should build a common European army.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "europe",
+    "tags": ["europe", "defence"],
+    "context": "A European army would mean a unified command of member states' forces, with a shared budget and a partial transfer of sovereignty over defence. Supporters say Europe must be able to defend itself; opponents prize national control."
+  },
+  {
+    "id": "c218",
+    "text": "Welfare benefits should be conditional on mandatory hours of work or volunteering.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "welfare",
+    "tags": ["welfare", "work"],
+    "context": "Welfare conditions can include job-search requirements or compulsory hours of work, training or volunteering. Supporters say rights come with duties; critics say conditions push the most vulnerable out of support."
+  },
+  {
+    "id": "c219",
+    "text": "My country should maintain diplomatic relations with Russia.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "international",
+    "tags": ["international", "diplomacy"],
+    "context": "Keeping diplomatic relations means keeping embassies and channels of dialogue open. The case for is that talking is the only path to peace; the case against is that it legitimises aggression."
+  },
+  {
+    "id": "c220",
+    "text": "Facial recognition should be banned in public spaces.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "technology",
+    "tags": ["technology", "security"],
+    "context": "Facial recognition identifies people from their faces, live or from recordings. Police say it helps catch suspects; critics say it enables mass surveillance and misidentifies people. This is about a total ban in public places."
+  },
+  {
+    "id": "c221",
+    "text": "Taxation should be harmonised across EU countries to prevent tax competition between states.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "europe",
+    "tags": ["europe", "tax"],
+    "context": "Some EU countries tax companies very lightly to attract their headquarters. Harmonisation would set common rules or a minimum rate on profits across the EU, limiting competition between member states."
+  },
+  {
+    "id": "c222",
+    "text": "My country needs a new constitution.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "institutions",
+    "tags": ["institutions", "democracy"],
+    "context": "A constitution sets how power is shared between head of state, government, parliament and courts. Writing a new one is a way to reset a political system; critics say it distracts from fixing concrete problems."
+  },
+  {
+    "id": "c223",
+    "text": "Governments should not be able to pass laws without a vote in parliament.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "institutions",
+    "tags": ["institutions", "democracy"],
+    "context": "Some constitutions let a government force a bill through without a final vote, daring parliament to bring it down instead. Critics call such tools undemocratic; defenders say they keep minority governments stable."
+  },
+  {
+    "id": "c224",
+    "text": "Parliament should be given more power relative to the executive.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "institutions",
+    "tags": ["institutions", "democracy"],
+    "context": "The balance between parliament and the executive varies. Where governments control the agenda, rely on emergency powers or rule by decree, parliament can become a rubber stamp. This is about shifting power back to parliament."
+  },
+  {
+    "id": "c225",
+    "text": "The state should be able to seize empty homes to house people.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "housing",
+    "tags": ["housing", "welfare"],
+    "context": "Cities often have homes standing empty while people sleep rough or wait years for social housing. Requisition lets the state take temporary control of empty homes to house people. Critics see it as an attack on property rights."
+  },
+  {
+    "id": "c226",
+    "text": "No farm subsidies without strict environmental rules.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "agriculture",
+    "tags": ["agriculture", "environment"],
+    "context": "Farm subsidies are often paid per hectare or per unit produced, regardless of how the land is farmed. Strict conditions would tie them to practices like hedgerows, crop rotation and less pesticide."
+  },
+  {
+    "id": "c227",
+    "text": "Conspicuous religious symbols should be banned for everyone in public services, staff and users alike.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "religion",
+    "tags": ["religion", "society"],
+    "context": "Some countries require strict religious neutrality in public life; others allow religious symbols freely. This is about banning conspicuous symbols (headscarf, kippah, large cross) for staff and users of public services alike."
+  },
+  {
+    "id": "c228",
+    "text": "Menstrual leave should be introduced and paid for by the state.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "health",
+    "tags": ["health", "work", "society"],
+    "context": "Severe period pain, including endometriosis, is a common cause of missed work. Menstrual leave would allow paid days off without loss of pay. Supporters call it overdue; critics fear it could make employers wary of hiring women."
+  },
+  {
+    "id": "c229",
+    "text": "Public broadcasting should get more public funding.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "media",
+    "tags": ["media", "culture"],
+    "context": "Public broadcasters are funded by a licence fee or directly from the state budget. Supporters say they provide independent news and culture the market won't; critics question paying for them and their neutrality."
+  },
+  {
+    "id": "c230",
+    "text": "Sex education should be strengthened and made compulsory from primary school to the end of secondary school.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "education",
+    "tags": ["education", "health"],
+    "context": "Sex education ranges from none at all to a compulsory curriculum from primary school. This is about making it thorough and compulsory, including consent, gender equality and reproductive health. Some parents want to decide this themselves."
+  },
+  {
+    "id": "c231",
+    "text": "Nobody should be allowed to earn more than a legal maximum.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "economy",
+    "tags": ["economy", "tax", "welfare"],
+    "context": "A legal maximum income would tax away all income above a ceiling, often set as a multiple of the minimum or median wage. It is an absolute cap, not just a higher top tax rate."
+  },
+  {
+    "id": "c232",
+    "text": "No single owner should control too much of the news.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "media",
+    "tags": ["media", "democracy"],
+    "context": "When a few owners control many TV channels, radio stations, newspapers and news sites, they can shape public debate. Anti-concentration rules cap how much media one owner can control, in the name of pluralism."
+  },
+  {
+    "id": "c233",
+    "text": "Parents should be free to pick any school, not the one they're assigned.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "education",
+    "tags": ["education"],
+    "context": "Catchment areas assign children to a public school by where they live, aiming for a social mix, though better-off families often get round them by moving. Abolishing them would let every family choose, at the risk of widening gaps between schools."
+  },
+  {
+    "id": "c234",
+    "text": "The voting age should be lowered to 16.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "democracy",
+    "tags": ["democracy", "youth"],
+    "context": "Supporters of votes at 16 say young people live longest with today's decisions and that voting early builds the habit. Opponents say voting should match the age of legal adulthood."
+  },
+  {
+    "id": "c235",
+    "text": "Minimum welfare benefits should be raised significantly.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "welfare",
+    "tags": ["welfare"],
+    "context": "The lowest welfare benefits often sit below the poverty line. Raising them significantly would help recipients cover their basic needs; critics worry about the cost and about reducing the incentive to work."
+  },
+  {
+    "id": "c236",
+    "text": "National service should be compulsory for young people.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "youth",
+    "tags": ["youth", "defence"],
+    "context": "National service means a period of compulsory military or civilian service for young people. Supporters say it builds cohesion, skills and readiness; opponents object to the compulsion and the cost."
+  },
+  {
+    "id": "c237",
+    "text": "Public health insurance should cover 100% of healthcare costs.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "health",
+    "tags": ["health", "welfare"],
+    "context": "Health systems differ in how much patients pay themselves, through fees, co-payments and private insurance. This is about the public system covering everything, paid for through taxes or contributions."
+  },
+  {
+    "id": "c238",
+    "text": "Doctor shortages should be fixed with public clinics and salaried doctors.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "health",
+    "tags": ["health", "welfare"],
+    "context": "Many rural and poor areas lack doctors. Public health centres employ salaried doctors instead of relying on self-employed doctors choosing where to work. This is about making them the main answer."
+  },
+  {
+    "id": "c239",
+    "text": "Official documents should offer a third, neutral gender marker.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "society",
+    "tags": ["society", "institutions"],
+    "context": "Official documents usually record only male or female. A third option, often marked X, would recognise non-binary and some intersex people. Opponents say sex should be recorded as a biological fact."
+  },
+  {
+    "id": "c240",
+    "text": "Toll motorways should be brought back into public ownership.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "transport",
+    "tags": ["transport", "economy"],
+    "context": "Some motorways are run by private companies under long concessions, funded by tolls. Bringing them back into public ownership would end private profits from them, but the state would carry the cost of running them."
+  },
+  {
+    "id": "c241",
+    "text": "Advertising for unhealthy products (alcohol, tobacco, junk food) should be further restricted.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "consumption",
+    "tags": ["consumption", "health"],
+    "context": "Advertising for tobacco and alcohol is already restricted in many places. This is about tightening the rules and extending them to junk food and sugary drinks. Critics see it as the nanny state."
+  },
+  {
+    "id": "c242",
+    "text": "More social housing should be built.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "housing",
+    "tags": ["housing", "welfare"],
+    "context": "Social housing is rented below market rates, usually by public or non-profit landlords. Building much more of it would cut waiting lists and rents, but takes significant public investment."
+  },
+  {
+    "id": "c243",
+    "text": "The state should be able to block social media in case of public disorder.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "technology",
+    "tags": ["technology", "security"],
+    "context": "During unrest, social media can be used to coordinate violence. A legal power to block these services temporarily could help keep order, but is in tension with free expression and the right to information."
+  },
+  {
+    "id": "c244",
+    "text": "Landlords should find it easier to evict tenants who don't pay their rent.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "housing",
+    "tags": ["housing"],
+    "context": "Evicting a tenant for unpaid rent can take many months. Faster evictions protect landlords' income and may encourage letting; critics say they push vulnerable people into homelessness."
+  },
+  {
+    "id": "c245",
+    "text": "A tax should be introduced on fast fashion (cheap clothing produced abroad).",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "consumption",
+    "tags": ["consumption", "environment"],
+    "context": "Fast fashion is cheap clothing made in large volumes, often in low-wage countries, and thrown away quickly. A tax would make prices reflect its environmental and social costs, but hit people on low incomes hardest."
+  },
+  {
+    "id": "c246",
+    "text": "Ecocide should be a crime under national law.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "environment",
+    "tags": ["environment", "justice"],
+    "context": "Ecocide means the massive, deliberate destruction of an ecosystem. Making it a crime would let executives and officials be prosecuted for major environmental damage."
+  },
+  {
+    "id": "c247",
+    "text": "Protected land should be opened up for housing.",
+    "followUp": null,
+    "source": "Adapted from MonVote2027",
+    "axis": "housing",
+    "tags": ["housing", "environment"],
+    "context": "Protected areas, like nature reserves, wetlands and green belts, have strict building rules. With housing short, this is about relaxing them to allow more construction."
   }
 ]

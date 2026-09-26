@@ -72,7 +72,7 @@ Card numbers are intrinsic to the card, not to its place in the shuffle: `claimN
 
 ### Styling
 
-Tailwind v4, CSS-first — everything is in `app/globals.css`, there is no `tailwind.config`. Project colour tokens (`--color-ballot`, `--color-riso`, `--color-paper`, …) are declared in a `@theme` block and used as `bg-ballot` / `bg-riso`; animations are custom `@utility` rules (`deck-enter`, `deck-fade`, `flash-invert`, `banner-enter`).
+Tailwind v4, CSS-first — everything is in `app/globals.css`, there is no `tailwind.config`. Project colour tokens (`--color-ballot`, `--color-riso`, `--color-paper`, …) are declared in a `@theme` block and used as `bg-ballot` / `bg-riso`; animations are custom `@utility` rules (`deck-enter`, `deck-fade`, `flash-invert`, `banner-enter`, `delayed-reveal`).
 
 Light-only by design: `@custom-variant dark (&:is(.dark *))` scopes `dark:` to a class nothing ever sets, so a stray `dark:` utility can't flip the app back to a dark theme. Don't reintroduce `prefers-color-scheme` theming.
 
@@ -80,7 +80,9 @@ shadcn is configured with the `base-nova` style on `@base-ui/react` (not Radix) 
 
 ## Data
 
-`data/claims.json` — `{ id, text, followUp, source, axis, tags }`. `axis` and `tags` are carried for a future filter UI; nothing reads them yet.
+`data/claims.json` — `{ id, text, followUp, source, axis, tags, context? }`. `axis` and `tags` are carried for a future filter UI; nothing reads them yet. `context` is optional background shown behind a "What's this about?" toggle that fades in three seconds after the card is dealt; so far only the MonVote2027 claims (`c152`–`c247`) have one.
+
+`notebooks/monvote2027.qmd` (Quarto, R) scrapes monvote2027.fr/donnees from a dated snapshot in the gitignored `notebooks/data/raw/`. Translations, scope codes and rewrites are hand-edited in `notebooks/data/monvote2027-en.csv`. Rendering writes the staging file `notebooks/data/monvote2027-claims.json` and never touches `data/claims.json`; the merge was a one-off, so edit merged cards in `data/claims.json` directly.
 `data/quotes.json` — `{ include, short, long, author, context }`; `include: false` switches a quote off without deleting it, and only `short ?? long` plus `author` are shown.
 
 `docs/PLAN.md` (gitignored) and `docs/TODO.md` hold the original design intent and the running task list.
@@ -89,3 +91,4 @@ shadcn is configured with the `base-nova` style on `@base-ui/react` (not Radix) 
 
 - Don't use Browser Tools to look at the page unless asked to
 - Don't run `npm run format` or `prettier --write .` yourself
+- Keep me in the loop and ask questions before making decisions

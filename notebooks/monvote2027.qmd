@@ -1,0 +1,341 @@
+---
+title: "MonVote2027"
+subtitle: "Scraping, translating and de-Frenchifying 100 ballot statements"
+author: "Claude Code"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    embed-resources: true
+    theme: cosmo
+    code-fold: true
+execute:
+  warning: false
+  message: false
+---
+
+```{r setup}
+library(tidyverse)
+library(rvest)
+library(jsonlite)
+library(gt)
+
+theme_set(theme_minimal(base_size = 12))
+set.seed(1312)
+```
+
+## Source
+
+[monvote2027.fr](https://monvote2027.fr/donnees) is a voting-advice quiz for the 2027 French
+presidential election: 100 statements, each with a context note, theme tags, and 23
+candidates placed on a five-point scale.
+
+- **No API.** Pages are server-rendered HTML; `/api`, `/api/questions`, `/data.json` and
+  the like all 404. The data page loads no JSON — everything is in the markup.
+- **Not on GitHub.** No `monvote2027` repo or org exists; the `monvote` hits are unrelated.
+- **Licence is unnamed.** The *mentions légales* say the editorial content (questions,
+  positions, texts) is "mis à disposition sous licence ouverte" — no licence is named.
+  In France that phrase usually means Etalab Licence Ouverte 2.0 (attribution only), but
+  that is an inference. **Ask them before anything ships in the public deck.** Candidate
+  photos are explicitly excluded, and nothing here uses them.
+- `robots.txt` allows everything except `/resultats` and `/partage`.
+
+The per-candidate pages hold sources for every position. They are specific to this
+election and are deliberately left out.
+
+## Snapshot
+
+The site changes as candidates move, so the notebook reads a dated snapshot, not the
+live page. Delete the file (or change the date) to take a new one. Snapshots are
+gitignored; the tidy outputs below are what's committed.
+
+```{r snapshot}
+snapshot <- "data/raw/monvote2027-donnees-2026-09-26.html"
+
+if (!file.exists(snapshot)) {
+  dir.create(dirname(snapshot), recursive = TRUE, showWarnings = FALSE)
+  download.file("https://monvote2027.fr/donnees", snapshot, quiet = TRUE)
+}
+
+page <- read_html(snapshot)
+```
+
+## Parse
+
+Each statement is a `.donnees-question`. The id and theme slugs sit in `data-qid` and
+`data-tags` (the visible tag chips are display copy). The context note is the `?`
+tooltip. The positions grid has five columns, one per point on the scale, each holding
+the candidate bubbles placed there.
+
+```{r parse}
+blocks <- html_elements(page, ".donnees-question")
+
+questions_fr <- tibble(
+  qid        = html_attr(blocks, "data-qid"),
+  num        = parse_number(qid),
+  text_fr    = map_chr(blocks, \(b) html_text2(html_element(b, ".donnees-q-text"))),
+  context_fr = map_chr(blocks, \(b) html_text2(html_element(b, ".q-info-tooltip"))),
+  tags_fr    = html_attr(blocks, "data-tags"),
+  quick_quiz = map_lgl(blocks, \(b) length(html_elements(b, ".q-tag-rapide")) > 0)
+)
+
+# One row per candidate per statement. The column's dot class carries the score:
+# pos-dot-2 = "tout à fait pour" (+2) … pos-dot--2 = "tout à fait contre" (−2).
+positions <- map_dfr(blocks, \(b) {
+  map_dfr(html_elements(b, ".pos-col"), \(col) {
+    tibble(
+      position = html_element(col, ".pos-dot") |>
+        html_attr("class") |>
+        str_extract("pos-dot-(-?\\d)", group = 1) |>
+        as.integer(),
+      cid = html_attr(html_elements(col, ".pos-cand-bubble"), "data-cid")
+    )
+  }) |>
+    mutate(qid = html_attr(b, "data-qid"), .before = 1)
+})
+
+stopifnot(
+  nrow(questions_fr) == 100,
+  !anyDuplicated(questions_fr$qid),
+  !anyNA(questions_fr$context_fr),
+  sum(questions_fr$quick_quiz) == 20
+)
+
+candidates_per_q <- count(positions, qid)
+n_candidates <- n_distinct(positions$cid)
+gaps <- filter(candidates_per_q, n != n_candidates)
+
+write_csv(questions_fr, "data/monvote2027-fr.csv")
+
+tibble(
+  statements = nrow(questions_fr),
+  candidates = n_candidates,
+  `statements missing a candidate` = nrow(gaps),
+  `quick-quiz statements` = sum(questions_fr$quick_quiz)
+) |>
+  gt()
+```
+
+## Themes
+
+28 theme slugs; most statements carry two or three. They map onto the deck's existing
+tag vocabulary where there is an obvious match (`immigration` → `migration`,
+`fiscal` → `tax`, `numerique` → `technology`, `laicite` → `religion`).
+
+```{r tags}
+tag_map <- c(
+  immigration = "migration", securite = "security", justice = "justice",
+  economie = "economy", fiscal = "tax", social = "welfare", travail = "work",
+  sante = "health", international = "international", diplomatie = "diplomacy",
+  europe = "europe", democratie = "democracy", institutions = "institutions",
+  education = "education", energie = "energy", environnement = "environment",
+  societe = "society", defense = "defence", agriculture = "agriculture",
+  logement = "housing", numerique = "technology", laicite = "religion",
+  culture = "culture", medias = "media", outremer = "overseas-territories",
+  jeunesse = "youth", transport = "transport", consommation = "consumption"
+)
+
+tags_long <- questions_fr |>
+  select(qid, tags_fr) |>
+  separate_longer_delim(tags_fr, ",") |>
+  mutate(tag = tag_map[tags_fr])
+
+stopifnot(!anyNA(tags_long$tag))
+
+tags_long |>
+  count(tag, sort = TRUE) |>
+  ggplot(aes(n, fct_reorder(tag, n))) +
+  geom_col(fill = "#2f4f7f") +
+  labs(x = "statements", y = NULL)
+```
+
+## Which statements split the field
+
+This is the one thing the candidate positions are good for here. A statement every
+candidate agrees with makes a dead discussion card; one that splits the field down the
+middle is a live one. `for` and `against` count candidates on each side of neutral;
+`balance` is 1 when the two sides are equal and 0 when one side is empty.
+
+```{r split}
+split <- positions |>
+  group_by(qid) |>
+  summarise(
+    `for`     = sum(position > 0),
+    against   = sum(position < 0),
+    neutral   = sum(position == 0),
+    sd        = sd(position),
+    .groups = "drop"
+  ) |>
+  mutate(balance = 1 - abs(`for` - against) / pmax(`for` + against, 1))
+
+split |>
+  ggplot(aes(balance, sd)) +
+  geom_point(alpha = 0.6, colour = "#2f4f7f") +
+  labs(x = "balance (1 = even split)", y = "SD of candidate positions")
+```
+
+## English, and how much of it travels
+
+The translations live in `data/monvote2027-en.csv`, keyed by `qid` and edited by hand
+(the same pattern as `word-codes.csv`). Each statement gets a literal `text_en` and a
+faithful `context_en`, a `scope` code, and up to three rewrites for the deck:
+
+- `text_generic`: the statement without its French specifics (below).
+- `text_deck`: the flattest statements rewritten in the deck's voice (see *The voice gap*).
+- `context_generic`: the context note rewritten to stay true: what the idea is and the
+  main case for and against. No countries, dates or figures, which would read oddly
+  outside France and go out of date.
+
+The scope codes:
+
+- **universal**: works anywhere as written.
+- **adaptable**: names a French institution, policy or "en France", but there's a
+  plain equivalent (the SMIC is a minimum wage; article 49.3 is a government passing
+  a law without a vote). `text_generic` holds the rewrite.
+- **eu**: makes sense only for an EU member state.
+- **france**: no useful equivalent (Parcoursup, the overseas territories, French
+  troops in Africa, bullfighting).
+
+```{r translations}
+en <- read_csv("data/monvote2027-en.csv", show_col_types = FALSE)
+
+stopifnot(
+  setequal(en$qid, questions_fr$qid),
+  en$scope %in% c("universal", "adaptable", "eu", "france"),
+  # every statement that doesn't travel as written has a rewrite, or is marked france
+  !anyNA(en$text_generic[en$scope == "adaptable"]),
+  # everything that gets exported has a country-neutral context
+  !anyNA(en$context_generic[en$scope != "france"])
+)
+
+statements <- questions_fr |>
+  left_join(en, by = "qid") |>
+  left_join(split, by = "qid") |>
+  mutate(
+    text = coalesce(text_deck, text_generic, text_en),
+    scope = factor(scope, levels = c("universal", "adaptable", "eu", "france"))
+  )
+
+statements |>
+  count(scope) |>
+  mutate(share = n / sum(n)) |>
+  gt() |>
+  fmt_percent(share, decimals = 0)
+```
+
+92 of the 100 work anywhere as written (57) or with a light rewrite (35); four more need
+an EU member state, and only four are genuinely French.
+The adaptable rewrites mostly strip "France", swap a French acronym for the
+generic thing, or turn "France should…" into "My country should…".
+
+```{r adaptable-examples}
+statements |>
+  filter(scope == "adaptable") |>
+  select(qid, text_en, text_generic) |>
+  slice_head(n = 12) |>
+  gt() |>
+  cols_label(text_en = "literal", text_generic = "generic")
+```
+
+## Shortlist
+
+The statements that travel (universal or adaptable), ranked by how evenly they split
+the candidates. The top of this table is where to start picking cards — with the caveat
+that it measures what splits 23 *French* candidates, fringe ones weighted the same as
+frontrunners. That's a decent proxy for a live card, not a prediction of what splits a
+table elsewhere.
+
+```{r shortlist}
+statements |>
+  filter(scope %in% c("universal", "adaptable")) |>
+  arrange(desc(balance), desc(sd)) |>
+  select(qid, text, scope, `for`, against, neutral, balance) |>
+  gt() |>
+  fmt_number(balance, decimals = 2) |>
+  opt_interactive(use_search = TRUE, page_size_default = 15)
+```
+
+## The voice gap
+
+These are ballot statements, written to be answered on a five-point scale:
+flat, qualified, measurable. The claims deck is written to be argued about.
+
+```{r voice}
+# The MonVote claims are merged into claims.json now; compare against the rest.
+claims <- fromJSON("../data/claims.json") |>
+  filter(source != "Adapted from MonVote2027")
+
+bind_rows(
+  claims |> slice_sample(n = 5) |> transmute(deck = "claims.json", text),
+  statements |> slice_sample(n = 5) |> transmute(deck = "MonVote2027", text)
+) |>
+  gt(groupname_col = "deck")
+```
+
+A literal translation reads noticeably flatter than the rest of the deck. The flattest
+28 have a `text_deck` rewrite that keeps the proposition but gives a player something
+to push back on; the rest go in as translated.
+
+```{r voice-rewrites}
+statements |>
+  filter(!is.na(text_deck)) |>
+  transmute(qid, before = coalesce(text_generic, text_en), text_deck) |>
+  gt() |>
+  cols_label(text_deck = "deck voice")
+```
+
+## Export
+
+`data/monvote2027-claims.json` is shaped like `data/claims.json`, plus two fields.
+The 96 claims in it were merged into `data/claims.json` as `c152`–`c247`, without
+`origin`. Re-rendering rewrites this file, never `data/claims.json`: edits to merged
+cards happen in `data/claims.json`.
+
+- `id`: the next free `c` numbers, in MonVote order. Card numbers come from the
+  digits in the id (`claimNumber`), so an `mv001`-style id would print as #1 and
+  collide with `c001`.
+- `context`: the country-neutral context note. **New field**; the claims deck
+  shows it behind a "What's this about?" button.
+- `origin`: the MonVote id, the French text and the scope, for traceability.
+- `axis` is the first tag, because `Claim.axis` is a required string.
+
+Every statement except the four France-only ones is exported; the eu ones are
+flagged in `origin.scope`.
+
+```{r export}
+exported <- statements |>
+  filter(scope != "france") |>
+  left_join(
+    tags_long |> summarise(tags = list(unname(tag)), .by = qid),
+    by = "qid"
+  ) |>
+  transmute(
+    id = sprintf("c%03d", 151 + row_number()),
+    text,
+    followUp = NA_character_,
+    source = "Adapted from MonVote2027",
+    axis = map_chr(tags, 1),
+    # I() keeps a one-tag list an array; auto_unbox would write it as a string.
+    tags = map(tags, I),
+    context = context_generic,
+    origin = pmap(
+      list(qid, text_fr, as.character(scope)),
+      \(qid, text_fr, scope) list(
+        site = "monvote2027.fr", qid = qid, text_fr = text_fr, scope = scope
+      )
+    )
+  )
+
+write_json(
+  exported, "data/monvote2027-claims.json",
+  auto_unbox = TRUE, pretty = TRUE, na = "null"
+)
+
+write_csv(
+  statements |> select(qid, scope, text, `for`, against, neutral, balance, sd),
+  "data/monvote2027-split.csv"
+)
+
+nrow(exported)
+```

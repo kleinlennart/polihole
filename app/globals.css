@@ -144,6 +144,25 @@
 
 /* The timer running out: the whole screen flips to its negative three times.
    Suppressed by the reduced-motion rule below, where the beeps carry it. */
+/* Holds something back for a few seconds, then fades it in: the claim gets read
+   before the help beside it. `visibility` goes with the opacity so the hidden
+   element can't be tapped or tabbed to while it waits. Reduced motion keeps the
+   wait and drops the fade (the rule below shortens durations, not delays). */
+@utility delayed-reveal {
+  animation: delayed-reveal 600ms ease-out 3s both;
+}
+
+@keyframes delayed-reveal {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 @utility flash-invert {
   animation: flash-invert 360ms 3;
 }

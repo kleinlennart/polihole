@@ -9,6 +9,8 @@ export type Claim = {
   source: string;
   axis: string;
   tags: string[];
+  /** Background on the claim, shown on request. Only some claims have one. */
+  context?: string;
 };
 
 /** A word bank entry is just the word. */

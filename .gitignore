@@ -41,3 +41,5 @@ yarn-error.log*
 next-env.d.ts
 
 docs/PLAN.md
+# notebook scrape snapshots
+/notebooks/data/raw/

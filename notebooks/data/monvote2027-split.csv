@@ -1,0 +1,101 @@
+qid,scope,text,for,against,neutral,balance,sd
+q1,adaptable,Legal immigration should be significantly reduced.,10,13,0,0.8695652173913043,1.6787441193290353
+q2,universal,Violent criminals get off too lightly.,11,8,4,0.8421052631578947,1.4015801359431275
+q3,universal,The very rich should pay far more tax.,16,7,0,0.6086956521739131,1.7113894223527013
+q4,universal,The legal retirement age should be lowered.,14,7,2,0.6666666666666667,1.6478516376673134
+q5,adaptable,"My country should enforce ICC arrest warrants, even against the leaders of allies.",13,8,2,0.7619047619047619,1.562910025252757
+q6,eu,My country should leave the European Union.,4,19,0,0.34782608695652173,1.364426648468647
+q7,adaptable,Every vote should count the same: parliament should be elected by proportional representation.,13,7,3,0.7,1.5036188231122247
+q8,adaptable,"Hospitals and schools need an army of new public hires, whatever it costs.",16,6,1,0.5454545454545454,1.4128154270215338
+q9,adaptable,The minimum wage should be raised significantly.,15,7,1,0.6363636363636364,1.4336442963229918
+q10,adaptable,Nuclear power should be a pillar of energy policy.,14,5,4,0.5263157894736843,1.525799213889796
+q11,universal,Private companies would run some public services better than the state does.,7,16,0,0.6086956521739131,1.4239620725952373
+q12,adaptable,My country should leave NATO.,6,14,3,0.6,1.5879984667608409
+q13,adaptable,Citizens should be able to force a national referendum by collecting signatures.,13,8,2,0.7619047619047619,1.3439955768796028
+q14,universal,School uniforms should be made compulsory in schools.,7,10,6,0.8235294117647058,1.25424181466106
+q15,adaptable,Governments should end all subsidies for fossil fuels.,13,8,2,0.7619047619047619,1.3082287455154336
+q16,universal,Recreational cannabis should be legalised.,9,12,2,0.8571428571428572,1.556574733569118
+q17,adaptable,Former colonial powers should officially apologise for their colonial past.,10,9,4,0.9473684210526316,1.5140971298358226
+q18,universal,Borrow big and build. The deficit can wait.,13,9,1,0.8181818181818181,1.580513750466923
+q19,adaptable,Free healthcare for undocumented migrants should be abolished.,7,16,0,0.6086956521739131,1.725191173458825
+q20,adaptable,Rich countries should increase their development aid to the Global South.,12,7,4,0.736842105263158,1.2776584313476258
+q21,adaptable,Birthright citizenship should be abolished.,8,14,1,0.7272727272727273,1.7021260827509301
+q22,universal,Foreigners without legal status should be systematically deported.,11,10,2,0.9523809523809523,1.64905051133457
+q23,universal,Foreign residents with legal status should get the right to vote in local elections.,10,10,3,1,1.7136974334113455
+q24,universal,Foreigners should have to wait 5 years before they can receive welfare benefits.,8,13,2,0.7619047619047619,1.8025015555353923
+q25,adaptable,Dual citizenship should be restricted.,5,16,2,0.47619047619047616,1.3702081432144624
+q26,universal,Let workers in first. Everyone else can wait.,9,7,7,0.875,1.1140496934013262
+q27,universal,Family reunification should be made easier.,10,12,1,0.9090909090909091,1.5755041855657435
+q28,adaptable,My country should take in more asylum seekers.,10,10,3,1,1.5049326012773303
+q29,adaptable,Repeat offenders should face mandatory minimum sentences.,10,11,2,0.9523809523809523,1.7297672854057793
+q30,universal,Juvenile offenders aged 16 and over should be tried as adults.,9,12,2,0.8571428571428572,1.6090160988393216
+q31,universal,Part of everyone's pension should be invested in the stock market.,7,15,1,0.6363636363636364,1.67166575701067
+q32,universal,Prison is the wrong punishment for non-violent crime.,10,10,3,1,1.5463842820677165
+q33,universal,An independent authority should be created to investigate police violence.,11,10,2,0.9523809523809523,1.6040955487888708
+q34,universal,"Being an MP should be a full-time job, with no side income.",8,3,12,0.5454545454545454,0.8221248859286777
+q35,universal,More prison places should be built.,11,9,3,0.9,1.5322617553657474
+q36,universal,Social media platforms should be held liable for harmful content posted by their users.,14,6,3,0.6,1.405803892788833
+q37,universal,"Farmers should be guaranteed a price they can live on, whatever the market says.",17,2,4,0.21052631578947367,0.9960395884000188
+q38,universal,Nobody should inherit a fortune without paying extra for it.,12,11,0,0.9565217391304348,1.7490821986257272
+q39,universal,Employers pay too much to hire people.,10,12,1,0.9090909090909091,1.6212521389419094
+q40,universal,"Take public money, and you don't get to move the jobs abroad.",18,3,2,0.2857142857142857,1
+q41,universal,Energy and transport should belong to the state.,14,8,1,0.7272727272727273,1.4717363572115556
+q42,adaptable,My country should be able to override European human rights rulings to enforce its migration policy.,9,14,0,0.782608695652174,1.854382694555148
+q43,adaptable,Nuclear-armed states should commit to nuclear disarmament.,5,16,2,0.47619047619047616,1.4459976109624424
+q44,universal,The sale of new petrol and diesel cars should be banned by 2035.,10,11,2,0.9523809523809523,1.556574733569118
+q45,universal,A universal basic income should be introduced.,4,12,7,0.5,1.2011193725169758
+q46,universal,Food and soap shouldn't be taxed at all.,17,1,5,0.11111111111111116,0.9197009309398038
+q47,adaptable,The standard working week is too short.,7,15,1,0.6363636363636364,1.4128154270215334
+q48,universal,The right to strike in public services should be limited.,7,13,3,0.7,1.428119634939456
+q49,universal,"Assisted reproduction should be fully reimbursed and access to it widened (age, medical criteria).",14,5,4,0.5263157894736843,1.2869057782967015
+q50,adaptable,Surrogacy should be legal.,2,15,6,0.23529411764705888,1.044465935734187
+q51,adaptable,Assisted dying should be legal.,11,10,2,0.9523809523809523,1.651445647689541
+q52,universal,Access to abortion should be made easier and wider.,15,4,4,0.42105263157894735,1.358620551284111
+q53,universal,"The more you fly, the more tax you should pay per ticket.",9,11,3,0.9,1.4114159066908942
+q54,universal,Workers should have as many seats on the board as shareholders.,12,6,5,0.6666666666666667,1.1368773542370678
+q55,universal,Strict rent controls should be introduced in big cities.,12,9,2,0.8571428571428572,1.5792628490042624
+q56,universal,It should be easier to lay people off.,6,16,1,0.5454545454545454,1.4058038927888332
+q57,universal,The carbon tax should be raised.,5,15,3,0.5,1.166054799083818
+q58,universal,Factory farming should be phased out.,11,9,3,0.9,1.3292096971404972
+q59,universal,Pesticides should be phased out.,14,8,1,0.7272727272727273,1.2335879094879223
+q60,france,Bullfighting should be banned in France.,9,6,8,0.8,1.2945614423669665
+q61,universal,Renewable energy should make up 100% of the electricity mix by 2050.,6,15,2,0.5714285714285714,1.469048252032049
+q62,adaptable,No new motorways should be built.,11,10,2,0.9523809523809523,1.2510864843424485
+q63,universal,National defence spending should reach 3% of GDP.,13,9,1,0.8181818181818181,1.5502135515263595
+q64,universal,Oil companies' crisis profits should be taxed away.,15,6,2,0.5714285714285714,1.3702081432144626
+q65,adaptable,My country should step up its military support for Ukraine.,12,10,1,0.9090909090909091,1.7815479346563372
+q66,eu,Controls at the EU's external borders should be tightened.,12,9,2,0.8571428571428572,1.5257992138897958
+q67,eu,The EU should build a common European army.,9,13,1,0.8181818181818181,1.5616450230015821
+q68,adaptable,Welfare benefits should be conditional on mandatory hours of work or volunteering.,10,13,0,0.8695652173913043,1.7513405368143935
+q69,adaptable,My country should maintain diplomatic relations with Russia.,10,6,7,0.75,1.3097385310674974
+q70,universal,Facial recognition should be banned in public spaces.,14,7,2,0.6666666666666667,1.590485544975088
+q71,france,France should reduce its military presence in Africa.,15,5,3,0.5,1.1051442772406628
+q72,eu,Taxation should be harmonised across EU countries to prevent tax competition between states.,14,6,3,0.6,1.269900870676083
+q73,adaptable,My country needs a new constitution.,12,10,1,0.9090909090909091,1.4015801359431272
+q74,adaptable,Governments should not be able to pass laws without a vote in parliament.,16,5,2,0.47619047619047616,1.3916748518532023
+q75,universal,Parliament should be given more power relative to the executive.,16,2,5,0.2222222222222222,1.179535649239177
+q76,universal,The state should be able to seize empty homes to house people.,10,7,6,0.8235294117647058,1.3586205512841107
+q77,universal,No farm subsidies without strict environmental rules.,10,11,2,0.9523809523809523,1.4663552190579532
+q78,universal,"Conspicuous religious symbols should be banned for everyone in public services, staff and users alike.",11,11,1,1,1.4864340436117256
+q79,adaptable,Menstrual leave should be introduced and paid for by the state.,11,3,9,0.4285714285714286,0.9920633665850976
+q80,adaptable,Public broadcasting should get more public funding.,11,7,5,0.7777777777777778,1.2945614423669667
+q81,universal,Sex education should be strengthened and made compulsory from primary school to the end of secondary school.,10,5,8,0.6666666666666667,1.2699008706760828
+q82,universal,Nobody should be allowed to earn more than a legal maximum.,9,10,4,0.9473684210526316,1.4432615676200797
+q83,universal,No single owner should control too much of the news.,15,6,2,0.5714285714285714,1.3959285801180925
+q84,universal,"Parents should be free to pick any school, not the one they're assigned.",3,13,7,0.375,1.2303796130035891
+q85,france,France's overseas territories should be given more institutional autonomy.,9,11,3,0.9,1.3586205512841107
+q86,universal,The voting age should be lowered to 16.,9,9,5,1,1.276110691916542
+q87,adaptable,Minimum welfare benefits should be raised significantly.,14,7,2,0.6666666666666667,1.4086126945758217
+q88,adaptable,National service should be compulsory for young people.,8,13,2,0.7619047619047619,1.6633695978261511
+q89,adaptable,Public health insurance should cover 100% of healthcare costs.,15,5,3,0.5,1.3021720984236467
+q90,universal,Doctor shortages should be fixed with public clinics and salaried doctors.,16,6,1,0.5454545454545454,1.2303796130035891
+q91,france,Parcoursup should be abolished.,13,7,3,0.7,1.269900870676083
+q92,adaptable,"Official documents should offer a third, neutral gender marker.",6,11,6,0.7058823529411764,1.3052039351200886
+q93,adaptable,Toll motorways should be brought back into public ownership.,15,7,1,0.6363636363636364,1.525799213889796
+q94,universal,"Advertising for unhealthy products (alcohol, tobacco, junk food) should be further restricted.",12,4,7,0.5,1.0368697190241638
+q95,universal,More social housing should be built.,14,3,6,0.3529411764705882,1.2605287804426009
+q96,universal,The state should be able to block social media in case of public disorder.,3,17,3,0.30000000000000004,1.1677484162422844
+q97,universal,Landlords should find it easier to evict tenants who don't pay their rent.,10,13,0,0.8695652173913043,1.4970326380435361
+q98,universal,A tax should be introduced on fast fashion (cheap clothing produced abroad).,15,4,4,0.42105263157894735,1.1122743142757672
+q99,adaptable,Ecocide should be a crime under national law.,12,7,4,0.736842105263158,1.4015801359431275
+q100,universal,Protected land should be opened up for housing.,7,14,2,0.6666666666666667,1.1994728750020203

@@ -77,9 +77,14 @@ time so they ship inside the app bundle and work offline with no fetch.
   "followUp": "Optional deeper line, or null",
   "source": "Inspired by Left Values Survey",
   "axis": "revolution",
-  "tags": ["revolution", "reform"]
+  "tags": ["revolution", "reform"],
+  "context": "Optional background, shown behind \"What's this about?\""
 }
 ```
+
+Claims `c152`–`c247` are adapted from [MonVote2027](https://monvote2027.fr/donnees)'s
+open data; [`notebooks/monvote2027.qmd`](notebooks/monvote2027.qmd) scrapes,
+translates and generalises them.
 
 `data/words.json` is a flat list of words:
 
