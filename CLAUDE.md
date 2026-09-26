@@ -1,7 +1,5 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
 @AGENTS.md
 
 ## Commands
@@ -10,30 +8,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 npm run dev     # BASE_PATH= next dev — serves at http://localhost:3000 (root, NOT /polihole)
 npm run build   # next build (static export to out/) + node scripts/generate-sw.mjs
                 # note: build does NOT override BASE_PATH, so it bakes in /polihole; dev does
-npm run lint       # bare `eslint` (flat config, eslint-config-next core-web-vitals + typescript)
-npm run typecheck  # tsc --noEmit
 npm test           # node --test over tests/ — data invariants only, no deps, no UI tests
 ```
 
 The only tests are data invariants in `tests/`, run by Node's built-in runner — no test framework is installed and nothing tests components or pages. A single file: `node --test tests/data.test.mjs`. Husky runs `npm test` on pre-commit (`.husky/pre-commit`); the hook checks the working tree, not just what is staged. `npm run dedupe:words` reports padded and repeated entries in `data/words.json` and `npm run dedupe:words -- --write` fixes them — it keeps the first spelling of a word, which renumbers every card after the one it drops.
 
-To preview the production build the way it is actually deployed (under a `/polihole/` path, with the service worker):
-
-```bash
-mkdir -p /tmp/preview && ln -sfn "$PWD/out" /tmp/preview/polihole
-python3 -c "from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler; import functools; \
-ThreadingHTTPServer(('', 4521), functools.partial(SimpleHTTPRequestHandler, directory='/tmp/preview')).serve_forever()"
-# http://localhost:4521/polihole/
-```
-
-It has to be the **threading** server, not plain `python3 -m http.server`: the worker's install fires one fetch per precached URL at once, and a single-threaded server drops enough of them that the install fails and the update never lands.
+To preview the production build as deployed (under `/polihole/`, with the service worker), use the `preview-build` skill.
 
 ## What this is
 
 A static, installable PWA with two discussion-starter card decks. No backend, no accounts, no scoring, no persistence beyond browser storage. Deployed to GitHub Pages by `.github/workflows/deploy.yml` on every push to `main`.
-
-Routes: `/` (home, two decks) · `/deck` (Polihole, claims) · `/politicize` (Politicize This, words) · `/about`.
-
 ## Architecture
 
 ### basePath is the thing most easily broken
@@ -80,7 +64,7 @@ Card numbers are intrinsic to the card, not to its place in the shuffle: `claimN
 
 ### Hydration gate
 
-`lib/use-hydrated.ts` returns false through the server render and hydration, true after. Anything random must wait on it — picking during the export would bake one fixed result into the static HTML, and picking during hydration would disagree with that HTML. Used by `useDeck` and `QuoteHeader`.
+`lib/use-hydrated.ts` returns false through the server render and hydration, true after. Anything random or read from the browser (storage, platform) must wait on it — computing it during the export would bake one fixed result into the static HTML, and computing it during hydration would disagree with that HTML.
 
 ### Feature flags
 
@@ -88,7 +72,7 @@ Card numbers are intrinsic to the card, not to its place in the shuffle: `claimN
 
 ### Styling
 
-Tailwind v4, CSS-first — everything is in `app/globals.css`, there is no `tailwind.config`. Project colour tokens (`--color-ballot`, `--color-riso`, `--color-paper`, …) are declared in a `@theme` block and used as `bg-ballot` / `bg-riso`; animations are custom `@utility` rules (`deck-enter`, `deck-fade`, `flash-invert`).
+Tailwind v4, CSS-first — everything is in `app/globals.css`, there is no `tailwind.config`. Project colour tokens (`--color-ballot`, `--color-riso`, `--color-paper`, …) are declared in a `@theme` block and used as `bg-ballot` / `bg-riso`; animations are custom `@utility` rules (`deck-enter`, `deck-fade`, `flash-invert`, `banner-enter`).
 
 Light-only by design: `@custom-variant dark (&:is(.dark *))` scopes `dark:` to a class nothing ever sets, so a stray `dark:` utility can't flip the app back to a dark theme. Don't reintroduce `prefers-color-scheme` theming.
 
@@ -97,12 +81,11 @@ shadcn is configured with the `base-nova` style on `@base-ui/react` (not Radix) 
 ## Data
 
 `data/claims.json` — `{ id, text, followUp, source, axis, tags }`. `axis` and `tags` are carried for a future filter UI; nothing reads them yet.
-`data/words.json` — a flat array of strings.
 `data/quotes.json` — `{ include, short, long, author, context }`; `include: false` switches a quote off without deleting it, and only `short ?? long` plus `author` are shown.
 
 `docs/PLAN.md` (gitignored) and `docs/TODO.md` hold the original design intent and the running task list.
 
 ## Rules
 
-- don't use Browser Tools to look at the page unless asked to
-- No need to ever run `format` yourself
+- Don't use Browser Tools to look at the page unless asked to
+- Don't run `npm run format` or `prettier --write .` yourself
